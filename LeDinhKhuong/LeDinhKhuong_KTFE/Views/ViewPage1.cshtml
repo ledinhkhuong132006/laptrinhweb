@@ -1,0 +1,251 @@
+﻿@{
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Giỏ hàng của tôi</title>
+        <style>
+            /* ---------------------- CSS ---------------------- */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f3f3f3;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: black;
+                color: white;
+                padding: 10px text-align: center;
+            }
+
+            .header-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .container
+
+            {
+                width: 90%;
+                max-width: 1000px;
+                margin: 20px auto;
+                display: flex;
+                gap: 20px;
+            }
+
+            .logo {
+                color: #0a68ff;
+                font-weight: bold;
+                font-size: 24px;
+            }
+            /* --- Cột bên trái: danh sách sản phẩm --- */
+            .cart {
+                background: white;
+                padding: 15px;
+                border-radius: 6px;
+                flex: 2;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            .product-images {
+                background-color: white;
+                padding: 15px;
+                border-radius: 10px;
+            }
+
+            .item img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                margin-right: 10px;
+            }
+
+            .item-info {
+                flex: 1;
+            }
+
+            .item-name {
+                font-weight: bold;
+            }
+
+            .item-price {
+                color: #c00;
+                font-weight: bold;
+            }
+
+            .quantity {
+                display: flex;
+                align-items: center;
+                margin-top: 5px;
+            }
+
+                .quantity button {
+                    background-color: #ddd;
+                    border: none;
+                    padding: 4px 10px;
+                    cursor: pointer;
+                    font-size: 16px;
+                }
+
+                .quantity span {
+                    margin: 0 8px;
+                    min-width: 20px;
+                    text-align: center;
+                    display: inline-block;
+                }
+
+            /* --- Cột bên phải: tổng tiền --- */
+            .summary {
+                flex: 1;
+                background: white;
+                padding: 15px;
+                border-radius: 6px;
+                height: fit-content;
+            }
+
+                .summary h3 {
+                    margin-top: 0;
+                }
+
+            .checkout {
+                background-color: #f0c14b;
+                border: 1px solid #a88734;
+                border-radius: 20px;
+                padding: 10px;
+                text-align: center;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+                .checkout:hover {
+                    background-color: #e2b33f;
+                }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class=" container header-content">
+                <div class="logo">AMAZON</div>
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." style="flex: 1; padding: 5px; margin: 0 20px; border-radius: 4px; border: 1px solid #ccc;">
+                <div class="user-info">
+                    <span>Xin chào, Khách!</span>
+                    <a href="#" style="color: red; margin-left: 10px;">Đăng nhập</a>
+                </div>
+        </header>
+        <div class="container">
+            <!-- ----------- BÊN TRÁI: Danh sách sản phẩm ----------- -->
+            <div class="cart">
+                <h1>Shopping Cart</h1>
+
+                <!-- Sản phẩm 1 -->
+                <div class="product-images">
+                    <img src="https://neriinstore.com/wp-content/uploads/2022/07/Tui-xach-nu-sang-trong-NE17-14.jpg" alt="Túi">
+                    <div class="item-info">
+                        <div class="item-name">Túi da nữ Tommy Hilfiger</div>
+                        <div class="item-price">$44.79</div>
+                        <div class="quantity">
+                            <button class="minus">-</button>
+                            <span class="qty">1</span>
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 2 -->
+                <div class="item" data-price="98.00">
+                    <img src="https://via.placeholder.com/80" alt="Giày">
+                    <div class="item-info">
+                        <div class="item-name">Giày nữ Sam Edelman</div>
+                        <div class="item-price">$98.00</div>
+                        <div class="quantity">
+                            <button class="minus">-</button>
+                            <span class="qty">2</span>
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 3 -->
+                <div class="item" data-price="23.39">
+                    <img src="https://via.placeholder.com/80" alt="Áo">
+                    <div class="item-info">
+                        <div class="item-name">Áo sơ mi nữ Newchoice</div>
+                        <div class="item-price">$23.39</div>
+                        <div class="quantity">
+                            <button class="minus">-</button>
+                            <span class="qty">3</span>
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----------- BÊN PHẢI: Tổng tiền ----------- -->
+            <div class="summary">
+                <h3>Tổng cộng</h3>
+                <p>Số lượng sản phẩm: <span id="total-items">6</span></p>
+                <p>Tổng tiền: <span id="total-price">$310.96</span></p>
+                <div class="checkout" id="checkout-btn">Thanh toán</div>
+            </div>
+        </div>
+
+        <script>
+        /* ---------------------- JAVASCRIPT ---------------------- */
+
+        // Lấy danh sách các sản phẩm trong giỏ
+        const items = document.querySelectorAll('.item');
+        const totalItems = document.getElementById('total-items');
+        const totalPrice = document.getElementById('total-price');
+        const checkoutBtn = document.getElementById('checkout-btn');
+
+        // Hàm cập nhật tổng tiền và số lượng
+        function updateTotal() {
+            let count = 0;
+            let total = 0;
+
+            items.forEach(item => {
+                const price = parseFloat(item.dataset.price);
+                const qty = parseInt(item.querySelector('.qty').textContent);
+                count += qty;
+                total += price * qty;
+            });
+
+            totalItems.textContent = count;
+            totalPrice.textContent = '$' + total.toFixed(2);
+        }
+
+        // Gắn sự kiện cho các nút + và -
+        items.forEach(item => {
+            const minusBtn = item.querySelector('.minus');
+            const plusBtn = item.querySelector('.plus');
+            const qtyEl = item.querySelector('.qty');
+
+            minusBtn.addEventListener('click', () => {
+                let qty = parseInt(qtyEl.textContent);
+                if (qty > 1) qty--;
+                qtyEl.textContent = qty;
+                updateTotal();
+            });
+
+            plusBtn.addEventListener('click', () => {
+                let qty = parseInt(qtyEl.textContent);
+                qty++;
+                qtyEl.textContent = qty;
+                updateTotal();
+            });
+        });
+
+        // Khi nhấn nút "Thanh toán"
+        checkoutBtn.addEventListener('click', () => {
+            alert("Cảm ơn bạn đã mua hàng! Tổng tiền là " + totalPrice.textContent);
+        });
+
+        // Cập nhật tổng tiền khi trang vừa mở
+        updateTotal();
+        </script>
+
+    </body>
+</html>

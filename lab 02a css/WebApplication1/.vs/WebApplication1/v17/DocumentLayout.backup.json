@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\nop bai git\\lab 02a css\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{91CCA379-3B8B-4B56-B521-AF531CE5E2E0}|WebApplication1.csproj|c:\\nop bai git\\lab 02a css\\webapplication1\\views\\home\\bai1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{91CCA379-3B8B-4B56-B521-AF531CE5E2E0}|WebApplication1.csproj|solutionrelative:views\\home\\bai1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91CCA379-3B8B-4B56-B521-AF531CE5E2E0}|WebApplication1.csproj|c:\\nop bai git\\lab 02a css\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91CCA379-3B8B-4B56-B521-AF531CE5E2E0}|WebApplication1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "bai1.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\lab 02a css\\WebApplication1\\Views\\Home\\bai1.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\bai1.cshtml",
+              "ToolTip": "C:\\nop bai git\\lab 02a css\\WebApplication1\\Views\\Home\\bai1.cshtml*",
+              "RelativeToolTip": "Views\\Home\\bai1.cshtml*",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-04T15:50:12.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\nop bai git\\lab 02a css\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\nop bai git\\lab 02a css\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wBwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T15:42:13.667Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

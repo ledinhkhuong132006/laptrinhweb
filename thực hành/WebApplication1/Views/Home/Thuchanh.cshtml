@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiki - Lon sữa Glucerna</title>
+    <style>
+        /* ===== CSS ===== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+        .header {
+            background-color:white;
+            padding: 10px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: #0a68ff;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .search-bar {
+            width: 60%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px 
+        }
+
+        .cart-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* MAIN LAYOUT */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 0.8fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* PRODUCT IMAGES */
+        .product-images {
+            background-color:white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .main-img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .thumbs {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+            .thumbs img {
+                width: 60px;
+                height: 60px;
+                border-radius: 6px;
+                border: 1px
+            }
+
+        /* PRODUCT INFO */
+        .product-info {
+            background-color:white
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+            .product-info h1 {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+
+        .rating {
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #d32f2f;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .flavor {
+            margin-bottom: 20px;
+        }
+
+        .option {
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+            .option.active {
+                background-color:cornflowerblue
+                border-color: black;
+            }
+
+        /* PURCHASE BOX */
+        .purchase-box {
+            background-color: white
+            padding: 20px;
+            border-radius: 10px;
+            height: fit-content;
+            text-align: center;
+        }
+
+        .quantity {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+            .quantity button {
+                width: 30px;
+                height: 30px;
+                border: none;
+                background: #eee;
+                cursor: pointer;
+                border-radius: 6px;
+                font-size: 18px;
+            }
+
+            .quantity input {
+                width: 50px;
+                text-align: center;
+                border: 1px solid 
+                padding: 4px;
+            }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+            .btn.buy {
+                background-color:red
+            }
+
+            .btn.add {
+                background-color:white;
+                border: 1px
+            }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">TIKI</div>
+            <input type="text" class="search-bar" placeholder="Tìm kiếm sản phẩm...">
+            <div class="cart-icon">🛒</div>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="container main-content">
+        <!-- Cột trái: ảnh sản phẩm -->
+        <section class="product-images">
+            <img src="https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09275_85d45ab994.jpg" alt="Glucerna" class="main-img">
+            <div class="thumbs">
+                <img src="https://cdn.upharma.vn/unsafe/3840x0/filters:quality(90)/san-pham/19988.png" alt="">
+                <img src="https://cdn-ecommerce.hellohealthgroup.com/media/catalog/product/cache/affabd953505e4c2dee2d727b9abdc3a/1/_/1_50_.jpg" alt="">
+            </div>
+        </section>
+
+        <!-- Cột giữa: thông tin sản phẩm -->
+        <section class="product-info">
+            <h1>Lon Sữa Glucerna 800g/lon - Tặng 2 gói dùng thử</h1>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(436 đánh giá)</span></div>
+            <div class="price">1.034.550₫</div>
+
+            <div class="flavor">
+                <label>Hương vị:</label>
+                <button class="option active">Sua nguyen chat</button>
+            </div>
+
+            <div class="shipping">
+                <h4>Thông tin vận chuyển</h4>
+                <p>Giao đến Dai phuoc, Nhon Trach, Dong Nai</p>
+                <p>🚀 Giao siêu tốc 24h <strong>Miễn phí</strong></p>
+            </div>
+        </section>
+
+        <!-- Cột phải: hộp mua hàng -->
+        <aside class="purchase-box">
+            <p><strong>So Luong</strong></p>
+            <div class="quantity">
+                <button class="minus">−</button>
+                <input type="number" value="1" min="1" id="qty">
+                <button class="plus">+</button>
+            </div>
+            <p class="subtotal">Tạm tính: <strong>1.034.550₫</strong></p>
+            <button class="btn buy">Mua ngay</button>
+            <button class="btn add">Thêm vào giỏ</button>
+        </aside>
+    </main>
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        const plusBtn = document.querySelector('.plus');
+        const minusBtn = document.querySelector('.minus');
+        const qtyInput = document.getElementById('qty');
+        const subtotal = document.querySelector('.subtotal strong');
+
+        const price = 1034550; // giá sản phẩm cố định
+
+        plusBtn.addEventListener('click', () => {
+            qtyInput.value = parseInt(qtyInput.value) + 1;
+            updateSubtotal();
+        });
+
+        minusBtn.addEventListener('click', () => {
+            if (qtyInput.value > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+                updateSubtotal();
+            }
+        });
+
+        function updateSubtotal() {
+            subtotal.textContent = (price * qtyInput.value).toLocaleString('vi-VN') + '₫';
+        }
+    </script>
+</body>
+</html>

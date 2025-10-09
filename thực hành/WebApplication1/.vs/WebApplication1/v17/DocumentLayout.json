@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\nop bai git\\th\u1EF1c h\u00E0nh\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0BDED583-C1B7-4406-9340-1432BE85E180}|WebApplication1.csproj|c:\\nop bai git\\th\u1EF1c h\u00E0nh\\webapplication1\\views\\home\\thuchanh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BDED583-C1B7-4406-9340-1432BE85E180}|WebApplication1.csproj|solutionrelative:views\\home\\thuchanh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BDED583-C1B7-4406-9340-1432BE85E180}|WebApplication1.csproj|C:\\nop bai git\\th\u1EF1c h\u00E0nh\\WebApplication1\\views\\viewpage1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BDED583-C1B7-4406-9340-1432BE85E180}|WebApplication1.csproj|solutionrelative:views\\viewpage1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BDED583-C1B7-4406-9340-1432BE85E180}|WebApplication1.csproj|C:\\nop bai git\\th\u1EF1c h\u00E0nh\\WebApplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BDED583-C1B7-4406-9340-1432BE85E180}|WebApplication1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewPage1.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\th\u1EF1c h\u00E0nh\\WebApplication1\\Views\\ViewPage1.cshtml",
+              "RelativeDocumentMoniker": "Views\\ViewPage1.cshtml",
+              "ToolTip": "C:\\nop bai git\\th\u1EF1c h\u00E0nh\\WebApplication1\\Views\\ViewPage1.cshtml",
+              "RelativeToolTip": "Views\\ViewPage1.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T14:29:37.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Thuchanh.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\th\u1EF1c h\u00E0nh\\WebApplication1\\Views\\Home\\Thuchanh.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Thuchanh.cshtml",
+              "ToolTip": "C:\\nop bai git\\th\u1EF1c h\u00E0nh\\WebApplication1\\Views\\Home\\Thuchanh.cshtml",
+              "RelativeToolTip": "Views\\Home\\Thuchanh.cshtml",
+              "ViewState": "AgIAALQAAAAAAAAAAAAAALoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T14:29:23.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\nop bai git\\th\u1EF1c h\u00E0nh\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\nop bai git\\th\u1EF1c h\u00E0nh\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T14:28:29.944Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

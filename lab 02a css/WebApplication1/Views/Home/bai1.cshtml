@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập Table Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 20px;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: auto;
+            background: #fff;
+        }
+
+        td {
+            padding: 15px;
+            vertical-align: top;
+            border: 1px solid #000;
+        }
+
+        /* Cột menu */
+        .sidebar {
+            width: 20%;
+            background: #eee;
+        }
+
+            .sidebar h3 {
+                margin-top: 0;
+                font-size: 16px;
+            }
+
+            .sidebar ul {
+                list-style-type: none;
+                padding-left: 10px;
+            }
+
+            .sidebar li {
+                margin: 5px 0;
+            }
+
+            .sidebar a {
+                text-decoration: none;
+                color: #333;
+            }
+
+                .sidebar a:hover {
+                    color: blue;
+                }
+
+        /* Logo */
+        .logo {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            background: #ddd;
+        }
+
+        /* Nội dung */
+        .content h3 {
+            margin-top: 0;
+        }
+
+        .content img {
+            float: right;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <!-- Cột menu bên trái -->
+            <td class="sidebar" rowspan="3">
+                <h3>Danh sách các mục liên kết</h3>
+                <ul>
+                    <li><a href="#">Liên kết 1</a></li>
+                    <li><a href="#">Liên kết 2</a></li>
+                    <li><a href="#">Liên kết 3</a></li>
+                </ul>
+            </td>
+
+            <!-- Logo -->
+            <td colspan="2" class="logo">Logo</td>
+        </tr>
+
+        <tr>
+            <!-- Nội dung 1 -->
+            <td class="content">
+                <h3>Nội dung 1</h3>
+                <p>Đoạn văn bản nội dung 1...</p>
+                <p>Đoạn văn bản nội dung 1...</p>
+                <img src="https://via.placeholder.com/50" alt="Ảnh minh họa">
+            </td>
+
+            <!-- Nội dung 2 -->
+            <td class="content">
+                <h3>Nội dung 2</h3>
+                <ul>
+                    <li>Mục 1</li>
+                    <li>Mục 2</li>
+                    <li>Mục 3</li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <!-- Nội dung 3 -->
+            <td colspan="2" class="content">
+                <h3>Nội dung 3</h3>
+                <p>Đoạn văn bản nội dung 3...</p>
+                <img src="https://via.placeholder.com/50" alt="Ảnh minh họa">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

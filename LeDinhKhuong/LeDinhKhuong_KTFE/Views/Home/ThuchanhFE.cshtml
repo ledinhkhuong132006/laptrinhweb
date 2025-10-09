@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giỏ hàng của tôi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start; /* Canh các cột theo chiều dọc */
+        }
+
+        /*  Cột bên trái: Giỏ hàng & Sản phẩm đã lưu */
+        .main-content {
+            flex: 3; /* Cột trái chiếm nhiều không gian hơn */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .shopping-cart, .saved-items {
+            background-color: white;
+            padding: 20px;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px 
+        }
+
+            .cart-header h1 {
+                margin: 0;
+                font-size: 28px;
+            }
+
+            .cart-header .deselect-link {
+                font-size: 14px;
+                color: red;
+                text-decoration: none;
+            }
+
+                .cart-header .deselect-link:hover {
+                    text-decoration: underline;
+                }
+
+        .price-label {
+            font-size: 14px;
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        /* Cấu trúc một sản phẩm  */
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            padding: 20px 0;
+            border-bottom: 1px 
+        }
+
+            .cart-item .item-image {
+                width: 180px;
+                height: 180px;
+                object-fit: contain;
+            }
+
+        .item-details {
+            flex-grow: 1; /* Cho phép phần mô tả chiếm hết không gian còn lại */
+        }
+
+            .item-details .item-name {
+                font-size: 18px;
+                color:navy;
+            }
+
+            .item-details .item-stock {
+                font-size: 12px;
+                color: red;
+                margin: 5px 0;
+            }
+
+            .item-details .item-options, .item-actions {
+                font-size: 14px;
+                color: black;
+            }
+
+        .item-actions {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+            .item-actions .quantity {
+                display: flex;
+                align-items: center;
+                border: 1px solid;
+                border-radius: 8px;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+                background-color: white;
+                padding: 4px 10px;
+            }
+
+            .item-actions .qty-value {
+                margin: 0 10px;
+            }
+
+            .item-actions a {
+                color: navy;
+                text-decoration: none;
+            }
+
+                .item-actions a:hover {
+                    text-decoration: underline;
+                }
+
+        .item-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+            min-width: 80px; /* Đảm bảo giá không bị xô lệch */
+            text-align: right;
+        }
+
+        .cart-subtotal {
+            text-align: right;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /*  Cột bên phải: Tổng tiền  */
+        .summary {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .summary-total {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .checkout-btn {
+            background-color: yellow;
+            border: 1px solid;
+            border-radius: 8px;
+            width: 100%;
+            padding: 12px 0;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px 0 rgba(213,217,217,.5);
+        }
+
+            .checkout-btn:hover {
+                background-color: red;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="shopping-cart">
+                <div class="cart-header">
+                    <h1>Shopping Cart</h1>
+                    <a href="#" class="deselect-link">Deselect all items</a>
+                </div>
+                <div class="price-label">Price</div>
+
+                <div class="cart-item" data-price="44.79">
+                    <input type="checkbox" checked>
+                    <img src="https://neriinstore.com/wp-content/uploads/2022/07/Tui-xach-nu-sang-trong-NE17-14.jpg" alt="Túi" class="item-image" />
+                    <div class="item-details">
+                        <div class="item-name">Tommy Hilfiger Women's Leather Saddle Shoulder Bag with Removable Crossbody Strap</div>
+                        <div class="item-stock">In Stock</div>
+                        <div class="item-actions">
+                            <div class="quantity">
+                                <button class="minus-btn">-</button>
+
+                                <span class="qty-value">1</span>
+
+                                <button class="plus-btn">+</button>
+                            </div>
+                            <a href="#">Delete</a> |
+                            <a href="#">Save for later</a>
+                        </div>
+                    </div>
+                    <div class="item-price">$44.79</div>
+                </div>
+
+                <div class="cart-item" data-price="98.00">
+                    <input type="checkbox" checked>
+                    <img src="data:image/jpeg;base64,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" alt="Giày" class="item-image" />
+                    <div class="item-details">
+                        <div class="item-name">Sam Edelman Women's Rosa Pump, Cape Blue, 10</div>
+                        <div class="item-stock">In Stock</div>
+                        <div class="item-options">
+                            <span>Size: 10</span><br>
+                            <span>Color: Cape Blue</span>
+                        </div>
+                        <div class="item-actions">
+                            <div class="quantity">
+                                <button class="minus-btn">-</button>
+
+                                <span class="qty-value">1</span>
+
+                                <button class="plus-btn">+</button>
+                            </div>
+                            <a href="#">Delete</a> |
+                            <a href="#">Save for later</a>
+                        </div>
+                    </div>
+                    <div class="item-price">$98.00</div>
+                </div>
+
+                <div class="cart-item" data-price="23.39">
+                    <input type="checkbox" checked>
+                    <img src="data:image/jpeg;base64,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" alt="Áo" class="item-image" />
+                    <div class="item-details">
+                        <div class="item-name">Newchoice Dressy Casual Tops for Women, Collared V Neck 3/4 Sleeve Blouses Loose Fitting Tunic Tops (Sage Green, XL)</div>
+                        <div class="item-stock">In Stock</div>
+                        <div class="item-options">
+                            <span>Size: X-Large</span><br>
+                            <span>Color: Sage Green</span>
+                        </div>
+                        <div class="item-actions">
+                            <div class="quantity">
+                                <button class="minus-btn">-</button>
+
+                                <span class="qty-value">1</span>
+
+                                <button class="plus-btn">+</button>
+                            </div>
+                            <a href="#">Delete</a> |
+                            <a href="#">Save for later</a>
+                        </div>
+                    </div>
+                    <div class="item-price">$23.39</div>
+                </div>
+
+                <div class="cart-subtotal">
+                    Subtotal (<span id="total-items">6</span> items): <span id="total-price" style="font-weight: bold;">$310.96</span>
+                </div>
+            </div>
+            <div class="saved-items">
+                <h2>Your Items</h2>
+                <p>No items saved for later</p>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="summary-total">
+                Subtotal (<span id="summary-total-items">6</span> items): <span id="summary-total-price" style="font-weight: bold;">$310.96</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Proceed to checkout</button>
+        </div>
+    </div>
+
+    <script>
+
+
+
+        /* JAVASCRIPT */
+        // Sử dụng querySelectorAll với class chung là .cart-item
+        const items = document.querySelectorAll('.cart-item');
+
+        // hiển thị tổng kết
+        const totalItemsEl = document.getElementById('total-items');
+        const totalPriceEl = document.getElementById('total-price');
+        const summaryItemsEl = document.getElementById('summary-total-items');
+        const summaryPriceEl = document.getElementById('summary-total-price');
+
+        const checkoutBtn = document.getElementById('checkout-btn');
+
+        // cập nhật tổng tiền và số lượng 
+        function updateTotal() {
+            let totalItemCount = 0;
+            let subtotal = 0;
+
+            items.forEach(item => {
+                const price = parseFloat(item.dataset.price);
+                const qty = parseInt(item.querySelector('.qty-value').textContent);
+
+                totalItemCount += qty;
+                subtotal += price * qty;
+            });
+
+            // Cập nhật giá trị lên giao diện
+            totalItemsEl.textContent = totalItemCount;
+            totalPriceEl.textContent = '$' + subtotal.toFixed(2);
+            summaryItemsEl.textContent = totalItemCount;
+            summaryPriceEl.textContent = '$' + subtotal.toFixed(2);
+        }
+
+        // *** PHẦN THÊM MỚI ĐỂ TĂNG/GIẢM SỐ LƯỢNG 
+        items.forEach(item => {
+            // Tìm các nút và phần tử hiển thị số lượng trong mỗi item
+            const minusBtn = item.querySelector('.minus-btn'); 
+            const plusBtn = item.querySelector('.plus-btn');  
+            const qtyEl = item.querySelector('.qty-value');
+
+            // Gắn sự kiện cho nút trừ (-)
+            if (minusBtn) {
+                minusBtn.addEventListener('click', () => {
+                    let currentQty = parseInt(qtyEl.textContent);
+                    if (currentQty > 1) {
+                        currentQty--;
+                        qtyEl.textContent = currentQty;
+                        updateTotal(); // hàm cập nhật lại tổng tiền
+                    }
+                });
+            }
+
+            // Gắn sự kiện cho nút cộng (+)
+            if (plusBtn) {
+                plusBtn.addEventListener('click', () => {
+                    let currentQty = parseInt(qtyEl.textContent);
+                    currentQty++;
+                    qtyEl.textContent = currentQty;
+                    updateTotal(); // hàm cập nhật lại tổng tiền
+                });
+            }
+        });
+ 
+
+        // Khi  "Thanh toán"
+        checkoutBtn.addEventListener('click', () => {
+            alert("Cảm ơn bạn đã mua hàng! Tổng tiền là " + totalPriceEl.textContent);
+        });
+
+        // Cập nhật tổng tiền ngay khi trang vừa tải xong
+        window.addEventListener('DOMContentLoaded', updateTotal);
+    </script>
+</body>
+</html>
