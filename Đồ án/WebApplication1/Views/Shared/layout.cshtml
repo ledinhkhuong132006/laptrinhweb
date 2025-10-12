@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - TechPhone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: gray;
+            color: dimgray;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .site-header {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+            .site-header .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+            }
+
+        .header-logo a {
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .header-nav ul {
+            display: flex;
+            gap: 35px;
+        }
+
+        .header-nav a {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: lightgray;
+            transition: color 0.3s ease;
+        }
+
+            .header-nav a:hover {
+                color: white;
+            }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 20px;
+        }
+
+            .header-actions a {
+                color: red;
+                transition: color 0.3s ease;
+            }
+
+                .header-actions a:hover {
+                    color: white;
+                }
+
+        .header-delivery {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #ccc;
+            border-left: 1px solid #444;
+            padding-left: 20px;
+        }
+
+            .header-delivery i {
+                color: #0088cc;
+            }
+
+            .header-delivery .delivery-text {
+                color: #fff;
+                text-decoration: underline;
+                cursor: pointer;
+                white-space: nowrap;
+                max-width: 150px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+        .header-search {
+            display: flex;
+            border: 1px solid gray;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+            .header-search input {
+                border: none;
+                padding: 15px;
+                font-size: 16px;
+                outline: none;
+                width: 300px;
+            }
+
+            .header-search button {
+                background-color: deepskyblue;
+                border: none;
+                color: white;
+                padding: 0 15px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+        .banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80');
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .banner-content {
+            max-width: 500px;
+            color: white;
+        }
+
+        .banner-subtitle {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .banner-title {
+            font-size: 52px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 10px 0 20px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: cornflowerblue;
+            color: white;
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: blue;
+            }
+
+        .categories-section {
+            padding: 60px 0;
+        }
+
+            .categories-section .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+        .category-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+            .category-item img {
+                width: 100%;
+                display: block;
+                transition: transform 0.4s ease;
+            }
+
+            .category-item:hover img {
+                transform: scale(1.05);
+            }
+
+        .category-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(34, 37, 41, 0.9);
+            color: white;
+            padding: 8px 15px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .featured-products {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 3px;
+                background-color: deepskyblue;
+            }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid gray;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            .product-card img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 15px;
+            }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-rating {
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .product-link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-logo"><a asp-controller="Home" asp-action="Index">TechPhone</a></div>
+
+            <div class="header-search">
+                <form asp-controller="Home" asp-action="Search" method="get">
+                    <input type="text" name="query" placeholder="Tìm kiếm sản phẩm...">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">Trang Chủ</a></li>
+                    <li><a asp-controller="Product" asp-action="Index">Sản Phẩm</a></li>
+                    <li><a href="#">Khuyến Mãi</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+
+                <div class="header-delivery">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span>Giao đến:</span><br>
+                        <a href="#" id="delivery-address-link" class="delivery-text" title="Nhấn để thay đổi địa chỉ">Nhập địa chỉ</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a asp-controller="Account" asp-action="Login" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
+                <a asp-controller="Cart" asp-action="Index" aria-label="Giỏ hàng"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addressLink = document.getElementById('delivery-address-link');
+            if (addressLink) {
+                function updateAddress() {
+                    const newAddress = prompt("Nhập địa chỉ giao hàng:");
+                    if (newAddress && newAddress.trim() !== '') {
+                        addressLink.textContent = newAddress;
+                        localStorage.setItem('userDeliveryAddress', newAddress);
+                    }
+                }
+                function loadAddress() {
+                    const saved = localStorage.getItem('userDeliveryAddress');
+                    if (saved) addressLink.textContent = saved;
+                }
+                addressLink.addEventListener('click', e => { e.preventDefault(); updateAddress(); });
+                loadAddress();
+            }
+        });
+    </script>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

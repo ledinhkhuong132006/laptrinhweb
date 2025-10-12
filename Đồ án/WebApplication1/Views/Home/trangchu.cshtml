@@ -1,0 +1,272 @@
+﻿
+@{
+    ViewBag.Title = "trangchu";
+}
+
+@{
+    ViewBag.Title = "Trang chủ - TechPhone";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPhone - Trang Chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: gray;
+            color: dimgray;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .site-header {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+            .site-header .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+            }
+
+        .header-logo a {
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .header-nav ul {
+            display: flex;
+            gap: 35px;
+        }
+
+        .header-nav a {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: lightgray;
+            transition: color 0.3s ease;
+        }
+
+            .header-nav a:hover {
+                color: white;
+            }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 20px;
+        }
+
+            .header-actions a {
+                color: red;
+                transition: color 0.3s ease;
+            }
+
+                .header-actions a:hover {
+                    color: white;
+                }
+
+        .header-delivery {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #ccc;
+            border-left: 1px solid #444;
+            padding-left: 20px;
+        }
+
+            .header-delivery i {
+                color: #0088cc;
+            }
+
+            .header-delivery .delivery-text {
+                color: #fff;
+                text-decoration: underline;
+                cursor: pointer;
+                white-space: nowrap;
+                max-width: 150px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+        .banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80');
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .banner-content {
+            max-width: 500px;
+            color: white;
+        }
+
+        .banner-subtitle {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .banner-title {
+            font-size: 52px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 10px 0 20px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: cornflowerblue;
+            color: white;
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: blue;
+            }
+
+        .login-prompt {
+            text-align: center;
+            padding: 50px 0;
+            background: white;
+            margin: 40px 0;
+        }
+
+            .login-prompt h2 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+        .login-btn {
+            display: inline-block;
+            background-color: lightblue;
+            color: white;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .login-btn:hover {
+                background-color: deepskyblue;
+            }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-logo"><a href="index.html">TechPhone</a></div>
+
+            <div class="header-search">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="product.html">Sản Phẩm</a></li>
+                    <li><a href="#">Khuyến Mãi</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+
+                <div class="header-delivery">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span>Giao đến:</span><br>
+                        <a href="#" id="delivery-address-link" class="delivery-text" title="Nhấn để thay đổi địa chỉ">Nhập địa chỉ</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="/Home/Login" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
+                <a href="cart.html" aria-label="Giỏ hàng"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="banner-content">
+                <p class="banner-subtitle">EXCLUSIVE SMARTPHONES</p>
+                <h1 class="banner-title">WELCOME TO TECHPHONE</h1>
+                <a href="product.html" class="btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="login-prompt">
+            <div class="container">
+                <h2>Đăng nhập để tiếp tục mua sắm</h2>
+                <p>Trải nghiệm mua sắm cá nhân hóa và theo dõi đơn hàng của bạn.</p>
+                <button class="login-btn" onclick="window.location.href='/Home/trangdangnhap'">Đăng nhập / Đăng ký</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addressLink = document.getElementById('delivery-address-link');
+            function updateAddress() {
+                const newAddress = prompt("Nhập địa chỉ giao hàng:");
+                if (newAddress && newAddress.trim() !== '') {
+                    addressLink.textContent = newAddress;
+                    localStorage.setItem('userDeliveryAddress', newAddress);
+                }
+            }
+            function loadAddress() {
+                const saved = localStorage.getItem('userDeliveryAddress');
+                if (saved) addressLink.textContent = saved;
+            }
+            addressLink.addEventListener('click', e => { e.preventDefault(); updateAddress(); });
+            loadAddress();
+        });
+    </script>
+</body>
+</html>
+

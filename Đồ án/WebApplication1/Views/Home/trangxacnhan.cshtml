@@ -1,0 +1,262 @@
+﻿@{
+    ViewBag.Title = "trangxacnhan";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận đơn hàng - TechPhone</title>
+    <link rel="stylesheet" href="~/Content/site.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            header h1 {
+                font-size: 22px;
+                letter-spacing: 1px;
+            }
+
+        .progress {
+            display: flex;
+            justify-content: center;
+            margin: 30px auto;
+            gap: 15px;
+        }
+
+        .step {
+            width: 130px;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+            position: relative;
+        }
+
+            .step::before {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: -65px;
+                width: 60px;
+                height: 2px;
+                background-color: #ccc;
+            }
+
+            .step:first-child::before {
+                display: none;
+            }
+
+        .active {
+            color: #0071e3;
+            font-weight: bold;
+        }
+
+        .step.active::before {
+            background-color: #0071e3;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .checkmark {
+            font-size: 60px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .info {
+            text-align: left;
+            margin-top: 20px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+            .info strong {
+                color: #000;
+            }
+
+        .summary {
+            text-align: left;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+            .summary p {
+                display: flex;
+                justify-content: space-between;
+                font-size: 16px;
+                margin: 8px 0;
+            }
+
+                .summary p.total {
+                    font-weight: 600;
+                    font-size: 18px;
+                    border-top: 1px solid #ddd;
+                    padding-top: 10px;
+                }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            margin-top: 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+        .back-home {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            background-color: #ddd;
+            border-radius: 5px;
+            width: 100%;
+            padding: 10px 25px;
+            margin-top: 25px;
+            border: none;
+        }
+
+            .back-home:hover {
+                text-decoration: underline;
+            }
+
+        footer {
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TECHPHONE</h1>
+        <nav>
+            <a href="/Home/Index" style="color:white; margin-right:20px;">Trang chủ</a>
+            <a href="/Home/Cart" style="color:white;">Giỏ hàng</a>
+        </nav>
+    </header>
+
+    <div class="progress">
+        <div class="step">Giỏ hàng</div>
+        <div class="step">Giao hàng</div>
+        <div class="step">Thanh toán</div>
+        <div class="step active">Xác nhận</div>
+    </div>
+
+    <div class="container">
+        <div class="checkmark">✔</div>
+        <h2>Đặt hàng thành công!</h2>
+        <p>Cảm ơn bạn đã mua sắm tại <strong>TechPhone</strong>.</p>
+
+        <div class="info">
+            <h3>Thông tin giao hàng</h3>
+            <p><strong>Họ tên:</strong> <span id="confirmName"></span></p>
+            <p><strong>Số điện thoại:</strong> <span id="confirmPhone"></span></p>
+            <p><strong>Địa chỉ:</strong> <span id="confirmAddress"></span></p>
+
+            <h3>Phương thức thanh toán</h3>
+            <p id="confirmPayment"></p>
+
+            <h3>Tóm tắt đơn hàng</h3>
+            <div class="summary" id="order-summary">
+                <div id="products-list"></div>
+                <p class="total"><span>Tổng cộng:</span> <span id="total-amount">0₫</span></p>
+            </div>
+        </div>
+
+        <button class="btn" onclick="window.location.href='/Home/tranghome'">Về trang chủ</button>
+        <br>
+        <button class="back-home" onclick="window.location.href='/Home/tranglichsu'">Xem lịch sử mua hàng</button>
+    </div>
+
+    <footer>
+        © 2025 TechPhone.
+    </footer>
+
+    <script>
+        window.onload = function () {
+            const shippingInfo = JSON.parse(localStorage.getItem('shippingInfo')) || {};
+            const paymentMethod = localStorage.getItem('paymentMethod');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (shippingInfo) {
+                document.getElementById('confirmName').textContent = shippingInfo.name;
+                document.getElementById('confirmPhone').textContent = shippingInfo.phone;
+                document.getElementById('confirmAddress').textContent = shippingInfo.address;
+            }
+
+            if (paymentMethod) {
+                const map = {
+                    card: 'Thẻ tín dụng / ghi nợ',
+                    bank: 'Chuyển khoản ngân hàng',
+                    cod: 'Thanh toán khi nhận hàng'
+                };
+                document.getElementById('confirmPayment').textContent = map[paymentMethod] || 'Không xác định';
+            }
+
+            const productsList = document.getElementById('products-list');
+            const totalEl = document.getElementById('total-amount');
+
+            if (cart.length === 0) {
+                productsList.innerHTML = '<p>Giỏ hàng trống!</p>';
+            } else {
+                let subtotal = 0;
+                let productsHTML = '';
+                cart.forEach(item => {
+                    const itemTotal = item.price * (item.quantity || 1);
+                    subtotal += itemTotal;
+                    productsHTML += `<p><span>${item.name} (${item.quantity || 1}x)</span> <span>${formatPrice(item.price)}</span></p>`;
+                });
+                productsList.innerHTML = productsHTML;
+
+                const total = subtotal;
+                totalEl.textContent = formatPrice(total);
+            }
+
+            function formatPrice(number) {
+                return number.toLocaleString('vi-VN') + '₫';
+            }
+
+            localStorage.removeItem('shippingInfo');
+            localStorage.removeItem('paymentMethod');
+            localStorage.removeItem('cart');
+        };
+    </script>
+</body>
+</html>
