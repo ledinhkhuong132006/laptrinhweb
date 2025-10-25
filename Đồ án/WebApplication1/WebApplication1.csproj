@@ -177,19 +177,34 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Trangsanpham.cshtml" />
     <Content Include="Views\Home\tranghome.cshtml" />
-    <Content Include="Views\Home\TrangHome1.cshtml" />
     <Content Include="Views\Home\tranggiao.cshtml" />
     <Content Include="Views\Home\trangthanhtoan.cshtml" />
     <Content Include="Views\Home\trangxacnhan.cshtml" />
     <Content Include="Views\Home\tranggiohang.cshtml" />
     <Content Include="Views\Shared\layout.cshtml" />
     <Content Include="Views\Home\trangdangnhap.cshtml" />
-    <Content Include="Views\Home\trangchu.cshtml" />
     <Content Include="Views\Home\trangsanpham1.cshtml" />
     <Content Include="Views\Home\trangsanpham2.cshtml" />
     <Content Include="Views\Home\tranglichsu.cshtml" />
+    <Content Include="Views\Home\laptop1.cshtml" />
+    <Content Include="Views\Home\laptop2.cshtml" />
+    <Content Include="Views\Home\laptop3.cshtml" />
+    <Content Include="Views\Home\laptop4.cshtml" />
+    <Content Include="Views\Home\laptop5.cshtml" />
+    <Content Include="Views\Home\phukien1.cshtml" />
+    <Content Include="Views\Home\phukien2.cshtml" />
+    <Content Include="Views\Home\phukien3.cshtml" />
+    <Content Include="Views\Home\phukien4.cshtml" />
+    <Content Include="Views\Home\phukien5.cshtml" />
+    <Content Include="Views\Home\trangchu.cshtml" />
+    <Content Include="Views\Home\trangdienthoai.cshtml" />
+    <Content Include="Views\Home\trangsanpham3.cshtml" />
+    <Content Include="Views\Home\trangsanpham4.cshtml" />
+    <Content Include="Views\Home\trangsanpham5.cshtml" />
+    <Content Include="Views\Home\tranglaptop.cshtml" />
+    <Content Include="Views\Home\trangphukien.cshtml" />
+    <Content Include="Views\Home\tranglienhe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

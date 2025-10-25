@@ -412,28 +412,28 @@
                 cartData.forEach((item, index) => {
                     const itemTotalPrice = item.price * (item.quantity || 1);
                     const cartItemHTML = `
-                                        <div class="cart-item" data-id="${index}">
-                                            <div class="cart-item-image">
-                                                <img src="${item.image}" alt="${item.name}">
-                                            </div>
-                                            <div class="cart-item-details">
-                                                <p class="product-name">${item.name}</p>
-                                                ${item.color || item.storage ? `<p class="product-options-text">Màu: ${item.color || ''}, Dung lượng: ${item.storage || ''}</p>` : ''}
-                                            </div>
-                                            <div class="cart-item-price">${formatPrice(item.price)}</div>
-                                            <div class="cart-item-quantity">
-                                                <div class="quantity-selector">
-                                                    <button class="decrease-qty" data-id="${index}">-</button>
-                                                    <input type="number" class="quantity-input" value="${item.quantity || 1}" min="1" data-id="${index}">
-                                                    <button class="increase-qty" data-id="${index}">+</button>
+                                            <div class="cart-item" data-id="${index}">
+                                                <div class="cart-item-image">
+                                                    <img src="${item.image}" alt="${item.name}">
+                                                </div>
+                                                <div class="cart-item-details">
+                                                    <p class="product-name">${item.name}</p>
+                                                    ${item.color || item.storage ? `<p class="product-options-text">Màu: ${item.color || ''}, Dung lượng: ${item.storage || ''}</p>` : ''}
+                                                </div>
+                                                <div class="cart-item-price">${formatPrice(item.price)}</div>
+                                                <div class="cart-item-quantity">
+                                                    <div class="quantity-selector">
+                                                        <button class="decrease-qty" data-id="${index}">-</button>
+                                                        <input type="number" class="quantity-input" value="${item.quantity || 1}" min="1" data-id="${index}">
+                                                        <button class="increase-qty" data-id="${index}">+</button>
+                                                    </div>
+                                                </div>
+                                                <div class="cart-item-total">${formatPrice(itemTotalPrice)}</div>
+                                                <div class="cart-item-remove">
+                                                    <button class="remove-btn" data-id="${index}"><i class="fas fa-trash-alt"></i></button>
                                                 </div>
                                             </div>
-                                            <div class="cart-item-total">${formatPrice(itemTotalPrice)}</div>
-                                            <div class="cart-item-remove">
-                                                <button class="remove-btn" data-id="${index}"><i class="fas fa-trash-alt"></i></button>
-                                            </div>
-                                        </div>
-                                    `;
+                                        `;
                     cartItemsContainer.insertAdjacentHTML('beforeend', cartItemHTML);
                 });
 

@@ -1,14 +1,19 @@
-﻿@{
-    ViewBag.Title = "trangsanpham1";
+﻿
+@{
+    ViewBag.Title = "trangsanpham5";
+}
+
+@{
+    ViewBag.Title = "trangsanpham5";
 }
 
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết sản phẩm - iPhone 15 Pro</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm - Xiaomi 15T 5G</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <style>
         * {
             margin: 0;
@@ -116,26 +121,6 @@
                 .header-nav a:hover, .header-nav a.active {
                     color: white;
                 }
-
-        .header-delivery {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            color: #ccc;
-            border-left: 1px solid #444;
-            padding-left: 20px;
-        }
-
-            .header-delivery i {
-                color: lightblue;
-            }
-
-            .header-delivery .delivery-text {
-                color: white;
-                text-decoration: underline;
-                cursor: pointer;
-            }
 
         .header-actions {
             display: flex;
@@ -309,22 +294,6 @@
             border: 1px solid #ddd;
         }
 
-        .option-btn[data-value="Blue"] .color-swatch {
-            background-color: #3B495E;
-        }
-
-        .option-btn[data-value="Natural"] .color-swatch {
-            background-color: #8A837E;
-        }
-
-        .option-btn[data-value="White"] .color-swatch {
-            background-color: #F0F0F0;
-        }
-
-        .option-btn[data-value="Black"] .color-swatch {
-            background-color: #454545;
-        }
-
         .quantity-selector {
             display: flex;
             align-items: center;
@@ -458,7 +427,7 @@
 
             .product-card:hover {
                 transform: translateY(-5px);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
             }
 
             .product-card img {
@@ -485,27 +454,29 @@
     </style>
 </head>
 <body>
-
     <header class="site-header">
         <div class="container">
             <div class="header-logo">
                 <a href="#">TechPhone</a>
             </div>
+
             <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." />
                 <button type="submit"><i class="fas fa-search"></i></button>
             </div>
+
             <nav class="header-nav">
                 <ul>
-                    <li><a href="#">Trang Chủ</a></li>
-                    <li><a href="#" class="active">Sản Phẩm</a></li>
-                    <li><a href="#">Khuyến Mãi</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
+                    <li><a href="/tranghome">Trang Chủ</a></li>
+                    <li><a href="/trangdong" class="active">Sản Phẩm</a></li>
+                    <li><a href="/trangkhuyenmai">Khuyến Mãi</a></li>
+                    <li><a href="/lienhe">Liên Hệ</a></li>
                 </ul>
             </nav>
+
             <div class="header-actions">
-                <a href="#" aria-label="Tài khoản"><i class="fas fa-user"></i></a>
-                <a href="#" aria-label="Giỏ hàng"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/trangtaikhoan" aria-label="Tài khoản"><i class="fas fa-user"></i></a>
+                <a href="/Home/tranggiohang" aria-label="Giỏ hàng"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
     </header>
@@ -516,7 +487,7 @@
                 <ul>
                     <li><a href="/Home/tranghome">Trang chủ</a></li>
                     <li><a href="/Home/trangdienthoai">Điện thoại</a></li>
-                    <li>iPhone 15 Pro</li>
+                    <li>Xiaomi 15T 5G</li>
                 </ul>
             </div>
         </section>
@@ -526,97 +497,84 @@
                 <div class="product-detail-container">
                     <div class="product-images">
                         <div class="main-image">
-                            <img id="main-product-image" src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="iPhone 15 Pro - Blue">
+                            <img id="main-product-image"
+                                 src="https://cdn.tgdd.vn/Products/Images/42/324983/xiaomi-15t-5g-thumb.jpg"
+                                 alt="Xiaomi 15T 5G" />
                         </div>
+
                         <div class="product-thumbnails" id="product-thumbnails">
-                            <img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="Thumbnail 1" data-color="Blue" class="active-color active">
-                            <img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-1-1.jpg" alt="Thumbnail 2" data-color="Blue" class="active-color">
-                            <img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-2.jpg" alt="Thumbnail 3" data-color="Blue" class="active-color">
-                            <img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-3.jpg" alt="Thumbnail 4" data-color="Blue" class="active-color">
-                            <img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-4.jpg" alt="Thumbnail 5" data-color="Blue" class="active-color">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/324983/xiaomi-15t-5g-thumb.jpg"
+                                 alt="Thumb 1" data-color="Black" class="active-color active" />
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/324983/xiaomi-15t-5g-1.jpg"
+                                 alt="Thumb 2" data-color="Black" class="active-color" />
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/324983/xiaomi-15t-5g-2.jpg"
+                                 alt="Thumb 3" data-color="White" class="active-color" />
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/324983/xiaomi-15t-5g-3.jpg"
+                                 alt="Thumb 4" data-color="Blue" class="active-color" />
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/324983/xiaomi-15t-5g-4.jpg"
+                                 alt="Thumb 5" data-color="Blue" class="active-color" />
                         </div>
                     </div>
 
                     <div class="product-info">
+                        <h1>Xiaomi 15T 512GB - Black</h1>
 
-                        <h1>iPhone 15 Pro 256GB - Titan Xanh</h1>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(125 đánh giá)</span>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(180 đánh giá)</span>
                         </div>
 
-                        <p class="product-price">28.990.000₫</p>
+                        <p class="product-price" id="base-price">15.990.000₫</p>
+
                         <p class="product-short-desc">
-                            iPhone 15 Pro. Rất bền. Rất nhẹ. Rất Pro. Chip A17 Pro mang đến hiệu năng đồ họa đột phá. Thiết kế từ titan chuẩn hàng không vũ trụ siêu bền, siêu nhẹ.
+                            Xiaomi 15T 5G — Chip Snapdragon 8 Gen 3, camera 200MP, màn hình AMOLED 144Hz, pin 5000mAh, sạc 120W.
                         </p>
 
                         <div class="product-options">
                             <div class="option-group">
                                 <h3>Màu sắc:</h3>
                                 <div class="option-buttons" id="color-options">
-                                    <button class="option-btn active" data-value="Blue"
+                                    <button class="option-btn active" data-value="Vàng Hồng"
                                             data-images='[
-                                            "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg",
-                                            "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-1-1.jpg",
-                                            "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-2.jpg",
-                                            "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-3.jpg",
-                                            "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-4.jpg"
-                                        ]'>
-                                        <span class="color-swatch"></span>Titan Xanh
+                                                "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-15t-5g-26.jpg",
+                                                "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-15t-5g-27.jpg",
+                                                "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-15t-5g-28.jpg"
+                                            ]'>
+                                        <span class="color-swatch"></span>Vàng Hồng
                                     </button>
-                                    <button class="option-btn" data-value="Natural"
+
+                                    <button class="option-btn" data-value="Đen"
                                             data-images='[
-                                            "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-pro-max_4.png",
-                                            "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-pro_5__2.jpg",
-                                            "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-pro_6__2.jpg",
-                                            "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-pro_7__2.jpg",
-                                            "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-15-pro_1__2.jpg"
-                                        ]'>
-                                        <span class="color-swatch"></span>Titan Tự nhiên
+                                                "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-15t-5g-15.jpg",
+                                                "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-15t-5g-17.jpg"
+                                            ]'>
+                                        <span class="color-swatch"></span>Đen
+
                                     </button>
-                                    <button class="option-btn" data-value="White"
-                                            data-images='[
-                                            "https://cdn.tgdd.vn/Products/Images/42/299033/iphone-15-pro-white-1-750x500.jpg",
-                                            "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/299033/iphone-15-pro-titan-trang-2-638629422025682081-750x500.jpg",
-                                            "https://cdn.tgdd.vn/Products/Images/42/299033/iphone-15-pro-white-3-750x500.jpg",
-                                            "https://cdn.tgdd.vn/Products/Images/42/299033/iphone-15-pro-white-4-750x500.jpg",
-                                           "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/299033/iphone-15-pro-titan-trang-2-638629422025682081-750x500.jpg"
-                                        ]'>
-                                        <span class="color-swatch"></span>Titan Trắng
-                                    </button>
-                                    <button class="option-btn" data-value="Black"
-                                            data-images='[
-                                            "https://cdn.tgdd.vn/Products/Images/42/299033/iphone-15-pro-black-1-750x500.jpg",
-                                            "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/299033/iphone-15-pro-titan-den-2-638629422268837146-750x500.jpg",
-                                            "https://cdn.tgdd.vn/Products/Images/42/299033/iphone-15-pro-black-3-750x500.jpg",
-                                            "https://cdn.tgdd.vn/Products/Images/42/299033/iphone-15-pro-black-4-750x500.jpg",
-                                       "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/299033/iphone-15-pro-titan-den-2-638629422268837146-750x500.jpg"
-                                        ]'>
-                                        <span class="color-swatch"></span>Titan Đen
-                                    </button>
+
+
                                 </div>
                             </div>
+
                             <div class="option-group">
                                 <h3>Dung lượng:</h3>
                                 <div class="option-buttons" id="storage-options">
-                                    <button class="option-btn" data-value="128GB">128GB</button>
-                                    <button class="option-btn active" data-value="256GB">256GB</button>
-                                    <button class="option-btn" data-value="512GB">512GB</button>
+                                    <button class="option-btn" data-value="256GB">256GB</button>
+                                    <button class="option-btn active" data-value="512GB">512GB</button>
                                     <button class="option-btn" data-value="1TB">1TB</button>
                                 </div>
                             </div>
+
                             <div class="option-group">
                                 <h3>Số lượng:</h3>
                                 <div class="quantity-selector">
                                     <button id="decrease-qty">-</button>
-                                    <input type="number" id="quantity-input" value="1" min="1">
+                                    <input type="number" id="quantity-input" value="1" min="1" />
                                     <button id="increase-qty">+</button>
                                 </div>
                             </div>
+
                             <div class="option-group">
                                 <h3>Tạm tính:</h3>
                                 <p class="product-price" id="subtotal-price" style="font-size: 28px; margin-bottom: 0;">
@@ -625,8 +583,13 @@
                         </div>
 
                         <div class="product-actions">
-                            <button class="btn-primary" onclick="addToCart()"><i class="fas fa-cart-plus"></i>Thêm vào giỏ hàng</button>
-                            <button class="btn-primary" onclick="buyNow()" style="background-color: #e53935;">Mua ngay</button>
+                            <button class="btn-primary" onclick="addToCart()">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ hàng
+                            </button>
+
+                            <button class="btn-primary" style="background-color: #e53935;" onclick="buyNow()">
+                                Mua ngay
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -642,59 +605,25 @@
                 </div>
 
                 <div class="tab-content active" id="description">
-                    <h3>Thiết kế Titan đột phá</h3>
-                    <p>iPhone 15 Pro là iPhone đầu tiên có thiết kế từ titan chuẩn hàng không vũ trụ, sử dụng hợp kim cao cấp tương tự như trong tàu vũ trụ cho các sứ mệnh Sao Hỏa. Titan là một trong những kim loại có tỷ lệ độ bền trên trọng lượng tốt nhất, tạo nên các phiên bản Pro nhẹ nhất từ trước đến nay của chúng tôi. Bạn sẽ cảm nhận được sự khác biệt ngay khi cầm trên tay.</p>
-                    <h3>Chip A17 Pro - Quái vật cho game thủ</h3>
-                    <p>Đây rồi. Lần tái thiết kế lớn nhất trong lịch sử GPU của Apple. A17 Pro là một đẳng cấp chip iPhone hoàn toàn mới, mang lại hiệu năng đồ họa tốt nhất của chúng tôi, một cách đáng kể. Các game di động sẽ trông và mang lại cảm giác vô cùng sống động, với môi trường cực kỳ chi tiết và các nhân vật chân thực hơn. Với tốc độ và hiệu quả năng lượng dẫn đầu ngành, A17 Pro xử lý cực nhanh.</p>
+                    <h3>Màn hình & Hiệu năng</h3>
+                    <p>Màn hình AMOLED 6.67", 144Hz; chip Snapdragon 8 Gen 3; RAM LPDDR5x; tối ưu cho game và đa nhiệm.</p>
                 </div>
 
                 <div class="tab-content" id="specs">
                     <h3>Thông số kỹ thuật chi tiết</h3>
                     <table class="specs-table">
                         <tbody>
-                            <tr>
-                                <td>Màn hình</td>
-                                <td>OLED, 6.1", Super Retina XDR</td>
-                            </tr>
-                            <tr>
-                                <td>Hệ điều hành</td>
-                                <td>iOS 17</td>
-                            </tr>
-                            <tr>
-                                <td>Camera sau</td>
-                                <td>Chính 48 MP & Phụ 12 MP, 12 MP</td>
-                            </tr>
-                            <tr>
-                                <td>Camera trước</td>
-                                <td>12 MP</td>
-                            </tr>
-                            <tr>
-                                <td>Chip</td>
-                                <td>Apple A17 Pro 6 nhân</td>
-                            </tr>
-                            <tr>
-                                <td>RAM</td>
-                                <td>8 GB</td>
-                            </tr>
-                            <tr>
-                                <td>Dung lượng lưu trữ</td>
-                                <td>256 GB</td>
-                            </tr>
-                            <tr>
-                                <td>SIM</td>
-                                <td>1 Nano SIM & 1 eSIM, Hỗ trợ 5G</td>
-                            </tr>
-                            <tr>
-                                <td>Pin, Sạc</td>
-                                <td>3274 mAh, 20 W</td>
-                            </tr>
+                            <tr><td>Màn hình</td><td>AMOLED, 6.67", 144Hz</td></tr>
+                            <tr><td>Hệ điều hành</td><td>Android 14 (MIUI)</td></tr>
+                            <tr><td>Camera sau</td><td>Chính 200 MP + góc rộng + tele</td></tr>
+                            <tr><td>Pin, Sạc</td><td>5000 mAh, sạc nhanh 120W</td></tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div class="tab-content" id="reviews">
-                    <h3>Chưa có đánh giá nào cho sản phẩm này.</h3>
-                    <p>Hãy là người đầu tiên đánh giá sản phẩm iPhone 15 Pro!</p>
+                    <h3>Đánh giá</h3>
+                    <p>Người dùng khen camera độ phân giải cao và màn hình mượt; một số phàn nàn về nhiệt khi sạc nhanh ở điều kiện tải cao.</p>
                 </div>
             </div>
         </section>
@@ -703,6 +632,22 @@
             <div class="container">
                 <h2 class="section-title">Sản phẩm tương tự</h2>
                 <div class="product-grid">
+                    <a href="/Home/trangsanpham1" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="iPhone 15 Pro" />
+                            <h3 class="product-name">iPhone 15 Pro</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(125 đánh giá)</span>
+                            </div>
+                            <p class="product-price">28.990.000₫</p>
+                        </div>
+                    </a>
+
                     <a href="/Home/trangsanpham2" class="product-card-link">
                         <div class="product-card">
                             <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-samsung-galaxy-s25-ultra_2__4.png" alt="Phone Model Y">
@@ -750,26 +695,9 @@
                             <p class="product-price">19.990.000₫</p>
                         </div>
                     </a>
-
-                    <a href="/Home/trangsanpham5" class="product-card-link">
-                        <div class="product-card">
-                            <img src="https://cdn.tgdd.vn/Products/Images/42/344644/xiaomi-15t-rose-gold-thumb-600x600.jpg" alt="Phone Model A">
-                            <h3 class="product-name">Xiaomi 15T 5G</h3>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>(110 đánh giá)</span>
-                            </div>
-                            <p class="product-price">22.990.000₫</p>
-                        </div>
-                    </a>
                 </div>
             </div>
         </section>
-
     </main>
 
     <script>
@@ -822,16 +750,17 @@
                                 const imageUrls = JSON.parse(this.dataset.images);
                                 renderThumbnails(imageUrls, selectedColor);
 
-                                document.querySelector('.product-info h1').textContent = `iPhone 15 Pro 256GB - Titan ${selectedColor === 'Blue' ? 'Xanh' : selectedColor === 'Natural' ? 'Tự nhiên' : selectedColor === 'White' ? 'Trắng' : 'Đen'}`;
+                                document.querySelector('.product-info h1').textContent = `Xiaomi 15T 512GB - ${selectedColor}`;
                             }
                         });
                     });
                 }
             }
+
             handleOptionSelection('color-options');
             handleOptionSelection('storage-options');
 
-            const priceElement = document.querySelector('.product-info .product-price');
+            const priceElement = document.getElementById('base-price');
             const qtyInput = document.getElementById('quantity-input');
             const decreaseBtn = document.getElementById('decrease-qty');
             const increaseBtn = document.getElementById('increase-qty');
@@ -850,13 +779,13 @@
             function updateSubtotal() {
                 const basePriceString = priceElement.textContent;
                 const basePrice = parsePrice(basePriceString);
-                const quantity = parseInt(qtyInput.value);
+                const quantity = parseInt(qtyInput.value) || 1;
                 const subtotal = basePrice * quantity;
                 subtotalElement.textContent = formatPrice(subtotal);
             }
 
             decreaseBtn.addEventListener('click', () => {
-                let currentValue = parseInt(qtyInput.value);
+                let currentValue = parseInt(qtyInput.value) || 1;
                 if (currentValue > 1) {
                     qtyInput.value = currentValue - 1;
                     updateSubtotal();
@@ -864,7 +793,7 @@
             });
 
             increaseBtn.addEventListener('click', () => {
-                let currentValue = parseInt(qtyInput.value);
+                let currentValue = parseInt(qtyInput.value) || 1;
                 qtyInput.value = currentValue + 1;
                 updateSubtotal();
             });
@@ -895,37 +824,29 @@
             });
 
             updateSubtotal();
+
             const initialColorButton = document.querySelector('#color-options .option-btn.active');
             if (initialColorButton) {
                 const initialImages = JSON.parse(initialColorButton.dataset.images);
                 renderThumbnails(initialImages, initialColorButton.dataset.value);
             }
         });
-    </script>
-    <script>
-        window.onload = function () {
-            const productData = JSON.parse(localStorage.getItem('selectedProduct'));
-            if (productData) {
-                document.getElementById('productName').textContent = productData.name;
-                document.getElementById('productPrice').textContent = productData.price;
-                document.getElementById('productImage').src = productData.image;
-            }
-        };
-    </script>
 
-
-    <script>
         function addToCart() {
             const productName = document.querySelector('.product-info h1').textContent;
-            const basePriceString = document.querySelector('.product-price').textContent;
-            const basePrice = parsePrice(basePriceString);
-            const quantity = parseInt(document.getElementById('quantity-input').value);
+            const basePriceString = document.querySelector('#base-price').textContent;
+            const basePrice = (function (priceString) {
+                if (!priceString) return 0;
+                const numberString = priceString.replace(/₫/g, '').replace(/\./g, '');
+                return parseInt(numberString, 10);
+            })(basePriceString);
+            const quantity = parseInt(document.getElementById('quantity-input').value) || 1;
             const selectedColorButton = document.querySelector('#color-options .option-btn.active');
             const selectedStorageButton = document.querySelector('#storage-options .option-btn.active');
             const selectedImage = document.getElementById('main-product-image').src;
 
-            const colorValue = selectedColorButton ? selectedColorButton.dataset.value : 'Blue';
-            const storageValue = selectedStorageButton ? selectedStorageButton.dataset.value : '256GB';
+            const colorValue = selectedColorButton ? selectedColorButton.dataset.value : 'Black';
+            const storageValue = selectedStorageButton ? selectedStorageButton.dataset.value : '512GB';
 
             const product = {
                 name: productName,
@@ -933,48 +854,75 @@
                 image: selectedImage,
                 color: colorValue,
                 storage: storageValue,
-                quantity: quantity
+                quantity: quantity,
+                addedAt: new Date().toISOString()
             };
 
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
             cart.push(product);
             localStorage.setItem("cart", JSON.stringify(cart));
-
+            alert("Đã thêm vào giỏ hàng!");
             window.location.href = "/Home/tranggiohang";
         }
 
         function buyNow() {
             const productName = document.querySelector('.product-info h1').textContent;
-            const basePriceString = document.querySelector('.product-price').textContent;
-            const basePrice = parsePrice(basePriceString);
-            const quantity = parseInt(document.getElementById('quantity-input').value);
+            const basePriceString = document.querySelector('#base-price').textContent;
+            const basePrice = (function (priceString) {
+                if (!priceString) return 0;
+                const numberString = priceString.replace(/₫/g, '').replace(/\./g, '');
+                return parseInt(numberString, 10);
+            })(basePriceString);
+            const quantity = parseInt(document.getElementById('quantity-input').value) || 1;
             const selectedColorButton = document.querySelector('#color-options .option-btn.active');
             const selectedStorageButton = document.querySelector('#storage-options .option-btn.active');
             const selectedImage = document.getElementById('main-product-image').src;
 
-            const colorValue = selectedColorButton ? selectedColorButton.dataset.value : 'Blue';
-            const storageValue = selectedStorageButton ? selectedStorageButton.dataset.value : '256GB';
+            const colorValue = selectedColorButton ? selectedColorButton.dataset.value : 'Black';
+            const storageValue = selectedStorageButton ? selectedStorageButton.dataset.value : '512GB';
 
-            const product = {
+            const order = {
                 name: productName,
                 price: basePrice,
                 image: selectedImage,
                 color: colorValue,
                 storage: storageValue,
-                quantity: quantity
+                quantity: quantity,
+                boughtAt: new Date().toISOString()
             };
 
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
-            cart.push(product);
-            localStorage.setItem("cart", JSON.stringify(cart));
-
+            let history = JSON.parse(localStorage.getItem("purchaseHistory")) || [];
+            history.push(order);
+            localStorage.setItem("purchaseHistory", JSON.stringify(history));
             window.location.href = "/Home/tranggiao";
         }
-        function parsePrice(priceString) {
-            if (!priceString) return 0;
-            const numberString = priceString.replace(/₫/g, '').replace(/\./g, '');
-            return parseInt(numberString, 10);
+    </script>
+    <script>
+        function goToProduct(name, price, image) {
+            const productData = { name, price, image };
+            localStorage.setItem('selectProduct', JSON.stringify(productData));
+            window.location.href = "/Home/trangsanpham1";
+        }
+
+        function goToProduct2(name, price, image) {
+            const productData = { name, price, image };
+            localStorage.setItem('selectProduct', JSON.stringify(productData));
+            window.location.href = "/Home/trangsanpham2";
+        }
+
+        function goToProduct3(name, price, image) {
+            const productData = { name, price, image };
+            localStorage.setItem('selectProduct', JSON.stringify(productData));
+            window.location.href = "/Home/trangsanpham3";
+        }
+
+        function goToProduct4(name, price, image) {
+            const productData = { name, price, image };
+            localStorage.setItem('selectProduct', JSON.stringify(productData));
+            window.location.href = "/Home/trangsanpham4";
         }
     </script>
 </body>
 </html>
+
+

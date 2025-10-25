@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "Views\\ViewPage1.cshtml",
               "ToolTip": "C:\\nop bai git\\LeDinhKhuong\\LeDinhKhuong_KTFE\\Views\\ViewPage1.cshtml",
               "RelativeToolTip": "Views\\ViewPage1.cshtml",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAUwPsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-07T00:24:41.282Z"
+              "WhenOpened": "2025-10-07T00:24:41.282Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -44,7 +45,7 @@
               "RelativeDocumentMoniker": "Views\\Home\\ThuchanhFE.cshtml",
               "ToolTip": "C:\\nop bai git\\LeDinhKhuong\\LeDinhKhuong_KTFE\\Views\\Home\\ThuchanhFE.cshtml",
               "RelativeToolTip": "Views\\Home\\ThuchanhFE.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAD8AAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcBAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-07T00:24:05.513Z",
               "EditorCaption": ""
@@ -59,7 +60,8 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T00:23:30.795Z"
+              "WhenOpened": "2025-10-07T00:23:30.795Z",
+              "EditorCaption": ""
             }
           ]
         }

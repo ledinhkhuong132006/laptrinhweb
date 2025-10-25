@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Lịch sử mua hàng";
 }
 
@@ -263,7 +262,7 @@
             </div>
             <nav class="header-nav">
                 <ul>
-                    <li><a href="/Home/Index">Trang Chủ</a></li>
+                    <li><a href="/Home/tranghome">Trang Chủ</a></li>
                     <li><a href="#">Sản Phẩm</a></li>
                     <li><a href="#">Khuyến Mãi</a></li>
                     <li><a href="#">Liên Hệ</a></li>
@@ -280,7 +279,7 @@
         <section class="breadcrumbs">
             <div class="container">
                 <ul>
-                    <li><a href="/Home/Index">Trang chủ</a></li>
+                    <li><a href="/Home/tranghome">Trang chủ</a></li>
                     <li><a href="#">Tài khoản</a></li>
                     <li>Lịch sử mua hàng</li>
                 </ul>
@@ -347,18 +346,18 @@
                 });
 
                 const orderHTML = `
-                        <div class="order-item">
-                            <div class="order-header">
-                                <span class="order-id">Đơn hàng ${order.id}</span>
-                                <span class="order-status ${statusClass}">${statusText}</span>
+                            <div class="order-item">
+                                <div class="order-header">
+                                    <span class="order-id">Đơn hàng ${order.id}</span>
+                                    <span class="order-status ${statusClass}">${statusText}</span>
+                                </div>
+                                <div class="order-details">
+                                    <p><strong>Ngày đặt:</strong> ${order.date}</p>
+                                    <div class="order-items">${itemsHTML}</div>
+                                    <p class="order-total">Tổng: ${order.total.toLocaleString('vi-VN')}₫</p>
+                                </div>
                             </div>
-                            <div class="order-details">
-                                <p><strong>Ngày đặt:</strong> ${order.date}</p>
-                                <div class="order-items">${itemsHTML}</div>
-                                <p class="order-total">Tổng: ${order.total.toLocaleString('vi-VN')}₫</p>
-                            </div>
-                        </div>
-                    `;
+                        `;
                 ordersContainer.insertAdjacentHTML('beforeend', orderHTML);
             });
         });

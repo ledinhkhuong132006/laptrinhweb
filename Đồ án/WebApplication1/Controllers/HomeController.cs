@@ -38,6 +38,10 @@ namespace tranggiaohang.Controllers
         {
             return View();
         }
+        public ActionResult trangdienthoai()
+        {
+            return View();
+        }
         public ActionResult trangsanpham1()
         {
             return View();
@@ -46,6 +50,19 @@ namespace tranggiaohang.Controllers
         {
             return View();
         }
+        public ActionResult trangsanpham3()
+        {
+            return View();
+        }
+        public ActionResult trangsanpham4()
+        {
+            return View();
+        }
+        public ActionResult trangsanpham5()
+        {
+            return View();
+        }
+        
         public ActionResult tranggiohang()
         {
             return View();
@@ -66,5 +83,59 @@ namespace tranggiaohang.Controllers
         {
             return View();
         }
+       
+        public ActionResult tranglaptop()
+        {
+            return View();
+        }
+        public ActionResult laptop1()
+        {
+            return View();
+        }
+        public ActionResult laptop2()
+        {
+            return View();
+        }
+        public ActionResult laptop3()
+        {
+            return View();
+        }
+        public ActionResult laptop4()
+        {
+            return View();
+        }
+        public ActionResult laptop5()
+        {
+            return View();
+        }
+        public ActionResult trangphukien()
+        {
+            return View();
+        }
+        public ActionResult phukien1()
+        {
+            return View();
+        }
+        public ActionResult phukien2()
+        {
+            return View();
+        }
+        public ActionResult phukien3()
+        {
+            return View();
+        }
+        public ActionResult phukien4()
+        {
+            return View();
+        }
+        public ActionResult phukien5()
+        {
+            return View();
+        }
+        public ActionResult tranglienhe()
+        {
+            return View();
+        }
     }
+
 }

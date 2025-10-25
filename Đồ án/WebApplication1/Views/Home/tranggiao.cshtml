@@ -16,6 +16,21 @@
             margin: 0;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
         header {
             background-color: #000;
             color: white;
@@ -30,43 +45,52 @@
                 letter-spacing: 1px;
             }
 
-        .progress {
+        .header-logo a {
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        .header-nav ul {
             display: flex;
-            justify-content: center;
-            margin: 30px auto;
-            gap: 15px;
+            gap: 35px;
         }
 
-        .step {
-            width: 130px;
-            text-align: center;
+        .header-nav a {
             font-size: 14px;
-            color: #999;
-            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: lightgray;
+            transition: color 0.3s ease;
         }
 
-            .step::before {
-                content: "";
-                position: absolute;
-                top: 8px;
-                left: -65px;
-                width: 60px;
-                height: 2px;
-                background-color: #ccc;
+            .header-nav a:hover {
+                color: white;
             }
 
-            .step:first-child::before {
-                display: none;
+        .progress {
+            padding: 20px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+            .progress ul {
+                display: flex;
+                gap: 10px;
+                font-size: 14px;
             }
 
-        .active {
-            color: #0071e3;
-            font-weight: bold;
-        }
+            .progress a {
+                color: lightblue;
+            }
 
-        .step.active::before {
-            background-color: #0071e3;
-        }
+            .progress li:not(:last-child)::after {
+                content: '/';
+                margin-left: 10px;
+                color: #999;
+            }
 
         .container {
             width: 60%;
@@ -128,47 +152,53 @@
 </head>
 <body>
     <header>
-        <h1>TECHPHONE</h1>
-        <nav>
-            <a href="/Home/Index" style="color:white; margin-right:20px;">Trang chủ</a>
-            <a href="/Home/Cart" style="color:white;">Giỏ hàng</a>
+        <div class="header-logo">
+            <a href="#">TechPhone</a>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+                <li><a href="/Home/tranghome">Trang chủ</a></li>
+                <li><a href="/Home/tranggiohang">Giỏ hàng</a></li>
+            </ul>
         </nav>
     </header>
 
-    <div class="progress">
-        <div class="step">Giỏ hàng</div>
-        <div class="step active">Giao hàng</div>
-        <div class="step">Thanh toán</div>
-        <div class="step">Xác nhận</div>
-    </div>
+    <main>
+        <section class="progress">
+            <ul>
+                <li><a href="/Home/tranggiohang">Giỏ hàng</a></li>
+                <li>Thông tin</li>
+            </ul>
+        </section>
 
-    <div class="container">
-        <h2>Thông tin giao hàng</h2>
+        <div class="container">
+            <h2>Thông tin giao hàng</h2>
 
-        <form id="shippingForm">
-            <label for="fullname">Họ và tên người nhận</label>
-            <input type="text" id="fullname" name="fullname" required placeholder="Nguyễn Văn A">
+            <form id="shippingForm">
+                <label for="fullname">Họ và tên người nhận</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Nguyễn Văn A">
 
-            <label for="phone">Số điện thoại</label>
-            <input type="tel" id="phone" name="phone" required placeholder="0123 456 789">
+                <label for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" name="phone" required placeholder="0123 456 789">
 
-            <label for="address">Địa chỉ giao hàng</label>
-            <textarea id="address" name="address" rows="3" required placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"></textarea>
+                <label for="address">Địa chỉ giao hàng</label>
+                <textarea id="address" name="address" rows="3" required placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"></textarea>
 
-            <label for="note">Ghi chú (nếu có)</label>
-            <textarea id="note" name="note" rows="2" placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi đến..."></textarea>
+                <label for="note">Ghi chú (nếu có)</label>
+                <textarea id="note" name="note" rows="2" placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi đến..."></textarea>
 
-            <label for="method">Phương thức giao hàng</label>
-            <select id="method" name="method">
-                <option>Giao hàng tiêu chuẩn (2-4 ngày)</option>
-                <option>Giao nhanh (trong 24h)</option>
-                <option>Nhận tại cửa hàng</option>
-            </select>
+                <label for="method">Phương thức giao hàng</label>
+                <select id="method" name="method">
+                    <option>Giao hàng tiêu chuẩn (2-4 ngày)</option>
+                    <option>Giao nhanh (trong 24h)</option>
+                    <option>Nhận tại cửa hàng</option>
+                </select>
 
-            <button type="button" class="btn" onclick="nextStep()">Tiếp tục thanh toán</button>
-        </form>
-    </div>
-
+                <button type="button" class="btn" onclick="nextStep()">Tiếp tục thanh toán</button>
+            </form>
+        </div>
+    </main>
     <footer>
         © 2025 TechPhone.
     </footer>

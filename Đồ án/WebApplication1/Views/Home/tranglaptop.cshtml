@@ -1,0 +1,382 @@
+﻿@{
+    ViewBag.Title = "tranglaptop";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPhone - Laptop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: gray;
+            color: dimgray;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- CSS CHO HEADER (ĐÃ ĐƯỢC ĐỒNG BỘ) --- */
+        .site-header {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-logo a {
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .header-search {
+            display: flex;
+            border: 1px solid #555;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .header-search input {
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            outline: none;
+            width: 300px;
+            color: #333;
+        }
+
+        .header-search button {
+            background-color: lightblue;
+            border: none;
+            color: white;
+            padding: 0 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .header-nav ul {
+            display: flex;
+            gap: 35px;
+        }
+
+        .header-nav a {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: lightgray;
+            transition: color 0.3s ease;
+        }
+
+        .header-nav a:hover, .header-nav a.active {
+            color: white;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 20px;
+        }
+
+        .header-actions a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .header-actions a:hover {
+            color: cornflowerblue;
+        }
+
+        .header-delivery {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #ccc;
+            border-left: 1px solid #444;
+            padding-left: 20px;
+        }
+
+        .header-delivery i {
+            color: cornflowerblue;
+        }
+
+        .header-delivery .delivery-text {
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        /* --- CSS RIÊNG CỦA TRANG LAPTOP --- */
+        .breadcrumbs {
+            padding: 20px 0;
+            background-color: white;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        .breadcrumbs ul {
+            display: flex;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .breadcrumbs a {
+            color: cornflowerblue;
+        }
+        
+        .breadcrumbs li {
+            color: #333;
+        }
+
+        .breadcrumbs li:not(:last-child)::after {
+            content: '/';
+            margin-left: 10px;
+            color: #999;
+        }
+
+        .featured-products {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: deepskyblue;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 200px; /* Thêm chiều cao cố định cho ảnh laptop */
+            object-fit: contain; /* Đảm bảo ảnh không bị méo */
+            margin-bottom: 15px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-rating {
+            color: gold;
+            margin-bottom: 10px;
+        }
+        
+        .product-rating span {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-logo"><a href="/Home/tranghome">TechPhone</a></div>
+
+            <div class="header-search">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="/Home/tranghome">Trang Chủ</a></li>
+                    <li><a href="/Home/tranglaptop" class="active">Sản Phẩm</a></li>
+                    <li><a href="#">Khuyến Mãi</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+
+                <div class="header-delivery">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span>Giao đến:</span><br>
+                        <a href="#" id="delivery-address-link" class="delivery-text" title="Nhấn để thay đổi địa chỉ">Nhập địa chỉ</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
+                <a href="/Home/tranggiohang" aria-label="Giỏ hàng"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="/Home/tranghome">Trang chủ</a></li>
+                    <li>Laptop</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Laptop Bán Chạy</h2>
+                <div class="product-grid">
+                    <a href="/Home/laptop1" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://lh3.googleusercontent.com/wcF4W13xKVMSHXLagZ8D-34laYZaWHmmr9S83m_RtA9CVKN2V5P-szY2ZHkYSrhstFOInTfGhr_CkZtctxmbiz73X3fJnSs9=w500-rw" alt="Laptop Acer Nitro Lite">
+                            <h3 class="product-name">Laptop Acer Nitro Lite 16 NL16-71G-56WQ</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(125 đánh giá)</span>
+                            </div>
+                            <p class="product-price">21.390.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/laptop2" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://lh3.googleusercontent.com/Q3fiZCOPKgXIzp88WuGdceuyj7BCEMy5ww01D0jKwvOANQsK7KGmbXfqFY3mW6qHoAMCw_tKWixbq_P5C4JLlanYxGh1rWbT=w500-rw" alt="Laptop Acer Aspire 7">
+                            <h3 class="product-name">Laptop Acer Aspire 7 A715-59G-73LB</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(190 đánh giá)</span>
+                            </div>
+                            <p class="product-price">18.490.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/laptop3" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://lh3.googleusercontent.com/zGINdaTDd4Jfd_kckUggS59oAQEqw1RmG-WjV4e9YSbQdCMmrUk-lYkR0TRCaZ1eoWyeENdIiUgtMHP95YaDzHv0EKQRgVWefA=w500-rw" alt="Laptop Acer Aspire Go 14">
+                            <h3 class="product-name">Laptop Acer Aspire Go 14 AI AG14-71M-57WR</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                <span>(210 đánh giá)</span>
+                            </div>
+                            <p class="product-price">15.990.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/laptop4" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://lh3.googleusercontent.com/9KrMwDr98CZh8qGPpr5LBNtNO-aD-K6BL17YHfjdBmdKjyIgWTovt6Prki9bQIUO-fqzGqm36VMWQ8H_JVRMsYCFZAUc1W8T=w500-rw" alt="Laptop Acer Aspire 5 Gaming">
+                            <h3 class="product-name">Laptop Acer Aspire 5 Gaming A515-58GM-51LB</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(310 đánh giá)</span>
+                            </div>
+                            <p class="product-price">17.290.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/laptop5" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://lh3.googleusercontent.com/h2mY-jDHpB-U2pTPD-5HjNO5-qTpiRKe4l0QtbphhmBZQFr5OuU55h5mtVgt2ZFPFD1coh4Hhz6xFY3mVRGtI5U_s5jKfklzug=w500-rw" alt="Laptop Acer Nitro V">
+                            <h3 class="product-name">Laptop Acer Nitro V ANV15-51-55CA</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(410 đánh giá)</span>
+                            </div>
+                            <p class="product-price">20.490.000₫</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addressLink = document.getElementById('delivery-address-link');
+            function updateAddress() {
+                const newAddress = prompt("Nhập địa chỉ giao hàng:");
+                if (newAddress && newAddress.trim() !== '') {
+                    addressLink.textContent = newAddress;
+                    localStorage.setItem('userDeliveryAddress', newAddress);
+                }
+            }
+            function loadAddress() {
+                const saved = localStorage.getItem('userDeliveryAddress');
+                if (saved) addressLink.textContent = saved;
+            }
+            addressLink.addEventListener('click', e => { e.preventDefault(); updateAddress(); });
+            loadAddress();
+        });
+    </script>
+</body>
+</html>
