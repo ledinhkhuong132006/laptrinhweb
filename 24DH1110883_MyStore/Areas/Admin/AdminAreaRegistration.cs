@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace _24DH1110883_MyStore.Areas.Admin
+namespace _24DH1110883_MyStore.Areas.Admin.Controllers
 {
     public class AdminAreaRegistration : AreaRegistration 
     {
@@ -19,7 +19,7 @@ namespace _24DH1110883_MyStore.Areas.Admin
                 "Admin/{controller}/{action}/{id}",
                 // Thêm controller = "Home" vào dòng dưới đây
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                new[] { "_24DH110883_MyStore.Areas.Admin.Controllers" }
+                new[] { "_24DH1110883_MyStore.Areas.Admin.Controllers" }
             );
         }
     }

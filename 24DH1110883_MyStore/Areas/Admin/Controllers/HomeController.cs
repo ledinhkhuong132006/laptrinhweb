@@ -13,5 +13,9 @@ namespace _24DH110883_MyStore.Areas.Admin.Controllers
         {
             return View();
         }
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
