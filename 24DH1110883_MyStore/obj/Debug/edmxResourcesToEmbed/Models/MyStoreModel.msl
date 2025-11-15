@@ -47,10 +47,10 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="MyStoreModel.Product">
         <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-          <ScalarProperty Name="ProductDecription" ColumnName="ProductDecription" />
           <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
           <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
         </MappingFragment>

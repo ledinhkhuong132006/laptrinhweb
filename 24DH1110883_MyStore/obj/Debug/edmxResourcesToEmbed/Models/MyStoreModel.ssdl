@@ -46,7 +46,7 @@
     <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CategoryID" Type="int" Nullable="false" />
     <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ProductDecription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProductDescription" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="ProductImage" Type="nvarchar(max)" />
   </EntityType>

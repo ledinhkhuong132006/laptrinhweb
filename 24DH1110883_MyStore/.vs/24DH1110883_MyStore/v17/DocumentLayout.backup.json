@@ -89,7 +89,8 @@
               "RelativeToolTip": "Views\\Web.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-11-11T12:45:01.871Z"
+              "WhenOpened": "2025-11-11T12:45:01.871Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
