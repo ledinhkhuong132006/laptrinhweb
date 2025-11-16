@@ -164,3 +164,7 @@ C:\nop bai git\24DH1110883_MyStore\obj\Debug\24DH1110883_MyStore.csproj.CoreComp
 C:\nop bai git\24DH1110883_MyStore\obj\Debug\24DH1110.D990329E.Up2Date
 C:\nop bai git\24DH1110883_MyStore\obj\Debug\_24DH1110883_MyStore.dll
 C:\nop bai git\24DH1110883_MyStore\obj\Debug\_24DH1110883_MyStore.pdb
+C:\nop bai git\24DH1110883_MyStore\bin\PagedList.dll
+C:\nop bai git\24DH1110883_MyStore\bin\PagedList.Mvc.dll
+C:\nop bai git\24DH1110883_MyStore\bin\PagedList.xml
+C:\nop bai git\24DH1110883_MyStore\bin\PagedList.Mvc.xml
