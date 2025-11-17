@@ -179,6 +179,8 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>MyStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\HomeProductVM.cs" />
+    <Compile Include="Models\ViewModel\ProductDetailsVM.cs" />
     <Compile Include="Models\ViewModel\ProductSearchVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -244,6 +246,17 @@
     <Content Include="Areas\Admin\Views\Products\PVCreateEditProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Products\PVProdlnfor.cshtml" />
     <Content Include="Areas\Admin\Views\Products\PVListProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Edit.cshtml" />
+    <Content Include="Areas\Index\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Home\_PVFeatureProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\_PVNewProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Customer\CustomerHome.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\ProductDetails.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\_PVRelatedProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\_PVTopProduct.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -274,6 +287,10 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Default\" />
+    <Folder Include="Areas\Index\Controllers\" />
+    <Folder Include="Areas\Index\Data\" />
+    <Folder Include="Areas\Index\Views\Shared\" />
+    <Folder Include="Views\Index\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
