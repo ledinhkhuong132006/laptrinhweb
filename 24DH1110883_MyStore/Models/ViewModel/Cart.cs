@@ -11,6 +11,10 @@ namespace _24DH1110883_MyStore.Models.ViewModel
 
         public IEnumerable<CartItem> Items => items;
 
+        // Group cart items by Category for Index2.cshtml
+        public IEnumerable<IGrouping<string, CartItem>> GroupedItems => items
+            .GroupBy(i => string.IsNullOrWhiteSpace(i.Category) ? "Khác" : i.Category);
+
         // Paging and related products (used by CartController)
         public int PageSize { get; set; } = 10;
         public IPagedList<_24DH1110883_MyStore.Models.Product> SimilarProducts { get; set; }

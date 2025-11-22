@@ -22,7 +22,7 @@ namespace _24DH1110883_MyStore.Controllers
         }
 
         // Hiển thị giỏ hàng đã gom nhóm sản phẩm theo danh mục
-        public ActionResult Index2(int? page)
+        public ActionResult Index(int? page)
         {
             var cart = GetCartService().GetCart();
             var products = db.Products.ToList();

@@ -6,7 +6,7 @@
         <h3>Sản phẩm mới</h3>
     </div>
 
-    @if (Model?.NewProducts != null && Model.NewProducts.Any())
+    @if (Model.NewProducts != null && Model.NewProducts.Any())
     {
         <div class="row">
             @foreach (var product in Model.NewProducts)

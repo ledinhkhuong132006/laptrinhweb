@@ -23,54 +23,48 @@ namespace _24DH1110883_MyStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Kiểm tra xem tên đăng nhập đã tồn tại chưa
-                var existingUser = db.Users.SingleOrDefault(u => u.Username == model.Username);
+                // 1. Kiểm tra Username trong bảng Customer (thay vì Users)
+                var existingUser = db.Customers.SingleOrDefault(u => u.Username == model.Username);
                 if (existingUser != null)
                 {
                     ModelState.AddModelError("Username", "Tên đăng nhập này đã tồn tại!");
                     return View(model);
                 }
 
-                // Tạo bản ghi thông tin tài khoản trong bảng User
-                var user = new User
-                {
-                    Username = model.Username,
-                    Password = model.Password, // Lưu ý: nên mã hóa mật khẩu khi đưa vào production
-                    UserRole = "Customer"
-                };
-                db.Users.Add(user);
-
-                // Tạo bản ghi thông tin khách hàng trong bảng Customer
+                // 2. Tạo bản ghi Customer mới (bao gồm cả User và Info)
+                // KHÔNG tạo var user = new User nữa
                 var customer = new Customer
                 {
+                    // Thông tin đăng nhập
+                    Username = model.Username,
+                    Password = model.Password, // Lưu ý mã hóa nếu cần
+                    UserRole = "Customer",
+
+                    // Thông tin cá nhân
                     CustomerName = model.CustomerName,
                     CustomerEmail = model.CustomerEmail,
                     CustomerPhone = model.CustomerPhone,
-                    CustomerAddress = model.CustomerAddress,
-                    Username = model.Username
+                    CustomerAddress = model.CustomerAddress
                 };
+
+                // 3. Chỉ thêm vào bảng Customers
                 db.Customers.Add(customer);
 
-                // Lưu thông tin vào CSDL
+                // 4. Lưu database
                 db.SaveChanges();
 
-                // Tự động đăng nhập sau khi đăng ký (tuỳ chọn)
-                FormsAuthentication.SetAuthCookie(user.Username, false);
-                Session["Username"] = user.Username;
-                Session["UserRole"] = user.UserRole;
-
+                // Tự động đăng nhập (dùng Username từ customer vừa tạo)
+                FormsAuthentication.SetAuthCookie(customer.Username, false);
                 return RedirectToAction("Index", "Home");
             }
 
             return View(model);
         }
-
         // GET: Account/Login
         public ActionResult Login()
         {
             return View();
         }
-
         // POST: Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -78,19 +72,22 @@ namespace _24DH1110883_MyStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Kiểm tra tên đăng nhập, mật khẩu và quyền Customer
-                var user = db.Users.SingleOrDefault(u =>
+                // Tìm trong bảng Customers
+                var user = db.Customers.SingleOrDefault(u =>
                     u.Username == model.Username &&
                     u.Password == model.Password &&
                     u.UserRole == "Customer");
 
                 if (user != null)
                 {
-                    // Lưu trạng thái đăng nhập vào session và cookie xác thực
+                    // Lưu session
                     Session["Username"] = user.Username;
                     Session["UserRole"] = user.UserRole;
-                    FormsAuthentication.SetAuthCookie(user.Username, false);
 
+                    // Lưu cả CustomerID để sau này dùng đặt hàng cho tiện
+                    Session["CustomerID"] = user.CustomerID;
+
+                    FormsAuthentication.SetAuthCookie(user.Username, false);
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -98,6 +95,13 @@ namespace _24DH1110883_MyStore.Controllers
             }
 
             return View(model);
+        }
+        // GET: Account/Logout
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
 
         protected override void Dispose(bool disposing)
