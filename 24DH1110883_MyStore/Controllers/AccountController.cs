@@ -32,7 +32,6 @@ namespace _24DH1110883_MyStore.Controllers
                 }
 
                 // 2. Tạo bản ghi Customer mới (bao gồm cả User và Info)
-                // KHÔNG tạo var user = new User nữa
                 var customer = new Customer
                 {
                     // Thông tin đăng nhập
@@ -53,7 +52,11 @@ namespace _24DH1110883_MyStore.Controllers
                 // 4. Lưu database
                 db.SaveChanges();
 
-                // Tự động đăng nhập (dùng Username từ customer vừa tạo)
+                // Lưu session và tự động đăng nhập
+                Session["Username"] = customer.Username;
+                Session["UserRole"] = customer.UserRole;
+                Session["CustomerID"] = customer.CustomerID;
+
                 FormsAuthentication.SetAuthCookie(customer.Username, false);
                 return RedirectToAction("Index", "Home");
             }
@@ -112,19 +115,38 @@ namespace _24DH1110883_MyStore.Controllers
             }
             base.Dispose(disposing);
         }
+
+        // Hiển thị thông tin profile của Customer (dựa vào Session["CustomerID"] hoặc fallback theo Username)
         [Authorize]
         public ActionResult ProfileInfo()
         {
-            // lấy id user đang đăng nhập
-            string userId = User.Identity.GetUser();
-            // tìm Customer liên kết
-            var customer = db.Customers.FirstOrDefault(c => c.UserId == userId);
-            if (customer == null)
+            // ưu tiên lấy CustomerID từ session (được lưu khi login/register)
+            if (Session["CustomerID"] != null)
             {
-                // chưa có hồ sơ, chuyển sang tạo hồ sơ hoặc thông báo
-                return RedirectToAction("Create", "Customer");
+                int customerId;
+                if (int.TryParse(Session["CustomerID"].ToString(), out customerId))
+                {
+                    var customer = db.Customers.Find(customerId);
+                    if (customer != null)
+                        return View(customer);
+                }
             }
-            return View(customer);
+
+            // fallback: nếu session CustomerID bị mất nhưng vẫn còn Username trong session => tìm theo Username
+            if (Session["Username"] != null)
+            {
+                string username = Session["Username"].ToString();
+                var customer = db.Customers.FirstOrDefault(c => c.Username == username);
+                if (customer != null)
+                {
+                    // đảm bảo session CustomerID được thiết lập lại
+                    Session["CustomerID"] = customer.CustomerID;
+                    return View(customer);
+                }
+            }
+
+            // Nếu không tìm được customer => chuyển tới trang đăng nhập hoặc tạo profile
+            return RedirectToAction("Login", "Account");
         }
     }
 }

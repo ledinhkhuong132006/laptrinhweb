@@ -1,0 +1,16 @@
+﻿@model _24DH1110883_MyStore.Models.Customer
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Xóa khách hàng</h2>
+
+<p>Bạn có chắc muốn xóa @Html.DisplayFor(m => m.CustomerName)?</p>
+
+@using (Html.BeginForm("DeleteConfirmed", "Customer", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.CustomerID)
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    @Html.ActionLink("Hủy", "Index", "Customer", null, new { @class = "btn btn-default" })
+}

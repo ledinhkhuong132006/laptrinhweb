@@ -3,7 +3,7 @@
     ViewBag.Title = "ProfileInfo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>ProfileInfo</h2>
+<h2 style="text-align:center">ProfileInfo</h2>
 
 <div>
     <h4>Customer</h4>
@@ -12,7 +12,6 @@
         <dt>
             @Html.DisplayNameFor(model => model.CustomerName)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.CustomerName)
         </dd>
@@ -20,7 +19,6 @@
         <dt>
             @Html.DisplayNameFor(model => model.CustomerPhone)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.CustomerPhone)
         </dd>
@@ -28,7 +26,6 @@
         <dt>
             @Html.DisplayNameFor(model => model.CustomerEmail)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.CustomerEmail)
         </dd>
@@ -36,30 +33,29 @@
         <dt>
             @Html.DisplayNameFor(model => model.CustomerAddress)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.CustomerAddress)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Password)
+            @Html.DisplayNameFor(model => model.Username)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.Password)
+            @Html.DisplayFor(model => model.Username)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.User.Password)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.User.Password)
-        </dd>
-
+        @* Nếu muốn hiển thị Password (không khuyến nghị), bỏ comment ở dưới và cân nhắc mã hóa/ẩn *@
+        @*
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+        *@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", "Customer", new { id = Model.CustomerID }, null) |
+    @Html.ActionLink("Back to List", "Index", "Customer")
 </p>

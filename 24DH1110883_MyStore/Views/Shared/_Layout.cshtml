@@ -43,6 +43,8 @@
                     <li class="nav-item">
                         @Html.ActionLink("Đăng nhập", "Login", "Account", null, new { @class = "nav-link" })
                     </li>
+                    @if (Session["Username"] != null)
+                    {@Html.ActionLink("Trang cá nhân", "ProfileInfo", "Account")}
                 </ul>
             </div>
         </div>

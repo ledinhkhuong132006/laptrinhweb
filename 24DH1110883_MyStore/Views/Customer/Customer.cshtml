@@ -1,0 +1,31 @@
+﻿@model IEnumerable<_24DH1110883_MyStore.Models.Customer>
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Danh sách khách hàng</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.First().CustomerName)</th>
+            <th>@Html.DisplayNameFor(m => m.First().CustomerEmail)</th>
+            <th>@Html.DisplayNameFor(m => m.First().CustomerPhone)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CustomerName</td>
+                <td>@item.CustomerEmail</td>
+                <td>@item.CustomerPhone</td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.CustomerID }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CustomerID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
