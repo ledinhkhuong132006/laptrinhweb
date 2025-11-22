@@ -1,10 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "laptop2";
-}
-
-@{
-    ViewBag.Title = "trangsanpham5";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -12,10 +9,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chi tiết sản phẩm - Xiaomi 15T 5G</title>
+    <title>Laptop Acer Aspire 7 A715-59G-73LB</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <style>
-        /* CSS y hệt trang Oppo Find X8 để giao diện, spacing, style giống 100% */
         * {
             margin: 0;
             padding: 0;
@@ -48,96 +44,6 @@
             max-width: 100%;
             display: block;
         }
-
-        .site-header {
-            background-color: black;
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-            .site-header .container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 20px;
-            }
-
-        .header-logo a {
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: white;
-        }
-
-        .header-search {
-            display: flex;
-            border: 1px solid #555;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: white;
-        }
-
-            .header-search input {
-                border: none;
-                padding: 10px 15px;
-                font-size: 14px;
-                outline: none;
-                width: 300px;
-                color: darkgray;
-            }
-
-            .header-search button {
-                background-color: lightblue;
-                border: none;
-                color: white;
-                padding: 0 15px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-            .header-nav ul {
-                display: flex;
-                gap: 35px;
-            }
-
-            .header-nav a {
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: uppercase;
-                color: lightgray;
-                padding: 5px 0;
-                transition: color 0.3s ease;
-            }
-
-                .header-nav a:hover, .header-nav a.active {
-                    color: white;
-                }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 20px;
-        }
-
-            .header-actions a {
-                color: white;
-                transition: color 0.3s ease;
-            }
-
-                .header-actions a:hover {
-                    color: lightblue;
-                }
 
         .btn-primary {
             display: inline-block;
@@ -455,38 +361,11 @@
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="header-logo">
-                <a href="#">TechPhone</a>
-            </div>
-
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm..." />
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="/tranghome">Trang Chủ</a></li>
-                    <li><a href="/trangdong" class="active">Sản Phẩm</a></li>
-                    <li><a href="/trangkhuyenmai">Khuyến Mãi</a></li>
-                    <li><a href="/lienhe">Liên Hệ</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-actions">
-                <a href="/trangtaikhoan" aria-label="Tài khoản"><i class="fas fa-user"></i></a>
-                <a href="/Home/tranggiohang" aria-label="Giỏ hàng"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </header>
-
     <main>
         <section class="breadcrumbs">
             <div class="container">
                 <ul>
-                    <li><a href="/Home/tranghome">Trang chủ</a></li>
+                    <li><a href="/Home/trangchu">Trang chủ</a></li>
                     <li><a href="/Home/tranglaptop">Laptop</a></li>
                     <li>Laptop Acer Aspire 7 A715-59G-73LB</li>
                 </ul>
@@ -545,19 +424,13 @@
                                             ]'>
                                         <span class="color-swatch"></span>Đen
                                     </button>
-
-
-
-
                                 </div>
                             </div>
 
                             <div class="option-group">
                                 <h3>Dung lượng:</h3>
                                 <div class="option-buttons" id="storage-options">
-
                                     <button class="option-btn active" data-value="512GB">512GB</button>
-
                                 </div>
                             </div>
 
@@ -608,7 +481,6 @@
                     <h3>Thông số kỹ thuật chi tiết</h3>
                     <table class="specs-table">
                         <tbody>
-
                             <tr><td> Bộ xử lý</td><td> CPU Intel® Core™ i7-12650H (2.3 GHz - 4.7 GHz/ 24MB/ 10 nhân, 16 luồng)</td></tr>
                             <tr><td>Màn hình</td><td>15.6" Full HD (1920 x 1080) IPS, 144Hz, Màn hình chống lóa, 350 nits, Acer ComfyView, 45% NTSC</td></tr>
                             <tr><td> CAMERA</td><td> HD webcam</td></tr>
@@ -741,7 +613,7 @@
                                 const imageUrls = JSON.parse(this.dataset.images);
                                 renderThumbnails(imageUrls, selectedColor);
 
-                                document.querySelector('.product-info h1').textContent = `Xiaomi 15T 512GB - ${selectedColor}`;
+                                document.querySelector('.product-info h1').textContent = `Laptop Acer Aspire 7 A715-59G-73LB - ${selectedColor}`;
                             }
                         });
                     });

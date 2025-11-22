@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "trangxacnhan";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -32,45 +33,6 @@
             list-style: none;
         }
 
-        header {
-            background-color: #000;
-            color: white;
-            padding: 15px 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-            header h1 {
-                font-size: 22px;
-                letter-spacing: 1px;
-            }
-
-        .header-logo a {
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: white;
-        }
-
-        .header-nav ul {
-            display: flex;
-            gap: 35px;
-        }
-
-        .header-nav a {
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: lightgray;
-            transition: color 0.3s ease;
-        }
-
-            .header-nav a:hover {
-                color: white;
-            }
-
         .progress {
             padding: 20px 0;
             background-color: #fff;
@@ -93,7 +55,7 @@
                 color: #999;
             }
 
-        .container {
+        #container1 {
             max-width: 700px;
             margin: 40px auto;
             background: #fff;
@@ -172,31 +134,9 @@
             margin-top: 25px;
             border: none;
         }
-
-        footer {
-            text-align: center;
-            color: #777;
-            font-size: 13px;
-            padding: 20px;
-            background-color: #f1f1f1;
-            margin-top: 40px;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-logo">
-            <a href="#">TechPhone</a>
-        </div>
-
-        <nav class="header-nav">
-            <ul>
-                <li><a href="/Home/tranghome">Trang chủ</a></li>
-                <li><a href="/Home/tranggiohang">Giỏ hàng</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
         <section class="progress">
             <ul>
@@ -207,7 +147,7 @@
             </ul>
         </section>
 
-        <div class="container">
+        <div id="container1">
             <div class="checkmark">✔</div>
             <h2>Đặt hàng thành công!</h2>
             <p>Cảm ơn bạn đã mua sắm tại <strong>TechPhone</strong>.</p>
@@ -228,15 +168,11 @@
                 </div>
             </div>
 
-            <button class="btn" onclick="window.location.href='/Home/tranghome'">Về trang chủ</button>
+            <button class="btn" onclick="window.location.href='/Home/trangchu'">Về trang chủ</button>
             <br>
             <button class="back-home" onclick="window.location.href='/Home/tranglichsu'">Xem lịch sử mua hàng</button>
         </div>
     </main>
-
-    <footer>
-        © 2025 TechPhone.
-    </footer>
 
     <script>
         window.onload = function () {

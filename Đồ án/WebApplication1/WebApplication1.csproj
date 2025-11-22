@@ -205,6 +205,9 @@
     <Content Include="Views\Home\tranglaptop.cshtml" />
     <Content Include="Views\Home\trangphukien.cshtml" />
     <Content Include="Views\Home\tranglienhe.cshtml" />
+    <Content Include="Views\Home\thongtin.cshtml" />
+    <Content Include="Views\Home\trangsanpham.cshtml" />
+    <Content Include="Views\Shared\_MasterLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

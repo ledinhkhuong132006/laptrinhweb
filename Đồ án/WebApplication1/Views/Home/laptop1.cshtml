@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "laptop1";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -8,7 +9,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chi tiết sản phẩm - Xiaomi 15T 5G</title>
+    <title> Laptop Acer Nitro Lite 16 NL16-71G-56WQ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <style>
         * {
@@ -43,96 +44,6 @@
             max-width: 100%;
             display: block;
         }
-
-        .site-header {
-            background-color: black;
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-            .site-header .container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 20px;
-            }
-
-        .header-logo a {
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: white;
-        }
-
-        .header-search {
-            display: flex;
-            border: 1px solid #555;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: white;
-        }
-
-            .header-search input {
-                border: none;
-                padding: 10px 15px;
-                font-size: 14px;
-                outline: none;
-                width: 300px;
-                color: darkgray;
-            }
-
-            .header-search button {
-                background-color: lightblue;
-                border: none;
-                color: white;
-                padding: 0 15px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-            .header-nav ul {
-                display: flex;
-                gap: 35px;
-            }
-
-            .header-nav a {
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: uppercase;
-                color: lightgray;
-                padding: 5px 0;
-                transition: color 0.3s ease;
-            }
-
-                .header-nav a:hover, .header-nav a.active {
-                    color: white;
-                }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 20px;
-        }
-
-            .header-actions a {
-                color: white;
-                transition: color 0.3s ease;
-            }
-
-                .header-actions a:hover {
-                    color: lightblue;
-                }
 
         .btn-primary {
             display: inline-block;
@@ -450,38 +361,11 @@
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="header-logo">
-                <a href="#">TechPhone</a>
-            </div>
-
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm..." />
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="/tranghome">Trang Chủ</a></li>
-                    <li><a href="/trangdong" class="active">Sản Phẩm</a></li>
-                    <li><a href="/trangkhuyenmai">Khuyến Mãi</a></li>
-                    <li><a href="/lienhe">Liên Hệ</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-actions">
-                <a href="/trangtaikhoan" aria-label="Tài khoản"><i class="fas fa-user"></i></a>
-                <a href="/Home/tranggiohang" aria-label="Giỏ hàng"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </header>
-
     <main>
         <section class="breadcrumbs">
             <div class="container">
                 <ul>
-                    <li><a href="/Home/tranghome">Trang chủ</a></li>
+                    <li><a href="/Home/trangchu">Trang chủ</a></li>
                     <li><a href="/Home/tranglaptop">Laptop</a></li>
                     <li>Laptop Acer Nitro Lite 16 NL16-71G-56WQ</li>
                 </ul>
@@ -517,7 +401,6 @@
                         </div>
 
                         <p class="product-price" id="base-price">22.390.000₫</p>
-
                         <p class="product-short-desc">
                             Laptop Acer Nitro Lite 16 NL16-71G-56WQ (i5-13420H/ RTX 3050 6GB/16GB/ 512GB/ Windows 11)
                         </p>
@@ -541,9 +424,7 @@
                             <div class="option-group">
                                 <h3>Dung lượng:</h3>
                                 <div class="option-buttons" id="storage-options">
-
                                     <button class="option-btn active" data-value="512GB">512GB</button>
-
                                 </div>
                             </div>
 
@@ -594,7 +475,6 @@
                     <h3>Thông số kỹ thuật chi tiết</h3>
                     <table class="specs-table">
                         <tbody>
-
                             <tr><td> Bộ xử lý</td><td> CPU: Intel® Core™ i5-13420H (2.1 GHz - 4.6 GHz/ 12MB/ 8 nhân, 12 luồng)</td></tr>
                             <tr><td>Màn hình</td><td>16 inch FHD+ (1920 x 1200), tấm nền IPS, 165Hz, độ sáng 300 nits, tỷ lệ 16:10</td></tr>
                             <tr><td> CAMERA</td><td> HD webcam</td></tr>
@@ -617,7 +497,7 @@
             <div class="container">
                 <h2 class="section-title">Sản phẩm tương tự</h2>
                 <div class="product-grid">
-                    <a href="/laptop1" class="product-card-link">
+                    <a href="/Home/laptop2" class="product-card-link">
                         <div class="product-card">
                             <img src="https://lh3.googleusercontent.com/Q3fiZCOPKgXIzp88WuGdceuyj7BCEMy5ww01D0jKwvOANQsK7KGmbXfqFY3mW6qHoAMCw_tKWixbq_P5C4JLlanYxGh1rWbT=w500-rw" />
                             <h3 class="product-name">Laptop Acer Aspire 7 A715-59G-73LB</h3>
@@ -631,8 +511,7 @@
                         </div>
                     </a>
 
-
-                    <a href="/laptop3" class="product-card-link">
+                    <a href="/Home/laptop3" class="product-card-link">
                         <div class="product-card">
                             <img src="https://lh3.googleusercontent.com/zGINdaTDd4Jfd_kckUggS59oAQEqw1RmG-WjV4e9YSbQdCMmrUk-lYkR0TRCaZ1eoWyeENdIiUgtMHP95YaDzHv0EKQRgVWefA=w500-rw" alt="Laptop Acer Aspire Go 14 AI AG14-71M-57WR " />
                             <h3 class="product-name">Laptop Acer Aspire Go 14 AI AG14-71M-57WR </h3>
@@ -645,7 +524,8 @@
                             <p class="product-price">16.000.000₫</p>
                         </div>
                     </a>
-                    <a href="/laptop4" class="product-card-link">
+
+                    <a href="/Home/laptop4" class="product-card-link">
                         <div class="product-card">
                             <img src="https://lh3.googleusercontent.com/9KrMwDr98CZh8qGPpr5LBNtNO-aD-K6BL17YHfjdBmdKjyIgWTovt6Prki9bQIUO-fqzGqm36VMWQ8H_JVRMsYCFZAUc1W8T=w1000-rw" alt="Laptop Acer Aspire 16 AI A16-71M-71U7" />
                             <h3 class="product-name">Laptop Acer Aspire 16 AI A16-71M-71U7 </h3>
@@ -658,8 +538,8 @@
                             <p class="product-price">19.000.000₫</p>
                         </div>
                     </a>
-                    <a href="laptop5" class="" product-card-link">
-                        "
+
+                    <a href="/Home/laptop5" class="" product-card-link">
                         <div class="product-card">
                             <img src="https://lh3.googleusercontent.com/h2mY-jDHpB-U2pTPD-5HjNO5-qTpiRKe4l0QtbphhmBZQFr5OuU55h5mtVgt2ZFPFD1coh4Hhz6xFY3mVRGtI5U_s5jKfklzug=w500-rw" />
                             <h3 class="product-name">Laptop Acer Nitro V Propanel AN16S-61-R5F4 </h3>
@@ -726,8 +606,7 @@
                                 const selectedColor = this.dataset.value;
                                 const imageUrls = JSON.parse(this.dataset.images);
                                 renderThumbnails(imageUrls, selectedColor);
-
-                                document.querySelector('.product-info h1').textContent = `Xiaomi 15T 512GB - ${selectedColor}`;
+                                document.querySelector('.product-info h1').textContent = `Laptop Acer Nitro Lite 16 NL16-71G-56WQ - ${selectedColor}`;
                             }
                         });
                     });

@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewBag.Title = "Liên hệ";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -34,116 +39,6 @@
             list-style: none;
         }
 
-        /* --- CSS CHO HEADER (ĐÃ SỬA CHÍNH XÁC) --- */
-        .site-header {
-            background-color: black;
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .site-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .header-logo a {
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* ĐÂY LÀ PHẦN ĐÃ SỬA */
-        .header-search {
-            display: flex;
-            border: 1px solid #555; /* Thêm viền */
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: #fff;
-        }
-
-        .header-search input {
-            border: none;
-            padding: 10px 15px;
-            font-size: 14px;
-            outline: none;
-            width: 300px;
-            color: #333;
-        }
-
-        .header-search button {
-            background-color: lightblue; /* Sửa lại màu */
-            border: none;
-            color: white;
-            padding: 0 15px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-        .header-nav ul {
-            display: flex;
-            gap: 35px;
-        }
-
-        .header-nav a {
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: lightgray;
-            transition: color 0.3s ease;
-        }
-
-        .header-nav a:hover {
-            color: white;
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 20px;
-        }
-
-        .header-actions a {
-            color: white;
-            transition: color 0.3s ease;
-        }
-
-        .header-actions a:hover {
-            color: cornflowerblue;
-        }
-
-        .header-delivery {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            color: #ccc;
-            border-left: 1px solid #444;
-            padding-left: 20px;
-        }
-
-        .header-delivery i {
-            color: cornflowerblue;
-        }
-
-        .header-delivery .delivery-text {
-            color: #fff;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        /* --- CSS CHO FORM LIÊN HỆ --- */
         .contact-section {
             padding: 60px 0;
         }
@@ -167,7 +62,9 @@
             min-width: 300px;
         }
 
-        .contact-info h2 { font-size: 28px; }
+            .contact-info h2 {
+                font-size: 28px;
+            }
 
         .info-item {
             display: flex;
@@ -175,17 +72,19 @@
             margin-top: 25px;
         }
 
-        .info-item .icon {
-            width: 20px;
-            margin-right: 15px;
-        }
+            .info-item .icon {
+                width: 20px;
+                margin-right: 15px;
+            }
 
-        .info-item .icon svg { fill: #ffffff; }
+                .info-item .icon svg {
+                    fill: #ffffff;
+                }
 
-        .info-item a {
-            color: #ffffff;
-            text-decoration: none;
-        }
+            .info-item a {
+                color: #ffffff;
+                text-decoration: none;
+            }
 
         .contact-form {
             padding: 40px;
@@ -193,33 +92,35 @@
             min-width: 320px;
         }
 
-        .contact-form h2 {
-            font-size: 28px;
+            .contact-form h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+        .form-group {
             margin-bottom: 20px;
         }
 
-        .form-group { margin-bottom: 20px; }
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+                box-sizing: border-box;
+            }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
+            .form-group textarea {
+                resize: vertical;
+                min-height: 120px;
+            }
 
         .submit-btn {
             width: 100%;
@@ -239,46 +140,19 @@
             text-align: center;
             display: none;
         }
-        #form-message.success {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        #form-message.error {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
+
+            #form-message.success {
+                background-color: #d4edda;
+                color: #155724;
+            }
+
+            #form-message.error {
+                background-color: #f8d7da;
+                color: #721c24;
+            }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="header-logo"><a href="/Home/tranghome">TechPhone</a></div>
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="index.html">Trang Chủ</a></li>
-                    <li><a href="product.html">Sản Phẩm</a></li>
-                    <li><a href="#">Khuyến Mãi</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
-                </ul>
-                <div class="header-delivery">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <span>Giao đến:</span><br>
-                        <a href="#" id="delivery-address-link" class="delivery-text" title="Nhấn để thay đổi địa chỉ">Nhập địa chỉ</a>
-                    </div>
-                </div>
-            </nav>
-            <div class="header-actions">
-                <a href="#" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
-                <a href="cart.html" aria-label="Giỏ hàng"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-    </header>
-
     <main>
         <section class="contact-section">
             <div class="contact-container">
@@ -323,55 +197,30 @@
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // JAVASCRIPT CHO "GIAO ĐẾN"
-            const addressLink = document.getElementById('delivery-address-link');
-            if (addressLink) {
-                function updateAddress() {
-                    const newAddress = prompt("Nhập địa chỉ giao hàng của bạn:");
-                    if (newAddress && newAddress.trim() !== '') {
-                        addressLink.textContent = newAddress;
-                        localStorage.setItem('userDeliveryAddress', newAddress);
-                    }
+        const supportForm = document.getElementById('support-form');
+        const messageElement = document.getElementById('form-message');
+
+        if (supportForm) {
+            supportForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (name === '' || email === '' || message === '') {
+                    messageElement.textContent = 'Vui lòng điền đầy đủ các trường bắt buộc.';
+                    messageElement.className = 'error';
+                    messageElement.style.display = 'block';
+                } else {
+                    messageElement.textContent = 'Gửi yêu cầu thành công! Chúng tôi sẽ liên hệ lại sớm.';
+                    messageElement.className = 'success';
+                    messageElement.style.display = 'block';
+                    supportForm.reset();
+                    setTimeout(() => { messageElement.style.display = 'none'; }, 5000);
                 }
-                function loadAddress() {
-                    const savedAddress = localStorage.getItem('userDeliveryAddress');
-                    if (savedAddress) {
-                        addressLink.textContent = savedAddress;
-                    }
-                }
-                addressLink.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    updateAddress();
-                });
-                loadAddress();
-            }
-
-            // JAVASCRIPT CHO FORM LIÊN HỆ
-            const supportForm = document.getElementById('support-form');
-            const messageElement = document.getElementById('form-message');
-
-            if (supportForm) {
-                supportForm.addEventListener('submit', function (event) {
-                    event.preventDefault();
-                    const name = document.getElementById('name').value.trim();
-                    const email = document.getElementById('email').value.trim();
-                    const message = document.getElementById('message').value.trim();
-
-                    if (name === '' || email === '' || message === '') {
-                        messageElement.textContent = 'Vui lòng điền đầy đủ các trường bắt buộc.';
-                        messageElement.className = 'error';
-                        messageElement.style.display = 'block';
-                    } else {
-                        messageElement.textContent = 'Gửi yêu cầu thành công! Chúng tôi sẽ liên hệ lại sớm.';
-                        messageElement.className = 'success';
-                        messageElement.style.display = 'block';
-                        supportForm.reset();
-                        setTimeout(() => { messageElement.style.display = 'none'; }, 5000);
-                    }
-                });
-            }
-        });
+            });
+        }
     </script>
 </body>
 </html>
+

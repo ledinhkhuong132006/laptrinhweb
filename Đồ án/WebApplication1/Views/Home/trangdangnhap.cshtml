@@ -1,10 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "trangdangnhap";
-}
-
-@{
-    ViewBag.Title = "Đăng ký / Đăng nhập";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -42,89 +39,6 @@
         ul {
             list-style: none;
         }
-
-        .site-header {
-            background-color: black;
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-            .site-header .container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 20px;
-            }
-
-        .header-logo a {
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: white;
-        }
-
-        .header-search {
-            display: flex;
-            border: 1px solid #555;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: #fff;
-        }
-
-            .header-search input {
-                border: none;
-                padding: 10px 15px;
-                font-size: 14px;
-                outline: none;
-                width: 300px;
-                color: #333;
-            }
-
-            .header-search button {
-                background-color: lightblue;
-                border: none;
-                color: white;
-                padding: 0 15px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-        .header-nav ul {
-            display: flex;
-            gap: 35px;
-        }
-
-        .header-nav a {
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: lightgray;
-            transition: color 0.3s ease;
-        }
-
-            .header-nav a:hover {
-                color: white;
-            }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 20px;
-        }
-
-            .header-actions a {
-                color: white;
-                transition: color 0.3s ease;
-            }
-
-                .header-actions a:hover {
-                    color: lightblue;
-                }
 
         .btn-primary {
             display: inline-block;
@@ -246,31 +160,6 @@
     </style>
 </head>
 <body>
-
-    <header class="site-header">
-        <div class="container">
-            <div class="header-logo">
-                <a href="#">TechPhone</a>
-            </div>
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="#">Trang Chủ</a></li>
-                    <li><a href="#">Sản Phẩm</a></li>
-                    <li><a href="#">Khuyến Mãi</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="#" aria-label="Tài khoản"><i class="fas fa-user"></i></a>
-                <a href="#" aria-label="Giỏ hàng"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </header>
-
     <main class="auth-section">
         <div class="container">
             <div class="auth-container">

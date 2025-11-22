@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Lịch sử mua hàng";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -37,89 +38,6 @@
         ul {
             list-style: none;
         }
-
-        .site-header {
-            background-color: black;
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-            .site-header .container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 20px;
-            }
-
-        .header-logo a {
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: white;
-        }
-
-        .header-search {
-            display: flex;
-            border: 1px solid #555;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: #fff;
-        }
-
-            .header-search input {
-                border: none;
-                padding: 10px 15px;
-                font-size: 14px;
-                outline: none;
-                width: 300px;
-                color: #333;
-            }
-
-            .header-search button {
-                background-color: lightblue;
-                border: none;
-                color: white;
-                padding: 0 15px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-        .header-nav ul {
-            display: flex;
-            gap: 35px;
-        }
-
-        .header-nav a {
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: lightgray;
-            transition: color 0.3s ease;
-        }
-
-            .header-nav a:hover {
-                color: white;
-            }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 20px;
-        }
-
-            .header-actions a {
-                color: white;
-                transition: color 0.3s ease;
-            }
-
-                .header-actions a:hover {
-                    color: lightblue;
-                }
 
         .btn-primary {
             display: inline-block;
@@ -250,37 +168,12 @@
     </style>
 </head>
 <body>
-
-    <header class="site-header">
-        <div class="container">
-            <div class="header-logo">
-                <a href="/Home/Index">TechPhone</a>
-            </div>
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="/Home/tranghome">Trang Chủ</a></li>
-                    <li><a href="#">Sản Phẩm</a></li>
-                    <li><a href="#">Khuyến Mãi</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="#" aria-label="Tài khoản"><i class="fas fa-user"></i></a>
-                <a href="#" aria-label="Giỏ hàng"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </header>
-
     <main>
         <section class="breadcrumbs">
             <div class="container">
                 <ul>
-                    <li><a href="/Home/tranghome">Trang chủ</a></li>
-                    <li><a href="#">Tài khoản</a></li>
+                    <li><a href="/Home/trangchu">Trang chủ</a></li>
+                    <li><a href="/Home/thongtin">Tài khoản</a></li>
                     <li>Lịch sử mua hàng</li>
                 </ul>
             </div>
@@ -296,7 +189,7 @@
                 <div class="empty-history" id="empty-history" style="display: none;">
                     <i class="fas fa-shopping-bag"></i>
                     <h2>Chưa có đơn hàng nào</h2>
-                    <p>Bạn chưa mua sắm gì cả. Hãy <a href="/Home/Index">mua sắm ngay</a>!</p>
+                    <p>Bạn chưa mua sắm gì cả. Hãy <a href="/Home/tranghome">Mua sắm ngay</a>!</p>
                 </div>
             </div>
         </section>
@@ -346,18 +239,18 @@
                 });
 
                 const orderHTML = `
-                            <div class="order-item">
-                                <div class="order-header">
-                                    <span class="order-id">Đơn hàng ${order.id}</span>
-                                    <span class="order-status ${statusClass}">${statusText}</span>
-                                </div>
-                                <div class="order-details">
-                                    <p><strong>Ngày đặt:</strong> ${order.date}</p>
-                                    <div class="order-items">${itemsHTML}</div>
-                                    <p class="order-total">Tổng: ${order.total.toLocaleString('vi-VN')}₫</p>
-                                </div>
-                            </div>
-                        `;
+                                    <div class="order-item">
+                                        <div class="order-header">
+                                            <span class="order-id">Đơn hàng ${order.id}</span>
+                                            <span class="order-status ${statusClass}">${statusText}</span>
+                                        </div>
+                                        <div class="order-details">
+                                            <p><strong>Ngày đặt:</strong> ${order.date}</p>
+                                            <div class="order-items">${itemsHTML}</div>
+                                            <p class="order-total">Tổng: ${order.total.toLocaleString('vi-VN')}₫</p>
+                                        </div>
+                                    </div>
+                                `;
                 ordersContainer.insertAdjacentHTML('beforeend', orderHTML);
             });
         });

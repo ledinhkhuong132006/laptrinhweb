@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\nop bai git\\TeachPhoneWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6363732A-F4B8-4E90-897B-8092BDEED3E4}|TeachPhoneWeb\\TeachPhoneWeb.csproj|c:\\nop bai git\\teachphoneweb\\teachphoneweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6363732A-F4B8-4E90-897B-8092BDEED3E4}|TeachPhoneWeb\\TeachPhoneWeb.csproj|solutionrelative:teachphoneweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6363732A-F4B8-4E90-897B-8092BDEED3E4}|TeachPhoneWeb\\TeachPhoneWeb.csproj|c:\\nop bai git\\teachphoneweb\\teachphoneweb\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6363732A-F4B8-4E90-897B-8092BDEED3E4}|TeachPhoneWeb\\TeachPhoneWeb.csproj|solutionrelative:teachphoneweb\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\TeachPhoneWeb\\TeachPhoneWeb\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TeachPhoneWeb\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\nop bai git\\TeachPhoneWeb\\TeachPhoneWeb\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TeachPhoneWeb\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T08:31:31.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\nop bai git\\TeachPhoneWeb\\TeachPhoneWeb\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "TeachPhoneWeb\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\nop bai git\\TeachPhoneWeb\\TeachPhoneWeb\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "TeachPhoneWeb\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-20T08:17:29.243Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

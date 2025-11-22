@@ -293,7 +293,6 @@
     <Content Include="Views\Home\ProductDetail.cshtml" />
     <Content Include="Views\Home\_PVTopProduct.cshtml" />
     <Content Include="Views\Home\_PVRelatedProduct.cshtml" />
-    <Content Include="Views\Cart\Index2.cshtml" />
     <Content Include="Views\Shared\_PVSimilarProduct.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />

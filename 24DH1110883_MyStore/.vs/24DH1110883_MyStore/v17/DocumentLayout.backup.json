@@ -3,28 +3,35 @@
   "WorkspaceRootPath": "C:\\nop bai git\\24DH1110883_MyStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\views\\cart\\index2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\cart\\index2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|c:\\nop bai git\\24dh1110883_mystore\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|24DH1110883_MyStore||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\models\\viewmodel\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:models\\viewmodel\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|c:\\nop bai git\\24dh1110883_mystore\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\models\\viewmodel\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:models\\viewmodel\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\areas\\admin\\views\\customer\\customerhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -47,19 +54,16 @@
       "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:models\\viewmodel\\customervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|c:\\nop bai git\\24dh1110883_mystore\\views\\home\\_pvnewproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\views\\home\\_pvnewproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\home\\_pvnewproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|c:\\nop bai git\\24dh1110883_mystore\\views\\home\\_pvfeatureproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\views\\home\\_pvfeatureproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\home\\_pvfeatureproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\models\\mystoremodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:models\\mystoremodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|24DH1110883_MyStore||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|C:\\nop bai git\\24DH1110883_MyStore\\areas\\admin\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,10 +154,6 @@
       "RelativeMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:2:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|c:\\nop bai git\\24dh1110883_mystore\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:2:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|solutionrelative:views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{495630AB-8CAA-4EC7-8404-13711C0CA4A9}|24DH1110883_MyStore.csproj|c:\\nop bai git\\24dh1110883_mystore\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
@@ -164,11 +164,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 2,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Web.config",
               "RelativeDocumentMoniker": "Views\\Web.config",
@@ -186,20 +186,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index2.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Cart\\Index2.cshtml",
               "RelativeDocumentMoniker": "Views\\Cart\\Index2.cshtml",
               "ToolTip": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Cart\\Index2.cshtml",
               "RelativeToolTip": "Views\\Cart\\Index2.cshtml",
-              "ViewState": "AgIAACkAAAAAAAAAAAAcwEAAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAEAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-22T08:42:39.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
@@ -212,20 +212,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\nop bai git\\24DH1110883_MyStore\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAswHEAAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\nop bai git\\24DH1110883_MyStore\\Controllers\\AccountController.cs*",
+              "RelativeToolTip": "Controllers\\AccountController.cs*",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAswHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-22T09:11:33.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Cart.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Models\\ViewModel\\Cart.cs",
               "RelativeDocumentMoniker": "Models\\ViewModel\\Cart.cs",
@@ -238,7 +238,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "24DH1110883_MyStore",
+              "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\24DH1110883_MyStore.csproj",
+              "RelativeDocumentMoniker": "24DH1110883_MyStore.csproj",
+              "ToolTip": "C:\\nop bai git\\24DH1110883_MyStore\\24DH1110883_MyStore.csproj",
+              "RelativeToolTip": "24DH1110883_MyStore.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-09T06:10:22.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
@@ -251,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "_PVNewProduct.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Home\\_PVNewProduct.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\_PVNewProduct.cshtml",
@@ -259,12 +271,11 @@
               "RelativeToolTip": "Views\\Home\\_PVNewProduct.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T13:11:14.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T13:11:14.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "CustomerHome.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Views\\Customer\\CustomerHome.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Customer\\CustomerHome.cshtml",
@@ -272,12 +283,11 @@
               "RelativeToolTip": "Areas\\Admin\\Views\\Customer\\CustomerHome.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-20T09:41:41.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T09:41:41.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -285,12 +295,11 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T09:49:20.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T09:49:20.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -298,12 +307,11 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-20T07:23:48.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T07:23:48.575Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Contact.cshtml",
@@ -311,12 +319,11 @@
               "RelativeToolTip": "Views\\Home\\Contact.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T09:49:52.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T09:49:52.717Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "Controllers\\CartController.cs",
@@ -324,12 +331,11 @@
               "RelativeToolTip": "Controllers\\CartController.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwBgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T08:18:33.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T08:18:33.003Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "_PVFeatureProduct.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Home\\_PVFeatureProduct.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\_PVFeatureProduct.cshtml",
@@ -337,12 +343,11 @@
               "RelativeToolTip": "Views\\Home\\_PVFeatureProduct.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T13:10:19.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T13:10:19.451Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "CustomerVM.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Models\\ViewModel\\CustomerVM.cs",
               "RelativeDocumentMoniker": "Models\\ViewModel\\CustomerVM.cs",
@@ -350,36 +355,22 @@
               "RelativeToolTip": "Models\\ViewModel\\CustomerVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T09:51:40.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T09:51:40.781Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "24DH1110883_MyStore",
-              "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\24DH1110883_MyStore.csproj",
-              "RelativeDocumentMoniker": "24DH1110883_MyStore.csproj",
-              "ToolTip": "C:\\nop bai git\\24DH1110883_MyStore\\24DH1110883_MyStore.csproj",
-              "RelativeToolTip": "24DH1110883_MyStore.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-09T06:10:22.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "MyStoreModel.edmx [Diagram1]",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Models\\MyStoreModel.edmx",
               "RelativeDocumentMoniker": "Models\\MyStoreModel.edmx",
               "ToolTip": "C:\\nop bai git\\24DH1110883_MyStore\\Models\\MyStoreModel.edmx [Diagram1]",
               "RelativeToolTip": "Models\\MyStoreModel.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-11-20T10:03:56.785Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2025-11-20T10:03:56.785Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Global.asax",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Global.asax",
               "RelativeDocumentMoniker": "Global.asax",
@@ -391,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Global.asax.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Global.asax.cs",
               "RelativeDocumentMoniker": "Global.asax.cs",
@@ -403,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\CategoriesController.cs",
@@ -415,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "_PVSimilarProduct.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Views\\Shared\\_PVSimilarProduct.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_PVSimilarProduct.cshtml",
@@ -427,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "web.config",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Views\\web.config",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\web.config",
@@ -439,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Web.config",
               "RelativeDocumentMoniker": "Web.config",
@@ -452,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
@@ -464,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Home\\Index.cshtml",
@@ -476,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewStart.cshtml",
@@ -488,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Models\\ViewModel\\CartItem.cs",
               "RelativeDocumentMoniker": "Models\\ViewModel\\CartItem.cs",
@@ -500,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Models\\ViewModel\\User.cs",
               "RelativeDocumentMoniker": "Models\\ViewModel\\User.cs",
@@ -512,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "LoginVM.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Models\\ViewModel\\LoginVM.cs",
               "RelativeDocumentMoniker": "Models\\ViewModel\\LoginVM.cs",
@@ -524,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -536,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "RegisterVM.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Models\\ViewModel\\RegisterVM.cs",
               "RelativeDocumentMoniker": "Models\\ViewModel\\RegisterVM.cs",
@@ -548,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Views\\Products\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Products\\Index.cshtml",
@@ -560,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Views\\Categories\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Categories\\Index.cshtml",
@@ -572,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HomeController.cs",
@@ -584,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ProductsController.cs",
@@ -596,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Views\\Categories\\Details.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Categories\\Details.cshtml",
@@ -608,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "PVListProduct.cshtml",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\Views\\Products\\PVListProduct.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Products\\PVListProduct.cshtml",
@@ -620,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "AdminAreaRegistration.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\Areas\\Admin\\AdminAreaRegistration.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\AdminAreaRegistration.cs",
@@ -632,7 +623,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "RouteConfig.cs",
               "DocumentMoniker": "C:\\nop bai git\\24DH1110883_MyStore\\App_Start\\RouteConfig.cs",
               "RelativeDocumentMoniker": "App_Start\\RouteConfig.cs",

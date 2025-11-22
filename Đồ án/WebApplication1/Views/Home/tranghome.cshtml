@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "tranghome";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -38,122 +39,6 @@
             list-style: none;
         }
 
-        /* --- CSS CHO HEADER (ĐÃ ĐƯỢC ĐỒNG BỘ) --- */
-        .site-header {
-            background-color: black;
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-            .site-header .container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 20px;
-            }
-
-        .header-logo a {
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .header-search {
-            display: flex;
-            border: 1px solid #555;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: #fff;
-        }
-
-            .header-search input {
-                border: none;
-                padding: 10px 15px;
-                font-size: 14px;
-                outline: none;
-                width: 300px;
-                color: #333;
-            }
-
-            .header-search button {
-                background-color: lightblue;
-                border: none;
-                color: white;
-                padding: 0 15px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-        /* 2. Sửa lại bố cục menu và "Giao đến" */
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-            .header-nav ul {
-                display: flex;
-                gap: 35px;
-            }
-
-            .header-nav a {
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: uppercase;
-                color: lightgray;
-                transition: color 0.3s ease;
-            }
-
-                .header-nav a:hover {
-                    color: white;
-                }
-
-        /* 3. Sửa lại màu icon Tài khoản & Giỏ hàng */
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 20px;
-        }
-
-            .header-actions a {
-                color: white; /* Từ đỏ -> trắng */
-                transition: color 0.3s ease;
-            }
-
-                .header-actions a:hover {
-                    color: cornflowerblue; /* Thêm hiệu ứng hover cho đẹp */
-                }
-
-        .header-delivery {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            color: #ccc;
-            border-left: 1px solid #444;
-            padding-left: 20px;
-        }
-
-            /* 4. Sửa lại màu icon "Giao đến" */
-            .header-delivery i {
-                color: cornflowerblue; /* Từ #0088cc -> cornflowerblue */
-            }
-
-            .header-delivery .delivery-text {
-                color: #fff;
-                text-decoration: underline;
-                cursor: pointer;
-                white-space: nowrap;
-                max-width: 150px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-        /* --- CÁC PHẦN CÒN LẠI GIỮ NGUYÊN --- */
         .banner {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80');
             height: 60vh;
@@ -288,7 +173,7 @@
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #333; /* Thêm màu chữ cho rõ hơn */
+            color: #333;
         }
 
         .product-rating {
@@ -297,7 +182,7 @@
         }
 
             .product-rating span {
-                color: #666; /* Thêm màu cho chữ "đánh giá" */
+                color: #666;
                 font-size: 14px;
             }
 
@@ -309,40 +194,6 @@
     </style>
 </head>
 <body>
-
-    <header class="site-header">
-        <div class="container">
-            <div class="header-logo"><a href="/Home/tranghome">TechPhone</a></div>
-
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="index.html">Trang Chủ</a></li>
-                    <li><a href="product.html">Sản Phẩm</a></li>
-                    <li><a href="#">Khuyến Mãi</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
-                </ul>
-
-                <div class="header-delivery">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <span>Giao đến:</span><br>
-                        <a href="#" id="delivery-address-link" class="delivery-text" title="Nhấn để thay đổi địa chỉ">Nhập địa chỉ</a>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="header-actions">
-                <a href="#" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
-                <a href="cart.html" aria-label="Giỏ hàng"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-    </header>
-
     <main>
         <section class="banner">
             <div class="banner-content">
@@ -390,45 +241,66 @@
                             <p class="product-price">28.990.000₫</p>
                         </div>
                     </a>
+
                     <a href="/Home/trangsanpham2" class="product-card-link">
                         <div class="product-card">
                             <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-samsung-galaxy-s25-ultra_2__4.png" alt="Phone Model Y">
                             <h3 class="product-name">Galaxy S25 Ultra</h3>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                                 <span>(125 đánh giá)</span>
                             </div>
                             <p class="product-price">32.000.000₫</p>
                         </div>
                     </a>
+
                     <a href="/Home/trangsanpham3" class="product-card-link">
                         <div class="product-card">
                             <img src="https://cdn.tgdd.vn/2025/10/timerseo/322129-600x600-2.jpg" alt="Phone Model Z">
                             <h3 class="product-name">Oppo Find X8 Pro</h3>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                                 <span>(98 đánh giá)</span>
                             </div>
                             <p class="product-price">24.990.000₫</p>
                         </div>
                     </a>
+
                     <a href="/Home/trangsanpham4" class="product-card-link">
                         <div class="product-card">
                             <img src="https://cdn.tgdd.vn/Products/Images/42/341625/vivo-v60-5g-xam-thumb-600x600.jpg" alt="Vivo V60 5G">
                             <h3 class="product-name">Vivo V60 5G</h3>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt">
+                                </i>
                                 <span>(85 đánh giá)</span>
                             </div>
                             <p class="product-price">19.990.000₫</p>
                         </div>
                     </a>
+
                     <a href="/Home/trangsanpham5" class="product-card-link">
                         <div class="product-card">
                             <img src="https://cdn.tgdd.vn/Products/Images/42/344644/xiaomi-15t-rose-gold-thumb-600x600.jpg" alt="Phone Model A">
                             <h3 class="product-name">Xiaomi 15T 5G</h3>
                             <div class="product-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><
+                                i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                                 <span>(110 đánh giá)</span>
                             </div>
                             <p class="product-price">22.990.000₫</p>
@@ -438,24 +310,5 @@
             </div>
         </section>
     </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const addressLink = document.getElementById('delivery-address-link');
-            function updateAddress() {
-                const newAddress = prompt("Nhập địa chỉ giao hàng:");
-                if (newAddress && newAddress.trim() !== '') {
-                    addressLink.textContent = newAddress;
-                    localStorage.setItem('userDeliveryAddress', newAddress);
-                }
-            }
-            function loadAddress() {
-                const saved = localStorage.getItem('userDeliveryAddress');
-                if (saved) addressLink.textContent = saved;
-            }
-            addressLink.addEventListener('click', e => { e.preventDefault(); updateAddress(); });
-            loadAddress();
-        });
-    </script>
 </body>
 </html>

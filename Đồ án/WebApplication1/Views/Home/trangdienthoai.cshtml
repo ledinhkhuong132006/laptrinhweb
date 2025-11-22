@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "trangdienthoai";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -38,115 +39,6 @@
             list-style: none;
         }
 
-        /* --- CSS CHO HEADER (ĐÃ ĐƯỢC ĐỒNG BỘ) --- */
-        .site-header {
-            background-color: black;
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-            .site-header .container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 20px;
-            }
-
-        .header-logo a {
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .header-search {
-            display: flex;
-            border: 1px solid #555;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: #fff;
-        }
-
-            .header-search input {
-                border: none;
-                padding: 10px 15px;
-                font-size: 14px;
-                outline: none;
-                width: 300px;
-                color: #333;
-            }
-
-            .header-search button {
-                background-color: lightblue;
-                border: none;
-                color: white;
-                padding: 0 15px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-            .header-nav ul {
-                display: flex;
-                gap: 35px;
-            }
-
-            .header-nav a {
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: uppercase;
-                color: lightgray;
-                transition: color 0.3s ease;
-            }
-
-                .header-nav a:hover, .header-nav a.active {
-                    color: white;
-                }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 20px;
-        }
-
-            .header-actions a {
-                color: white;
-                transition: color 0.3s ease;
-            }
-
-                .header-actions a:hover {
-                    color: cornflowerblue;
-                }
-
-        .header-delivery {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            color: #ccc;
-            border-left: 1px solid #444;
-            padding-left: 20px;
-        }
-
-            .header-delivery i {
-                color: cornflowerblue;
-            }
-
-            .header-delivery .delivery-text {
-                color: #fff;
-                text-decoration: underline;
-                cursor: pointer;
-            }
-
-        /* --- CSS RIÊNG CỦA TRANG ĐIỆN THOẠI --- */
         .breadcrumbs {
             padding: 20px 0;
             background-color: white;
@@ -247,45 +139,11 @@
     </style>
 </head>
 <body>
-
-    <header class="site-header">
-        <div class="container">
-            <div class="header-logo"><a href="/Home/tranghome">TechPhone</a></div>
-
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="/Home/tranghome">Trang Chủ</a></li>
-                    <li><a href="/Home/trangdienthoai" class="active">Sản Phẩm</a></li>
-                    <li><a href="#">Khuyến Mãi</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
-                </ul>
-
-                <div class="header-delivery">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <span>Giao đến:</span><br>
-                        <a href="#" id="delivery-address-link" class="delivery-text" title="Nhấn để thay đổi địa chỉ">Nhập địa chỉ</a>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="header-actions">
-                <a href="#" aria-label="Tài khoản"><i class="fa-solid fa-user"></i></a>
-                <a href="/Home/tranggiohang" aria-label="Giỏ hàng"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-    </header>
-
     <main>
         <section class="breadcrumbs">
             <div class="container">
                 <ul>
-                    <li><a href="/Home/tranghome">Trang chủ</a></li>
+                    <li><a href="/Home/trangchu">Trang chủ</a></li>
                     <li>Điện thoại</li>
                 </ul>
             </div>
@@ -358,24 +216,5 @@
             </div>
         </section>
     </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const addressLink = document.getElementById('delivery-address-link');
-            function updateAddress() {
-                const newAddress = prompt("Nhập địa chỉ giao hàng:");
-                if (newAddress && newAddress.trim() !== '') {
-                    addressLink.textContent = newAddress;
-                    localStorage.setItem('userDeliveryAddress', newAddress);
-                }
-            }
-            function loadAddress() {
-                const saved = localStorage.getItem('userDeliveryAddress');
-                if (saved) addressLink.textContent = saved;
-            }
-            addressLink.addEventListener('click', e => { e.preventDefault(); updateAddress(); });
-            loadAddress();
-        });
-    </script>
 </body>
 </html>

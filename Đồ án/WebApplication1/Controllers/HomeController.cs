@@ -136,6 +136,15 @@ namespace tranggiaohang.Controllers
         {
             return View();
         }
+        public ActionResult thongtin()
+        {
+            return View();
+        }
+        public ActionResult trangsanpham()
+        {
+            return View();
+        }
+
     }
 
 }

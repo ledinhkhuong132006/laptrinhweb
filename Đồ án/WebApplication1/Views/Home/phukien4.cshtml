@@ -1,11 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "phukien4";
-}
-
-
-@{
-    ViewBag.Title = "trangsanpham5";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -13,10 +9,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chi tiết sản phẩm - Xiaomi 15T 5G</title>
+    <title>Giá đỡ điện thoại Xoay Q10</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <style>
-        /* CSS y hệt trang Oppo Find X8 để giao diện, spacing, style giống 100% */
         * {
             margin: 0;
             padding: 0;
@@ -49,96 +44,6 @@
             max-width: 100%;
             display: block;
         }
-
-        .site-header {
-            background-color: black;
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-            .site-header .container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 20px;
-            }
-
-        .header-logo a {
-            font-size: 28px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: white;
-        }
-
-        .header-search {
-            display: flex;
-            border: 1px solid #555;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: white;
-        }
-
-            .header-search input {
-                border: none;
-                padding: 10px 15px;
-                font-size: 14px;
-                outline: none;
-                width: 300px;
-                color: darkgray;
-            }
-
-            .header-search button {
-                background-color: lightblue;
-                border: none;
-                color: white;
-                padding: 0 15px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-            .header-nav ul {
-                display: flex;
-                gap: 35px;
-            }
-
-            .header-nav a {
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: uppercase;
-                color: lightgray;
-                padding: 5px 0;
-                transition: color 0.3s ease;
-            }
-
-                .header-nav a:hover, .header-nav a.active {
-                    color: white;
-                }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 20px;
-        }
-
-            .header-actions a {
-                color: white;
-                transition: color 0.3s ease;
-            }
-
-                .header-actions a:hover {
-                    color: lightblue;
-                }
 
         .btn-primary {
             display: inline-block;
@@ -456,39 +361,12 @@
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="header-logo">
-                <a href="#">TechPhone</a>
-            </div>
-
-            <div class="header-search">
-                <input type="text" placeholder="Tìm kiếm sản phẩm..." />
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </div>
-
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="/Home/tranghome">Trang Chủ</a></li>
-                    <li><a href="/trangdong" class="active">Sản Phẩm</a></li>
-                    <li><a href="/trangkhuyenmai">Khuyến Mãi</a></li>
-                    <li><a href="/lienhe">Liên Hệ</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-actions">
-                <a href="/trangtaikhoan" aria-label="Tài khoản"><i class="fas fa-user"></i></a>
-                <a href="/Home/tranggiohang" aria-label="Giỏ hàng"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-    </header>
-
     <main>
         <section class="breadcrumbs">
             <div class="container">
                 <ul>
-                    <li><a href="/Home/tranghome">Trang chủ</a></li>
-                    <li><a href="/Home/trangphuien">Phụ kiện nổi bật</a></li>
+                    <li><a href="/Home/trangchu">Trang chủ</a></li>
+                    <li><a href="/Home/trangphukien">Phụ kiện nổi bật</a></li>
                     <li>Giá đỡ điện thoại Xoay Q10</li>
                 </ul>
             </div>
@@ -707,7 +585,7 @@
                                 const imageUrls = JSON.parse(this.dataset.images);
                                 renderThumbnails(imageUrls, selectedColor);
 
-                                document.querySelector('.product-info h1').textContent = `Xiaomi 15T 512GB - ${selectedColor}`;
+                                document.querySelector('.product-info h1').textContent = `Giá đỡ điện thoại Xoay Q10- ${selectedColor}`;
                             }
                         });
                     });
