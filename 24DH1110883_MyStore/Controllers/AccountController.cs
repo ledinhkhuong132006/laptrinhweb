@@ -112,5 +112,19 @@ namespace _24DH1110883_MyStore.Controllers
             }
             base.Dispose(disposing);
         }
+        [Authorize]
+        public ActionResult ProfileInfo()
+        {
+            // lấy id user đang đăng nhập
+            string userId = User.Identity.GetUser();
+            // tìm Customer liên kết
+            var customer = db.Customers.FirstOrDefault(c => c.UserId == userId);
+            if (customer == null)
+            {
+                // chưa có hồ sơ, chuyển sang tạo hồ sơ hoặc thông báo
+                return RedirectToAction("Create", "Customer");
+            }
+            return View(customer);
+        }
     }
 }

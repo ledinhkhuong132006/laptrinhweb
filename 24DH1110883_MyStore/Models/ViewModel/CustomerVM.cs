@@ -17,6 +17,7 @@ namespace _24DH1110883_MyStore.Models.ViewModel
         public string CustomerEmail { get; set; }
         public string CustomerAddress { get; set; }
         public string Username { get; set; }
+        public string UserId { get; set; }
 
         // Keep EF Order type fully-qualified to avoid namespace issues
         public ICollection<_24DH1110883_MyStore.Models.Order> Orders { get; set; }
