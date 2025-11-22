@@ -13,10 +13,10 @@ namespace _24DH1110883_MyStore.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MyStoreEntities : DbContext
+    public partial class MyStoreEntities2 : DbContext
     {
-        public MyStoreEntities()
-            : base("name=MyStoreEntities")
+        public MyStoreEntities2()
+            : base("name=MyStoreEntities2")
         {
         }
     
@@ -30,7 +30,5 @@ namespace _24DH1110883_MyStore.Models
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<User> Users { get; set; }
     }
 }

@@ -4,20 +4,21 @@
     ViewBag.Title = "Delete";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-<h2 class="bg-success">Xóa danh mục</h2>
 
-<h4 class="alert-danger">bạn thực sự muốn xóa danh mục này?</h4>
+<h2 class="bg-success">Xóa sản phẩm</h2>
 
+@* show validation / error messages *@
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
 @Html.Partial("PVProdlnfor", Model)
 
-<div class="form-group">
-    <div class="col-md-offset-3 col-md-9">
-
-        @Html.ActionLink("Xóa", "Delete", new { id = Model.ProductID }, new { @class = "btn btn-primary btn-sm" })
-        @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-primary btn-sm" })
+@using (Html.BeginForm("Delete", "Products", new { area = "Admin", id = Model.ProductID }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <div class="col-md-offset-3 col-md-9">
+            <input type="submit" value="Xóa" class="btn btn-danger btn-sm" />
+            @Html.ActionLink("Quay lại", "Index", "Products", new { area = "Admin" }, new { @class = "btn btn-secondary btn-sm ml-2" })
+        </div>
     </div>
-
-</div>
-
-
+}

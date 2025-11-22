@@ -12,7 +12,7 @@ namespace _24DH1110883_MyStore.Areas.Admin.Controllers
 {
     public class CategoriesController : Controller
     {
-        private MyStoreEntities db = new MyStoreEntities();
+        private MyStoreEntities2 db = new MyStoreEntities2();
 
         // GET: Admin/Categories
         // Lay du lieu tu bang  categori de hien thi ten 

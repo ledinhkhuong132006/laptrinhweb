@@ -13,7 +13,7 @@
             {
                 <div class="col-6 col-sm-4 col-md-3 mb-3">
                     <div class="card h-100 admin-card">
-                        <a href="@Url.Action("Details", "Home", new { area = "Admin", id = product.ProductID })" class="text-decoration-none text-dark">
+                        <a href="@Url.Action("ProductDetails", "Home", new { area = "Admin", id = product.ProductID })" class="text-decoration-none text-dark">
                             <img class="card-img-top" src="@Url.Content(product.ProductImage ?? "~/Content/img/no-image.png")" alt="@product.ProductName" />
                             <div class="card-body p-2">
                                 <div class="card-title">@product.ProductName</div>
@@ -23,7 +23,7 @@
                         </a>
                         <div class="card-footer p-2">
                             <a class="btn btn-sm btn-outline-primary" href="@Url.Action("Edit", "Products", new { area = "Admin", id = product.ProductID })">Sửa</a>
-                            <a class="btn btn-sm btn-outline-secondary" href="@Url.Action("Details", "Products", new { area = "Admin", id = product.ProductID })">Chi tiết</a>
+                            <a class="btn btn-sm btn-outline-secondary" href="@Url.Action("ProductDetails", "Home", new { area = "Admin", id = product.ProductID })">Chi tiết</a>
                         </div>
                     </div>
                 </div>

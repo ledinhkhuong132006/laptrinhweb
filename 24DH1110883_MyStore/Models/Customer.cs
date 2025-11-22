@@ -26,9 +26,10 @@ namespace _24DH1110883_MyStore.Models
         public string CustomerEmail { get; set; }
         public string CustomerAddress { get; set; }
         public string Username { get; set; }
+        public string Password { get; set; }
+        public string UserRole { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
-        public virtual User l { get; set; }
     }
 }

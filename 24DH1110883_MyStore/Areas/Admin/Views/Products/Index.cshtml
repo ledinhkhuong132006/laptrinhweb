@@ -21,7 +21,7 @@
     }
 </style>
 
-@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+@using (Html.BeginForm("Index", "Products", new { area = "Admin" }, FormMethod.Get))
 {
     <div class="form-group search-container">
         @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control", placeholder = "Nhập tên sản phẩm cần tìm" })

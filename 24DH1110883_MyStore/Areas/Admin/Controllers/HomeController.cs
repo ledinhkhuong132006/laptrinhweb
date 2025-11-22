@@ -18,14 +18,14 @@ namespace _24DH1110883_MyStore.Areas.Admin.Controllers
 {
     public class HomeController : Controller
     {
-        private MyStoreEntities db = new MyStoreEntities();
+        private MyStoreEntities2 db = new MyStoreEntities2();
 
 
         // GET: Admin/Home/Index
         public ActionResult Index(string searchTerm, int? page)
         {
             var model = new HomeProductVM();
-            var products = db.Products.AsQueryable();
+            var products = db.Products.AsQueryable();       
 
             // Nếu có tìm kiếm thì lọc
             if (!String.IsNullOrEmpty(searchTerm))
@@ -69,7 +69,13 @@ namespace _24DH1110883_MyStore.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product pro = db.Products.Find(id);
+
+            // Eager-load Category and OrderDetails so properties are available in the view
+            var pro = db.Products
+                        .Include(p => p.Category)
+                        .Include(p => p.OrderDetails)
+                        .SingleOrDefault(p => p.ProductID == id);
+    
             if (pro == null)
             {
                 return HttpNotFound();
