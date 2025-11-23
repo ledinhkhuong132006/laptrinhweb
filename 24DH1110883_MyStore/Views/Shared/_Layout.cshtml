@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        /* CSS chung cho toàn trang */
         body {
             font-family: 'Montserrat', sans-serif;
-            padding-top: 70px; 
+            padding-top: 70px;
         }
 
         .navbar {
@@ -29,28 +28,39 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        @Html.ActionLink("Trang chủ", "Index", "Home", null, new { @class = "nav-link" })
-                    </li>
-                    <li class="nav-item">
-                        @Html.ActionLink("Sản phẩm", "Index", "Products", null, new { @class = "nav-link" })
-                    </li>
+                    <li class="nav-item">@Html.ActionLink("Trang chủ", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Sản phẩm", "Index", "Products", null, new { @class = "nav-link" })</li>
                     <li class="nav-item">
                         <a href="@Url.Action("Index", "Cart")" class="nav-link position-relative">
                             <i class="fa-solid fa-cart-shopping"></i> Giỏ hàng
                         </a>
                     </li>
-                    <li class="nav-item">
-                        @Html.ActionLink("Đăng nhập", "Login", "Account", null, new { @class = "nav-link" })
-                    </li>
-                    @if (Session["Username"] != null)
-                    {@Html.ActionLink("Trang cá nhân", "ProfileInfo", "Account")}
+
+                    @if (Session["Username"] == null)
+                    {
+                        <li class="nav-item">@Html.ActionLink("Đăng nhập", "Login", "Account", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("Đăng ký", "Register", "Account", null, new { @class = "nav-link" })</li>
+                    }
+                    else
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-bs-toggle="dropdown">
+                                <i class="fa-solid fa-user"></i> @Session["Username"]
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                                <li>@Html.ActionLink("Trang cá nhân", "ProfileInfo", "Account", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Chỉnh sửa hồ sơ", "Edit", "Customer", new { id = Session["CustomerID"] }, new { @class = "dropdown-item" })</li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li>@Html.ActionLink("Đăng xuất", "Logout", "Account", null, new { @class = "dropdown-item" })</li>
+                            </ul>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-3">
         @RenderBody()
     </div>
 

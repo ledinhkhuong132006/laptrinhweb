@@ -1,4 +1,5 @@
-﻿@model _24DH1110883_MyStore.Models.Customer
+﻿ url=https://github.com/ledinhkhuong132006/laptrinhweb/blob/3414fda3ea8da814f8762fd84895d94bd34bc6a9/24DH1110883_MyStore/Views/Customer/Edit.cshtml
+@model _24DH1110883_MyStore.Models.Customer
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,22 +9,38 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(m => m.CustomerID)
-    <div class="form-group">
+
+    <div class="form-group mb-3">
         @Html.LabelFor(m => m.CustomerName)
         @Html.TextBoxFor(m => m.CustomerName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CustomerName, "", new { @class = "text-danger" })
     </div>
-    <div class="form-group">
+
+    <div class="form-group mb-3">
         @Html.LabelFor(m => m.CustomerEmail)
         @Html.TextBoxFor(m => m.CustomerEmail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CustomerEmail, "", new { @class = "text-danger" })
     </div>
-    <div class="form-group">
+
+    <div class="form-group mb-3">
         @Html.LabelFor(m => m.CustomerPhone)
         @Html.TextBoxFor(m => m.CustomerPhone, new { @class = "form-control" })
     </div>
-    <div class="form-group">
+
+    <div class="form-group mb-3">
         @Html.LabelFor(m => m.CustomerAddress)
         @Html.TextBoxFor(m => m.CustomerAddress, new { @class = "form-control" })
     </div>
+
+    <div class="form-group mb-3">
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+        <small class="text-muted">Bạn có thể thay đổi username nếu muốn.</small>
+    </div>
+
     <button type="submit" class="btn btn-primary">Lưu</button>
+    @Html.ActionLink("Hủy", "ProfileInfo", "Account", null, new { @class = "btn btn-secondary ms-2" })
 }

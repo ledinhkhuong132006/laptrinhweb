@@ -22,8 +22,9 @@
                 <td>@item.CustomerEmail</td>
                 <td>@item.CustomerPhone</td>
                 <td>
-                    @Html.ActionLink("Details", "Details", new { id = item.CustomerID }) |
-                    @Html.ActionLink("Edit", "Edit", new { id = item.CustomerID })
+                    @Html.ActionLink("Details", "Details", new { id = item.CustomerID }, new { @class = "btn btn-sm btn-info" })
+                    @Html.Raw(" ")
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CustomerID }, new { @class = "btn btn-sm btn-primary" })
                 </td>
             </tr>
         }
