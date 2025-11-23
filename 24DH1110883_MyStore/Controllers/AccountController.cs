@@ -1,8 +1,10 @@
-﻿using _24DH1110883_MyStore.Models;
+﻿
+using _24DH1110883_MyStore.Models;
 using _24DH1110883_MyStore.Models.ViewModel;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Web.UI.WebControls;
 
 namespace _24DH1110883_MyStore.Controllers
 {
@@ -10,20 +12,43 @@ namespace _24DH1110883_MyStore.Controllers
     {
         private MyStoreEntities2 db = new MyStoreEntities2();
 
-        // GET: Account/Register
+        // ===== Helper: Lấy customer hiện tại từ Session =====
+        private Customer GetCurrentCustomer()
+        {
+            // Ưu tiên CustomerID
+            if (Session["CustomerID"] != null && int.TryParse(Session["CustomerID"].ToString(), out int customerId))
+            {
+                var customerById = db.Customers.Find(customerId);
+                if (customerById != null) return customerById;
+            }
+
+            // Fallback theo Username
+            if (Session["Username"] != null)
+            {
+                string username = Session["Username"].ToString();
+                var customerByUsername = db.Customers.FirstOrDefault(c => c.Username == username);
+                if (customerByUsername != null)
+                {
+                    Session["CustomerID"] = customerByUsername.CustomerID; // sync lại Session
+                    return customerByUsername;
+                }
+            }
+
+            return null;
+        }
+
+        // ===== Register =====
         public ActionResult Register()
         {
             return View();
         }
 
-        // POST: Account/Register
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Register(RegisterVM model)
         {
             if (ModelState.IsValid)
             {
-                // 1. Kiểm tra Username trong bảng Customer (thay vì Users)
                 var existingUser = db.Customers.SingleOrDefault(u => u.Username == model.Username);
                 if (existingUser != null)
                 {
@@ -31,28 +56,23 @@ namespace _24DH1110883_MyStore.Controllers
                     return View(model);
                 }
 
-                // 2. Tạo bản ghi Customer mới (bao gồm cả User và Info)
+                // Lưu ý: Nên hash mật khẩu, ví dụ dùng BCrypt/SHA256 (demo dùng plain)
                 var customer = new Customer
                 {
-                    // Thông tin đăng nhập
                     Username = model.Username,
-                    Password = model.Password, // Lưu ý mã hóa nếu cần
+                    Password = model.Password,
                     UserRole = "Customer",
 
-                    // Thông tin cá nhân
                     CustomerName = model.CustomerName,
                     CustomerEmail = model.CustomerEmail,
                     CustomerPhone = model.CustomerPhone,
                     CustomerAddress = model.CustomerAddress
                 };
 
-                // 3. Chỉ thêm vào bảng Customers
                 db.Customers.Add(customer);
-
-                // 4. Lưu database
                 db.SaveChanges();
 
-                // Lưu session và tự động đăng nhập
+                // Đăng nhập và lưu session
                 Session["Username"] = customer.Username;
                 Session["UserRole"] = customer.UserRole;
                 Session["CustomerID"] = customer.CustomerID;
@@ -63,19 +83,19 @@ namespace _24DH1110883_MyStore.Controllers
 
             return View(model);
         }
-        // GET: Account/Login
+
+        // ===== Login =====
         public ActionResult Login()
         {
             return View();
         }
-        // POST: Account/Login
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginVM model)
         {
             if (ModelState.IsValid)
             {
-                // Tìm trong bảng Customers
                 var user = db.Customers.SingleOrDefault(u =>
                     u.Username == model.Username &&
                     u.Password == model.Password &&
@@ -83,11 +103,8 @@ namespace _24DH1110883_MyStore.Controllers
 
                 if (user != null)
                 {
-                    // Lưu session
                     Session["Username"] = user.Username;
                     Session["UserRole"] = user.UserRole;
-
-                    // Lưu cả CustomerID để sau này dùng đặt hàng cho tiện
                     Session["CustomerID"] = user.CustomerID;
 
                     FormsAuthentication.SetAuthCookie(user.Username, false);
@@ -99,7 +116,8 @@ namespace _24DH1110883_MyStore.Controllers
 
             return View(model);
         }
-        // GET: Account/Logout
+
+        // ===== Logout =====
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
@@ -107,46 +125,104 @@ namespace _24DH1110883_MyStore.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        // Hiển thị thông tin profile của Customer (dựa vào Session["CustomerID"] hoặc fallback theo Username)
+        // ===== Xem thông tin profile =====
         [Authorize]
         public ActionResult ProfileInfo()
         {
-            // ưu tiên lấy CustomerID từ session (được lưu khi login/register)
-            if (Session["CustomerID"] != null)
+            var customer = GetCurrentCustomer();
+            if (customer == null)
+                return RedirectToAction("Login", "Account");
+
+            return View(customer);
+        }
+
+        // ===== Sửa thông tin profile (Tên, Email, SĐT, Địa chỉ) =====
+        [Authorize]
+        public ActionResult EditProfile()
+        {
+            var customer = GetCurrentCustomer();
+            if (customer == null)
+                return RedirectToAction("Login", "Account");
+
+            var vm = new EditProfileVM
             {
-                int customerId;
-                if (int.TryParse(Session["CustomerID"].ToString(), out customerId))
-                {
-                    var customer = db.Customers.Find(customerId);
-                    if (customer != null)
-                        return View(customer);
-                }
+                CustomerName = customer.CustomerName,
+                CustomerEmail = customer.CustomerEmail,
+                CustomerPhone = customer.CustomerPhone,
+                CustomerAddress = customer.CustomerAddress
+            };
+
+            return View(vm);
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditProfile(EditProfileVM model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var customer = GetCurrentCustomer();
+            if (customer == null)
+                return RedirectToAction("Login", "Account");
+
+            // Cập nhật
+            customer.CustomerName = model.CustomerName;
+            customer.CustomerEmail = model.CustomerEmail;
+            customer.CustomerPhone = model.CustomerPhone;
+            customer.CustomerAddress = model.CustomerAddress;
+
+            db.SaveChanges();
+
+            TempData["Success"] = "Cập nhật thông tin thành công!";
+            return RedirectToAction("ProfileInfo");
+        }
+
+        // ===== Đổi mật khẩu =====
+        [Authorize]
+        public ActionResult ChangePassword()
+        {
+            return View(new ChangePasswordVM());
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangePassword(ChangePasswordVM model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var customer = GetCurrentCustomer();
+            if (customer == null)
+                return RedirectToAction("Login", "Account");
+
+            // Kiểm tra mật khẩu hiện tại
+            if (customer.Password != model.CurrentPassword)
+            {
+                ModelState.AddModelError("CurrentPassword", "Mật khẩu hiện tại không đúng.");
+                return View(model);
             }
 
-            // fallback: nếu session CustomerID bị mất nhưng vẫn còn Username trong session => tìm theo Username
-            if (Session["Username"] != null)
+            if (model.NewPassword != model.ConfirmNewPassword)
             {
-                string username = Session["Username"].ToString();
-                var customer = db.Customers.FirstOrDefault(c => c.Username == username);
-                if (customer != null)
-                {
-                    // đảm bảo session CustomerID được thiết lập lại
-                    Session["CustomerID"] = customer.CustomerID;
-                    return View(customer);
-                }
+                ModelState.AddModelError("ConfirmNewPassword", "Mật khẩu xác nhận không khớp.");
+                return View(model);
             }
 
-            // Nếu không tìm được customer => chuyển tới trang đăng nhập hoặc tạo profile
-            return RedirectToAction("Login", "Account");
+            // TODO: Hash mật khẩu mới trước khi lưu (ví dụ BCrypt)
+            customer.Password = model.NewPassword;
+            db.SaveChanges();
+
+            TempData["Success"] = "Đổi mật khẩu thành công!";
+            return RedirectToAction("ProfileInfo");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing) db.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

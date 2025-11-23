@@ -1,61 +1,44 @@
 ﻿@model _24DH1110883_MyStore.Models.Customer
 @{
-    ViewBag.Title = "ProfileInfo";
+    ViewBag.Title = "Thông tin cá nhân"; // Đặt title tiếng Việt cho thân thiện
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2 style="text-align:center">ProfileInfo</h2>
 
-<div>
-    <h4>Customer</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CustomerName)
-        </dd>
+<div class="container" style="margin-top: 20px;">
+    <h2>Thông tin tài khoản</h2>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerPhone)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CustomerPhone)
-        </dd>
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerEmail)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CustomerEmail)
-        </dd>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th style="width: 200px;">Tên đăng nhập</th>
+            <td>@Model.Username</td>
+        </tr>
+        <tr>
+            <th>Họ và tên</th>
+            <td>@Model.CustomerName</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>@Model.CustomerEmail</td>
+        </tr>
+        <tr>
+            <th>Số điện thoại</th>
+            <td>@Model.CustomerPhone</td>
+        </tr>
+        <tr>
+            <th>Địa chỉ</th>
+            <td>@Model.CustomerAddress</td>
+        </tr>
+    </table>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerAddress)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CustomerAddress)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Username)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Username)
-        </dd>
-
-        @* Nếu muốn hiển thị Password (không khuyến nghị), bỏ comment ở dưới và cân nhắc mã hóa/ẩn *@
-        @*
-            <dt>
-                @Html.DisplayNameFor(model => model.Password)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Password)
-            </dd>
-        *@
-    </dl>
+    <div class="mt-3">
+        @Html.ActionLink("Sửa thông tin", "EditProfile", "Account", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Đổi mật khẩu", "ChangePassword", "Account", null, new { @class = "btn btn-warning", style = "margin-left:10px;" })
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", "Customer", new { id = Model.CustomerID }, null) |
-    @Html.ActionLink("Back to List", "Index", "Customer")
-</p>

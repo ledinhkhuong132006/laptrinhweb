@@ -6,7 +6,7 @@
         <a class="btn btn-sm btn-outline-secondary" href="#new-products">Xem tất cả</a>
     </div>
 
-    @if (Model?.FeaturedProducts != null && Model.FeaturedProducts.Any())
+    @if (Model != null && Model.FeaturedProducts != null && Model.FeaturedProducts.Any())
     {
         <div class="featured-row">
             @foreach (var product in Model.FeaturedProducts)

@@ -48,8 +48,22 @@
                                 <i class="fa-solid fa-user"></i> @Session["Username"]
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
-                                <li>@Html.ActionLink("Trang cá nhân", "ProfileInfo", "Account", null, new { @class = "dropdown-item" })</li>
-                                <li>@Html.ActionLink("Chỉnh sửa hồ sơ", "Edit", "Customer", new { id = Session["CustomerID"] }, new { @class = "dropdown-item" })</li>
+                                <li>
+                                    @Html.ActionLink("Trang cá nhân", "ProfileInfo", "Account", null, new { @class = "dropdown-item" })
+                                </li>
+                                <li>
+                                    @if (Session["CustomerID"] != null)
+                                    {
+                                        @Html.ActionLink("Chỉnh sửa hồ sơ", "Edit", "Customer", new { id = Session["CustomerID"] }, new { @class = "dropdown-item" })
+                                    }
+                                    else
+                                    {
+                                        @Html.ActionLink("Chỉnh sửa hồ sơ", "Edit", "Customer", null, new { @class = "dropdown-item" })
+                                    }
+                                </li>
+                                <li>
+
+                                </li>
                                 <li><hr class="dropdown-divider" /></li>
                                 <li>@Html.ActionLink("Đăng xuất", "Logout", "Account", null, new { @class = "dropdown-item" })</li>
                             </ul>

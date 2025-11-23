@@ -2,25 +2,37 @@
 
 <section class="mb-3">
     <div class="section-title mb-2">
-        <h3>Sản phẩm nổi bật</h3>
-        <a class="btn btn-sm btn-outline-secondary" href="#new-products">Xem tất cả</a>
+        <h3
+            style="font-weight:bold;
+            text-transform:uppercase; 
+              border-bottom: 2px solid #007bff;
+               display:inline-block;">Sản phẩm nổi bật</h3>
+        <a class="btn btn-sm btn-outline-secondary" href="#new-products" 
+           style="float:right;"   >Xem tất cả</a>
     </div>
 
-    @if (Model.FeaturedProducts != null && Model.FeaturedProducts.Any())
+
+
+    @* Kiểm tra null để tránh lỗi biên dịch *@
+    @if (Model != null && Model.FeaturedProducts != null && Model.FeaturedProducts.Any())
     {
-        <div class="featured-row">
+        @* BẮT BUỘC: Dùng class "list-container" để nó chia cột giống CSS *@
+        <div class="list-container">
+
             @foreach (var product in Model.FeaturedProducts)
             {
-                <div class="featured-item admin-card card">
-                    <a href="@Url.Action("Details", "Home", new { area = "Admin", id = product.ProductID })" class="text-decoration-none text-dark">
-                        <img class="card-img-top" src="@Url.Content(product.ProductImage ?? "~/Content/img/no-image.png")" alt="@product.ProductName" />
-                        <div class="card-body p-2">
-                            <div class="card-title">@product.ProductName</div>
-                            <div class="card-price">@product.ProductPrice.ToString("C")</div>
-                        </div>
+                @* BẮT BUỘC: Dùng class "lproduct-item" để khung đẹp giống CSS *@
+                <div class="lproduct-item">
+                    <a href="@Url.Action("Details", "Home", new { area = "Admin", id = product.ProductID })">
+                        <img src="@Url.Content(product.ProductImage ?? "~/Content/img/no-image.png")" alt="@product.ProductName" />
                     </a>
+
+                    <h5>@product.ProductName</h5>
+
+                    <span class="prodSale">@product.ProductPrice.ToString("N0") đ</span>
                 </div>
             }
+
         </div>
     }
     else
