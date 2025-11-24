@@ -1,88 +1,98 @@
-﻿using System;
+﻿using _24DH1110883_MyStore.Models;
+using _24DH1110883_MyStore.Models.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using _24DH1110883_MyStore.Models;
-using _24DH1110883_MyStore.Models.ViewModel;
-using PagedList;
-using System.Data.Entity;
 
 namespace _24DH1110883_MyStore.Controllers
 {
     public class CartController : Controller
     {
-        //private readonly ApplicationDbContext db = new ApplicationDbContext();
         private MyStoreEntities2 db = new MyStoreEntities2();
 
-        // Hàm lấy dịch vụ giỏ hàng
-        private CartService GetCartService()
+        // Hàm lấy giỏ hàng từ Session
+        private List<CartItem> GetCart()
         {
-            return new CartService(Session);
+            List<CartItem> cart = Session["Cart"] as List<CartItem>;
+            if (cart == null)
+            {
+                cart = new List<CartItem>();
+                Session["Cart"] = cart;
+            }
+            return cart;
         }
 
-        // Hiển thị giỏ hàng đã gom nhóm sản phẩm theo danh mục
-        public ActionResult Index(int? page)
+        // Action 1: Thêm sản phẩm vào giỏ
+        public ActionResult AddToCart(int id)
         {
-            var cart = GetCartService().GetCart();
-            var products = db.Products.ToList();
-            var similarProducts = new List<Product>();
+            // Lấy giỏ hàng hiện tại
+            var cart = GetCart();
 
-            // Logic tìm sản phẩm tương tự (Gợi ý mua thêm)
-            if (cart.Items != null && cart.Items.Any())
+            // Tìm xem sản phẩm này đã có trong giỏ chưa
+            var item = cart.FirstOrDefault(s => s.ProductID == id);
+
+            if (item != null)
             {
-                similarProducts = products.Where(p =>
-                    // 1. Tìm sản phẩm có cùng danh mục với bất kỳ sản phẩm nào đang có trong giỏ
-                    cart.Items.Any(ci => ci.Category == p.Category.CategoryName)
-                    // 2. VÀ loại bỏ những sản phẩm đã có trong giỏ hàng rồi (để không gợi ý trùng)
-                    && !cart.Items.Any(ci => ci.ProductID == p.ProductID)
-                ).ToList();
+                // Nếu có rồi thì tăng số lượng lên 1
+                item.Quantity++;
+            }
+            else
+            {
+                // Nếu chưa có thì lấy thông tin từ DB và thêm mới vào giỏ
+                var p = db.Products.Find(id);
+                if (p != null)
+                {
+                    item = new CartItem
+                    {
+                        ProductID = p.ProductID,
+                        ProductName = p.ProductName,
+                        ProductImage = p.ProductImage,
+                        UnitPrice = p.ProductPrice,
+                        Quantity = 1
+                    };
+                    cart.Add(item);
+                }
             }
 
-            // Đoạn code liên quan tới phân trang
-            // Lấy số trang hiện tại (mặc định là trang 1 nếu không có giá trị)
-            int pageNumber = page ?? 1;
-            int pageSize = cart.PageSize; // Số sản phẩm mỗi trang (lấy cấu hình từ cart)
+            // Lưu lại vào Session
+            Session["Cart"] = cart;
 
-            // Sắp xếp và phân trang cho danh sách sản phẩm tương tự
-            cart.SimilarProducts = similarProducts.OrderBy(p => p.ProductID).ToPagedList(pageNumber, pageSize);
+            // Chuyển hướng đến trang Giỏ hàng để khách xem
+            return RedirectToAction("Index");
+        }
 
+        // Action 2: Xem giỏ hàng
+        public ActionResult Index()
+        {
+            var cart = GetCart();
             return View(cart);
         }
 
-        // Thêm sản phẩm vào giỏ
-        public ActionResult AddToCart(int id, int quantity = 1)
-        {
-            var product = db.Products.Find(id);
-            if (product != null)
-            {
-                var cartService = GetCartService();
-                cartService.GetCart().AddItem(product.ProductID, product.ProductImage,
-                    product.ProductName, product.ProductPrice, quantity, product.Category?.CategoryName);
-            }
-            return RedirectToAction("Index");
-        }
-
-        // Xóa sản phẩm khỏi giỏ
+        // Action 3: Xóa sản phẩm khỏi giỏ
         public ActionResult RemoveFromCart(int id)
         {
-            var cartService = GetCartService();
-            cartService.GetCart().RemoveItem(id);
+            var cart = GetCart();
+            var item = cart.FirstOrDefault(s => s.ProductID == id);
+            if (item != null)
+            {
+                cart.Remove(item);
+            }
+            Session["Cart"] = cart;
             return RedirectToAction("Index");
         }
 
-        // Làm trống giỏ hàng
-        public ActionResult ClearCart()
-        {
-            GetCartService().ClearCart();
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
+        // Action 4: Cập nhật số lượng (dùng cho trang giỏ hàng)
         public ActionResult UpdateQuantity(int id, int quantity)
         {
-            var cartService = GetCartService();
-            cartService.GetCart().UpdateQuantity(id, quantity);
+            var cart = GetCart();
+            var item = cart.FirstOrDefault(s => s.ProductID == id);
+            if (item != null)
+            {
+                item.Quantity = quantity;
+            }
+            Session["Cart"] = cart;
             return RedirectToAction("Index");
         }
     }

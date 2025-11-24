@@ -1,0 +1,100 @@
+﻿@model _24DH1110883_MyStore.Models.Order
+@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-5">
+    <div class="alert alert-success text-center">
+        <h4><i class="fa fa-check-circle"></i> ĐẶT HÀNG THÀNH CÔNG!</h4>
+        <p>Cảm ơn bạn đã mua sắm. Đơn hàng của bạn đang được xử lý.</p>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Thông tin đơn hàng #@Model.OrderID</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Ngày đặt:</strong> @Model.OrderDate.Value.ToString("dd/MM/yyyy HH:mm")</p>
+                    <p><strong>Trạng thái đơn:</strong> <span class="badge badge-info">@Model.OrderStatus</span></p>
+                    <p>
+                        <strong>Trạng thái thanh toán:</strong>
+                        @if (Model.PaymentStatus == "Đã thanh toán")
+                        {
+                            <span class="text-success font-weight-bold">@Model.PaymentStatus</span>
+                        }
+                        else
+                        {
+                            <span class="text-warning font-weight-bold">@Model.PaymentStatus</span>
+                        }
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Người nhận:</strong> @Model.Customer.CustomerName</p> @* Đảm bảo Model có liên kết Customer *@
+                    <p><strong>Số điện thoại:</strong> @Model.Customer.CustomerPhone</p>
+                    <p><strong>Địa chỉ giao hàng:</strong> @Model.AddressDelivery</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Danh sách sản phẩm</h5>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover mb-0">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="text-center">STT</th>
+                        <th>Tên sản phẩm</th>
+                        <th class="text-center">Số lượng</th>
+                        <th class="text-right">Đơn giá</th>
+                        <th class="text-right">Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int i = 1; }
+                    @foreach (var item in Model.OrderDetails)
+                    {
+                        <tr>
+                            <td class="text-center">@i</td>
+                            <td>
+                                @if (item.Product.ProductImage != null)
+                                {
+                                    <img src="@Url.Content(item.Product.ProductImage)" width="40" height="40" style="object-fit:cover; margin-right:10px;" />
+                                }
+                                <strong>@item.Product.ProductName</strong>
+                            </td>
+                            <td class="text-center">@item.Quantity</td>
+                            <td class="text-right">@item.UnitPrice.ToString("N0") đ</td>
+                            <td class="text-right text-primary font-weight-bold">
+                               
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-right font-weight-bold">Tổng tiền thanh toán:</td>
+                        <td class="text-right text-danger font-weight-bold" style="font-size: 1.2rem;">
+                            @Model.TotalAmount.ToString("N0") VNĐ
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg">
+            <i class="fa fa-shopping-cart"></i> Tiếp tục mua hàng
+        </a>
+        <button onclick="window.print()" class="btn btn-secondary btn-lg ml-2">
+            <i class="fa fa-print"></i> In hóa đơn
+        </button>
+    </div>
+</div>

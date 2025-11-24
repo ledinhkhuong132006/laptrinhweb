@@ -31,10 +31,12 @@
     <Property Name="OrderDate" Type="DateTime" Precision="3" />
     <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="PaymentStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="AddressDelivery" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddressDelivery" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Customer" Relationship="Self.FK__Order__CustomerI__412EB0B6" FromRole="Order" ToRole="Customer" />
     <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__44FF419A" FromRole="Order" ToRole="OrderDetail" />
     <Property Name="OrderStatus" Type="Int32" Nullable="false" />
+    <Property Name="PaymentMethod" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="DeliveryMethod" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="OrderDetail">
     <Key>

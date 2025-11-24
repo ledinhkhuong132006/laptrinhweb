@@ -168,3 +168,6 @@ C:\nop bai git\24DH1110883_MyStore\bin\PagedList.dll
 C:\nop bai git\24DH1110883_MyStore\bin\PagedList.Mvc.dll
 C:\nop bai git\24DH1110883_MyStore\bin\PagedList.xml
 C:\nop bai git\24DH1110883_MyStore\bin\PagedList.Mvc.xml
+C:\nop bai git\24DH1110883_MyStore\bin\PayPal.dll
+C:\nop bai git\24DH1110883_MyStore\bin\PayPalCoreSDK.dll
+C:\nop bai git\24DH1110883_MyStore\bin\PayPal.xml

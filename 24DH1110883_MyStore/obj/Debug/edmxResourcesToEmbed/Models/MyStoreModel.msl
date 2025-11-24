@@ -26,6 +26,8 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="MyStoreModel.Order">
         <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="DeliveryMethod" ColumnName="DeliveryMethod" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
           <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
           <ScalarProperty Name="OrderID" ColumnName="OrderID" />
           <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
