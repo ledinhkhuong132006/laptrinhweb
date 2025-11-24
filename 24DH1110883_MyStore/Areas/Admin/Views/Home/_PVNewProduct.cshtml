@@ -24,6 +24,7 @@
                         <div class="card-footer p-2">
                             <a class="btn btn-sm btn-outline-primary" href="@Url.Action("Edit", "Products", new { area = "Admin", id = product.ProductID })">Sửa</a>
                             <a class="btn btn-sm btn-outline-secondary" href="@Url.Action("ProductDetails", "Home", new { area = "Admin", id = product.ProductID })">Chi tiết</a>
+                            <a class="btn btn-sm btn-danger" href="@Url.Action("Delete", "Home", new { area = "Admin", id = product.ProductID })">Xóa</a>
                         </div>
                     </div>
                 </div>

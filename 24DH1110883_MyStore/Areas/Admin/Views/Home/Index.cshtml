@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2 class="mb-3">Trang quản trị</h2>
+<h2 class="mb-3">TRANG QUẢN TRỊ</h2>
 
 <style>
   
@@ -53,9 +53,12 @@
 
 @using (Html.BeginForm("Index", "Home", new { area = "Admin" }, FormMethod.Get))
 {
-    <div class="form-inline mb-3">
-        @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control mr-2", placeholder = "Tìm kiếm sản phẩm..." })
-        <button type="submit" class="btn btn-primary">Tìm</button>
+    <div class="form-group">
+        <div class="col-md-2">
+            @Html.TextBoxFor(m => m.SearchTerm, null, new { @class = "form-control mr-2", placeholder = "Tìm kiếm sản phẩm..." })
+
+            <button type="submit" class="btn btn-primary">Tìm</button>
+        </div>
     </div>
 }
 
