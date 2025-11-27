@@ -1,4 +1,5 @@
-﻿using _24DH1110883_MyStore.Models;
+﻿using _24DH1110883_MyStore.ViewModels;
+using _24DH1110883_MyStore.Models;
 using _24DH1110883_MyStore.Models.ViewModel;
 using Antlr.Runtime;
 
@@ -19,33 +20,26 @@ namespace _24DH1110883_MyStore.Areas.Admin.Controllers
     public class HomeController : Controller
     {
         private MyStoreEntities2 db = new MyStoreEntities2();
-
-
-        // GET: Admin/Home/Index
-        public ActionResult Index(string searchTerm, int? page)
+        // GET: Admin/Home
+        public ActionResult Index()
         {
-            var model = new HomeProductVM();
-            var products = db.Products.AsQueryable();       
+            // Giả sử db là DbContext của bạn
+            // Logic: Lấy từ bảng OrderDetail -> Group theo Sản phẩm -> Tính tổng số lượng
 
-            // Nếu có tìm kiếm thì lọc
-            if (!String.IsNullOrEmpty(searchTerm))
-            {
-                model.SearchTerm = searchTerm;
-                products = products.Where(p => p.ProductName.Contains(searchTerm) ||
-                                           p.ProductDescription.Contains(searchTerm) ||
-                                           p.Category.CategoryName.Contains(searchTerm));
-            }
-            // doan code lien qua toi phan trang
-            // lay so luong trang hien tai
-            int pageNumber = page ?? 1;
-            int pageSize = 6;
-            // lay top 10 san pham moi nhat
-            model.FeaturedProducts = products.OrderByDescending(p => p.ProductID).Take(10).ToList();
-            // lay 20 san pham moi nhat de phan trang
-            model.NewProducts = products.OrderByDescending(p => p.ProductID).ToPagedList(pageNumber, pageSize);
+            var dataThongKe = db.OrderDetails
+                .GroupBy(od => od.Product) // Nhóm theo Product (hoặc od.ProductID)
+                .Select(g => new ProductStatisticVM
+                {
+                    TenSanPham = g.Key.ProductName, // Lấy tên từ Product
+                    SoLuongDaBan = g.Sum(x => x.Quantity), // Cộng dồn số lượng bán
+                    TongDoanhThu = g.Sum(x => x.Quantity * x.UnitPrice), // Cộng dồn tiền
+                    HinhAnh = g.Key.ProductImage // Lấy ảnh
+                })
+                .OrderByDescending(x => x.SoLuongDaBan) // Sắp xếp giảm dần (bán chạy nhất lên đầu)
+                .Take(5) // Chỉ lấy top 5 sản phẩm bán chạy nhất
+                .ToList();
 
-            // Trả về view với model HomeProductVM (was returning products.ToList())
-            return View(model);
+            return View(dataThongKe);
         }
 
         // GET: Admin/Home/Details/5
@@ -111,14 +105,43 @@ namespace _24DH1110883_MyStore.Areas.Admin.Controllers
         }
 
         // POST: Admin/Home/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductID,CategoryID,ProductName,ProductPrice,ProductImage,ProductDescription")] Product product)
+        // Thêm tham số HttpPostedFileBase ImageFile để nhận file
+        public ActionResult Create(Product product, HttpPostedFileBase ImageFile)
         {
             if (ModelState.IsValid)
             {
+                // Xử lý lưu ảnh
+                if (ImageFile != null && ImageFile.ContentLength > 0)
+                {
+                    // 1. Lấy tên file
+                    string fileName = System.IO.Path.GetFileName(ImageFile.FileName);
+
+                    // 2. Tạo đường dẫn lưu file (Server.MapPath trỏ tới thư mục thật trên server)
+                    string uploadPath = Server.MapPath("~/images/products/");
+
+                    // Kiểm tra xem thư mục có tồn tại không, nếu không thì tạo mới
+                    if (!System.IO.Directory.Exists(uploadPath))
+                    {
+                        System.IO.Directory.CreateDirectory(uploadPath);
+                    }
+
+                    // 3. Nối tên file vào đường dẫn
+                    string path = System.IO.Path.Combine(uploadPath, fileName);
+
+                    // 4. Lưu file lên server
+                    ImageFile.SaveAs(path);
+
+                    // 5. Gán tên file vào đối tượng Product để lưu vào DB
+                    product.ProductImage = fileName;
+                }
+                else
+                {
+                    // Gán ảnh mặc định nếu không upload
+                    product.ProductImage = "no-image.png";
+                }
+
                 db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");

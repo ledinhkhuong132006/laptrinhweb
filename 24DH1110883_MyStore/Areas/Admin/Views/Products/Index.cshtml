@@ -19,6 +19,14 @@
     .order-container {
         margin-top: 8px;
     }
+
+    /* --- THÊM ĐOẠN NÀY ĐỂ CHỐNG TRÀN CHỮ --- */
+    table td {
+        max-width: 250px; /* Giới hạn chiều rộng tối đa của mỗi cột là 250px */
+        white-space: normal; /* Bắt buộc xuống dòng */
+        word-wrap: break-word; /* Bẻ gãy từ nếu quá dài */
+        overflow-wrap: break-word; /* Chuẩn mới hỗ trợ nhiều trình duyệt hơn */
+    }
 </style>
 
 @using (Html.BeginForm("Index", "Products", new { area = "Admin" }, FormMethod.Get))

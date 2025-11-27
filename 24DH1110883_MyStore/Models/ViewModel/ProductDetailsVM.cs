@@ -10,7 +10,7 @@ namespace _24DH1110883_MyStore.Models.ViewModel
         public int quantity { get; set; } = 1;
 
         // Estimated value computed from quantity and product price
-        public decimal estimatedValue => quantity * (product?.ProductPrice ?? 0m);
+        public decimal estimatedValue { get; set; }
 
         // Pagination helpers
         public int PageNumber { get; set; } // current page

@@ -110,13 +110,24 @@ namespace _24DH1110883_MyStore.Areas.Admin.Controllers
             }
             return View(category);
         }
-
         // POST: Admin/Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Category category = db.Categories.Find(id);
+
+            // BƯỚC 1: KIỂM TRA RÀNG BUỘC
+            // Nếu danh mục này đang chứa bất kỳ sản phẩm nào -> KHÔNG CHO XÓA
+            if (category.Products.Any())
+            {
+                // Gửi thông báo lỗi ra màn hình
+                // TempData là cách truyền dữ liệu tạm thời giữa các trang
+                TempData["Message"] = "Không thể xóa danh mục này vì đang chứa sản phẩm! Vui lòng xóa sản phẩm trước.";
+                return RedirectToAction("Index");
+            }
+
+            // BƯỚC 2: NẾU TRỐNG THÌ CHO XÓA
             db.Categories.Remove(category);
             db.SaveChanges();
             return RedirectToAction("Index");

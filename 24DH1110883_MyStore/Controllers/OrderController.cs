@@ -83,7 +83,8 @@ namespace _24DH1110883_MyStore.Controllers
                 order.AddressDelivery = model.ShippingAddress;
                 order.PaymentMethod = model.PaymentMethod;
                 order.DeliveryMethod = model.ShippingMethod;
-                order.PaymentStatus = "Chưa thanh toán";
+                order.PaymentStatus = "Đã thanh toán";
+                order.OrderStatus = 0; // 0: Chờ xử lý
                 order.TotalAmount = cart.Sum(item => item.TotalPrice);
 
                 // Cập nhật trạng thái thanh toán

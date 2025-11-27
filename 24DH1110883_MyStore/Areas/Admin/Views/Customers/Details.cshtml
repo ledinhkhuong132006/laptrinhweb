@@ -1,0 +1,128 @@
+﻿@model _24DH1110883_MyStore.Models.Customer
+
+@{
+    ViewBag.Title = "Hồ sơ khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <h2 class="mt-4">Hồ sơ khách hàng</h2>
+
+    <div class="row">
+        @* --- CỘT TRÁI: THÔNG TIN CÁ NHÂN --- *@
+        <div class="col-md-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Thông tin cá nhân</h6>
+                </div>
+                <div class="card-body">
+                    <p><strong>Họ tên:</strong> @Model.CustomerName</p>
+                    <p><strong>Tài khoản:</strong> @Model.Username</p>
+                    <p><strong>Số điện thoại:</strong> @Model.CustomerPhone</p>
+                    <p><strong>Email:</strong> @Model.CustomerEmail</p>
+                    <p><strong>Địa chỉ:</strong> @Model.CustomerAddress</p>
+
+                    <a href="@Url.Action("Index")" class="btn btn-secondary mt-3">
+                        <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        @* --- CỘT PHẢI: LỊCH SỬ MUA HÀNG --- *@
+        <div class="col-md-8">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Lịch sử đơn hàng (@Model.Orders.Count)</h6>
+                </div>
+                <div class="card-body">
+                    @if (Model.Orders != null && Model.Orders.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-bordered" width="100%" cellspacing="0">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Mã đơn</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Trạng thái</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var order in Model.Orders)
+                                    {
+                                        <tr>
+                                            <td>#@order.OrderID</td>
+                                            <td>@string.Format("{0:dd/MM/yyyy}", order.OrderDate)</td>
+                                            <td class="text-danger font-weight-bold">
+                                                @string.Format("{0:N0} đ", order.TotalAmount)
+                                            </td>
+
+                                            <td>
+                                                @* --- 1. HIỂN THỊ TRẠNG THÁI THANH TOÁN (Chữ đen) --- *@
+                                                <div style="margin-bottom: 6px;">
+                                                    @if (!string.IsNullOrEmpty(order.PaymentStatus) && order.PaymentStatus == "Đã thanh toán")
+                                                    {
+                                                        @* badge-success: Nền xanh lá, style="color: black": Chữ đen *@
+                                                        <span class="badge badge-success" style="color: black; font-size: 13px; border: 1px solid #ccc;">
+                                                            Đã thanh toán
+                                                        </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        @* badge-light: Nền trắng xám, Chữ đen *@
+                                                        <span class="badge badge-light" style="color: black; font-size: 13px; border: 1px solid #ccc;">
+                                                            Chưa thanh toán
+                                                        </span>
+                                                    }
+                                                </div>
+
+                                                @* --- 2. HIỂN THỊ TRẠNG THÁI GIAO HÀNG (Chữ đen) --- *@
+                                                @{
+                                                    string statusText = "";
+                                                    string badgeClass = "";
+
+                                                    int status = order.OrderStatus;
+
+                                                    switch (status)
+                                                    {
+                                                        case 1:
+                                                            statusText = "Đang giao hàng";
+                                                            badgeClass = "badge-info";   // Nền xanh dương
+                                                            break;
+                                                        case 2:
+                                                            statusText = "Giao thành công";
+                                                            badgeClass = "badge-success"; // Nền xanh lá
+                                                            break;
+                                                        case 3:
+                                                            statusText = "Đã hủy";
+                                                            badgeClass = "badge-danger";  // Nền đỏ
+                                                            break;
+                                                        default:
+                                                            statusText = "Chờ xử lý";
+                                                            badgeClass = "badge-warning"; // Nền vàng
+                                                            break;
+                                                    }
+                                                }
+
+                                                @* Thêm style="color: black;" để ép chữ thành màu đen *@
+                                                <span class="badge @badgeClass" style="color: black; font-size: 13px; border: 1px solid #ccc;">
+                                                    @statusText
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-center text-muted">Khách hàng này chưa mua đơn hàng nào.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

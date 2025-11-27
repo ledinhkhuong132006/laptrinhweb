@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.UI;
+using System.Data.Entity; // Quan trọng để dùng .Include()
 
 namespace _24DH1110883_MyStore.Controllers
 {
@@ -14,7 +14,7 @@ namespace _24DH1110883_MyStore.Controllers
     {
         private MyStoreEntities2 db = new MyStoreEntities2();
 
-        // GET: Admin/Products
+        // GET: Home/Index
         public ActionResult Index(string searchTerm, int? page)
         {
             var model = new HomeProductVM();
@@ -30,49 +30,58 @@ namespace _24DH1110883_MyStore.Controllers
             }
 
             // Đoạn code liên quan tới phân trang
-            // Lấy số trang hiện tại (mặc định là trang 1 nếu không có giá trị)
             int pageNumber = page ?? 1;
             int pageSize = 6; // Số sản phẩm mỗi trang
 
-            // lấy top 10 sản phẩm bán chạy nhất
+            // Lấy top 10 sản phẩm bán chạy nhất cho phần Featured
             model.FeaturedProducts = products.OrderByDescending(p => p.OrderDetails.Count()).Take(10).ToList();
 
-            // lấy 20 sản phẩm bán ế nhất và phân trang
-            model.NewProducts = products.OrderBy(p => p.OrderDetails.Count()).Take(20).ToPagedList(pageNumber, pageSize);
+            // Lấy danh sách sản phẩm mới nhất (hoặc tất cả) và phân trang
+            model.NewProducts = products.OrderByDescending(p => p.ProductID).ToPagedList(pageNumber, pageSize);
 
             return View(model);
         }
+
         // GET: Home/ProductDetails/5
+        // Thêm tham số quantity và page để xử lý logic tính tiền và phân trang sản phẩm liên quan
         public ActionResult ProductDetails(int? id, int? quantity, int? page)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product pro = db.Products.Find(id);
-            if (pro == null)
+
+            // 1. Tìm sản phẩm theo ID
+            var product = db.Products.Include(p => p.Category).FirstOrDefault(x => x.ProductID == id);
+
+            if (product == null)
             {
                 return HttpNotFound();
             }
 
-            // lấy tất cả các sản phẩm cùng danh mục
-            var products = db.Products.Where(p => p.CategoryID == pro.CategoryID && p.ProductID != pro.ProductID).AsQueryable();
+            // 2. Khởi tạo ViewModel (Bắt buộc phải dùng VM để khớp với View)
+            var model = new ProductDetailsVM();
+            model.product = product;
+            model.quantity = quantity ?? 1; // Mặc định là 1 nếu chưa nhập
+            model.estimatedValue = model.quantity * product.ProductPrice; // Tính tạm tính
 
-            ProductDetailsVM model = new ProductDetailsVM();
-
-            // Đoạn code liên quan tới phân trang
-            // Lấy số trang hiện tại (mặc định là trang 1 nếu không có giá trị)
+            // 3. Chuẩn bị dữ liệu cho các Partial View (TopProduct và RelatedProduct)
             int pageNumber = page ?? 1;
-            int pageSize = model.PageSize; // Số sản phẩm mỗi trang
-            model.product = pro;
-            model.RelatedProducts = products.OrderBy(p => p.ProductID).Take(8).ToPagedList(pageNumber, pageSize);
-            model.TopProducts = products.OrderByDescending(p => p.OrderDetails.Count()).Take(8).ToPagedList(pageNumber, pageSize);
+            int pageSize = model.PageSize; // Lấy số trang mặc định từ VM (thường là 3 hoặc 4)
 
-            if (quantity.HasValue)
-            {
-                model.quantity = quantity.Value;
-            }
+            // Lấy các sản phẩm liên quan (cùng danh mục, trừ chính nó)
+            model.RelatedProducts = db.Products
+                .Where(x => x.CategoryID == product.CategoryID && x.ProductID != product.ProductID)
+                .OrderBy(x => x.ProductID)
+                .ToPagedList(pageNumber, pageSize);
 
+            // Lấy Top sản phẩm bán chạy (để hiển thị bên phải)
+            model.TopProducts = db.Products
+                .OrderByDescending(x => x.OrderDetails.Count())
+                .Take(10)
+                .ToPagedList(pageNumber, pageSize);
+
+            // 4. Trả về ViewModel (Không được trả về 'product' trần)
             return View(model);
         }
     }

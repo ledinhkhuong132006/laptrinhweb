@@ -1,79 +1,50 @@
-﻿@model _24DH1110883_MyStore.Models.ViewModel.HomeProductVM
+﻿@using _24DH1110883_MyStore.ViewModels
+@model IEnumerable<ProductStatisticVM>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-}
-
-<h2 class="mb-3">TRANG QUẢN TRỊ</h2>
-
-<style>
-  
-    .admin-card {
-        max-width: 220px;
-    }
-
-        .admin-card img {
-            height: 150px;
-            object-fit: cover;
-        }
-
-    .featured-row {
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 10px;
-    }
-
-    .featured-item {
-        display: inline-block;
-        margin-right: 12px;
-        vertical-align: top;
-    }
-
-    .card-title {
-        font-size: 0.95rem;
-        font-weight: 600;
-    }
-
-    .card-price {
-        color: #28a745;
-        font-weight: 700;
-    }
-
-    .section-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-        .section-title h3 {
-            margin: 0;
-        }
-</style>
-
-@using (Html.BeginForm("Index", "Home", new { area = "Admin" }, FormMethod.Get))
-{
-    <div class="form-group">
-        <div class="col-md-2">
-            @Html.TextBoxFor(m => m.SearchTerm, null, new { @class = "form-control mr-2", placeholder = "Tìm kiếm sản phẩm..." })
-
-            <button type="submit" class="btn btn-primary">Tìm</button>
-        </div>
-    </div>
+    ViewBag.Title = "Admin Dashboard";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml"; // Đường dẫn layout của bạn
 }
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            @Html.Partial("_PVFeatureProduct", Model)
+    <h2 class="mt-4">Thống Kê Sản Phẩm Bán Chạy</h2>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Top 5 Sản Phẩm
         </div>
-    </div>
-
-    <hr />
-
-    <div class="row">
-        <div class="col-12">
-            @Html.Partial("_PVNewProduct", Model)
+        <div class="card-body">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                     
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng đã bán</th>
+                        <th>Doanh thu mang lại</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                             
+                                <td>@item.TenSanPham</td>
+                                <td style="font-weight: bold; color: green;">@item.SoLuongDaBan</td>
+                                <td>@string.Format("{0:N0} đ", item.TongDoanhThu)</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center">Chưa có dữ liệu đơn hàng</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

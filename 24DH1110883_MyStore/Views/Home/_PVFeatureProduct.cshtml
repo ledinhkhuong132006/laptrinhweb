@@ -8,18 +8,26 @@
         <a class="btn btn-sm btn-outline-secondary" href="#new-products" style="float:right;">Xem tất cả</a>
     </div>
 
-    @* Kiểm tra null để tránh lỗi biên dịch *@
     @if (Model != null && Model.FeaturedProducts != null && Model.FeaturedProducts.Any())
     {
         <div class="list-container">
             @foreach (var product in Model.FeaturedProducts)
             {
                 <div class="lproduct-item">
-                    <a href="@Url.Action("ProductDetails", "Home", new { area = "Admin", id = product.ProductID })">
-                        <img src="@Url.Content(product.ProductImage ?? "~/Content/img/no-image.png")" alt="@product.ProductName" />
+                    @* --- SỬA LỖI QUAN TRỌNG TẠI ĐÂY --- *@
+                    @* 1. Sửa 'item' thành 'product' *@
+                    @* 2. Thêm area = "" để không bị bay về Admin *@
+                    @* 3. Đã đóng dấu ngoặc kép " bị thiếu *@
+                    <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID, area = "" })">
+                        @* Cập nhật đường dẫn ảnh cho đúng thư mục *@
+                        <img src="@(product.ProductImage != null && product.ProductImage.Contains("http") ? product.ProductImage : Url.Content("~/images/products/" + product.ProductImage))" alt="@product.ProductName" />
                     </a>
 
-                    <h5>@product.ProductName</h5>
+                    <h5>
+                        <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID, area = "" })" style="text-decoration:none; color:inherit;">
+                            @product.ProductName
+                        </a>
+                    </h5>
 
                     <span class="prodSale">@product.ProductPrice.ToString("N0") đ</span>
 
@@ -29,11 +37,13 @@
 
                     <div style="margin-top: auto; padding-top: 10px; border-top: 1px dashed #eee;">
 
-                        <a class="btn btn-sm btn-danger" href="@Url.Action("AddToCart", "Cart", new { id = product.ProductID })" style="margin-right: 5px;">
+                        @* Thêm area = "" cho nút Mua ngay để an toàn *@
+                        <a class="btn btn-sm btn-danger" href="@Url.Action("AddToCart", "Cart", new { id = product.ProductID, area = "" })" style="margin-right: 5px;">
                             Mua ngay
                         </a>
 
-                        <a class="btn btn-sm btn-warning" href="@Url.Action("AddToCart", "Cart", new { id = product.ProductID })">
+                        @* Thêm area = "" cho nút Thêm giỏ để an toàn *@
+                        <a class="btn btn-sm btn-warning" href="@Url.Action("AddToCart", "Cart", new { id = product.ProductID, area = "" })">
                             <i class="fa fa-cart-plus"></i> Thêm vào giỏ
                         </a>
 

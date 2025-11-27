@@ -4,6 +4,19 @@
     ViewBag.Title = "Giỏ hàng của bạn";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    /* Ẩn mũi tên cho Chrome, Safari, Edge, Opera */
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Ẩn mũi tên cho Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
 
 <div class="container mt-4">
     <h2>GIỎ HÀNG (@(Model != null ? Model.Count : 0) sản phẩm)</h2>

@@ -13,7 +13,7 @@ namespace _24DH1110883_MyStore.Controllers
         private MyStoreEntities2 db = new MyStoreEntities2();
 
         // Hàm lấy giỏ hàng từ Session
-        private List<CartItem> GetCart()
+        private List<CartItem> GetCartService()
         {
             List<CartItem> cart = Session["Cart"] as List<CartItem>;
             if (cart == null)
@@ -24,19 +24,32 @@ namespace _24DH1110883_MyStore.Controllers
             return cart;
         }
 
-        // Action 1: Thêm sản phẩm vào giỏ
-        public ActionResult AddToCart(int id)
+        // Action 1: Xem giỏ hàng
+        public ActionResult Index()
+        {
+            var cart = GetCartService();
+            // Tính tổng tiền cho đẹp (truyền qua ViewBag)
+            ViewBag.TotalAmount = cart.Sum(item => item.TotalPrice);
+            return View(cart);
+        }
+
+        // Action 2: Thêm sản phẩm vào giỏ (ĐÃ SỬA NÂNG CẤP)
+       // Quan trọng: Phải là POST mới nhận được dữ liệu từ Form
+        public ActionResult AddToCart(int id, int? quantity, string type)
         {
             // Lấy giỏ hàng hiện tại
-            var cart = GetCart();
+            var cart = GetCartService();
+
+            // Xử lý số lượng: Nếu không truyền thì mặc định là 1
+            int sl = quantity ?? 1;
 
             // Tìm xem sản phẩm này đã có trong giỏ chưa
             var item = cart.FirstOrDefault(s => s.ProductID == id);
 
             if (item != null)
             {
-                // Nếu có rồi thì tăng số lượng lên 1
-                item.Quantity++;
+                // Nếu có rồi thì cộng dồn số lượng khách chọn (thay vì chỉ +1)
+                item.Quantity += sl;
             }
             else
             {
@@ -49,8 +62,9 @@ namespace _24DH1110883_MyStore.Controllers
                         ProductID = p.ProductID,
                         ProductName = p.ProductName,
                         ProductImage = p.ProductImage,
-                        UnitPrice = p.ProductPrice,
-                        Quantity = 1
+                        // Thêm ?? 0 để tránh lỗi nếu giá bị null
+                        UnitPrice = p.ProductPrice, 
+                        Quantity = sl
                     };
                     cart.Add(item);
                 }
@@ -59,21 +73,22 @@ namespace _24DH1110883_MyStore.Controllers
             // Lưu lại vào Session
             Session["Cart"] = cart;
 
-            // Chuyển hướng đến trang Giỏ hàng để khách xem
-            return RedirectToAction("Index");
-        }
+            // --- XỬ LÝ CHUYỂN HƯỚNG ---
+            
+            // Nếu khách bấm nút "Mua ngay"
+            if (type == "buynow")
+            {
+                return RedirectToAction("Checkout", "Order"); // Chuyển sang trang Thanh toán
+            }
 
-        // Action 2: Xem giỏ hàng
-        public ActionResult Index()
-        {
-            var cart = GetCart();
-            return View(cart);
+            // Nếu bấm "Thêm vào giỏ" bình thường -> Quay lại trang giỏ hàng
+            return RedirectToAction("Index");
         }
 
         // Action 3: Xóa sản phẩm khỏi giỏ
         public ActionResult RemoveFromCart(int id)
         {
-            var cart = GetCart();
+            var cart = GetCartService();
             var item = cart.FirstOrDefault(s => s.ProductID == id);
             if (item != null)
             {
@@ -83,10 +98,11 @@ namespace _24DH1110883_MyStore.Controllers
             return RedirectToAction("Index");
         }
 
-        // Action 4: Cập nhật số lượng (dùng cho trang giỏ hàng)
+        // Action 4: Cập nhật số lượng
+        [HttpPost]
         public ActionResult UpdateQuantity(int id, int quantity)
         {
-            var cart = GetCart();
+            var cart = GetCartService();
             var item = cart.FirstOrDefault(s => s.ProductID == id);
             if (item != null)
             {
