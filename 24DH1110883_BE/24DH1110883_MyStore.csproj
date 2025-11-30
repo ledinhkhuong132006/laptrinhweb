@@ -150,7 +150,6 @@
     <Compile Include="Areas\Admin\Model\ViewModel\ProductStatisticVM.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
@@ -309,11 +308,6 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\ProfileInfo.cshtml" />
-    <Content Include="Views\Customer\Customer.cshtml" />
-    <Content Include="Views\Customer\CustomerDetails.cshtml" />
-    <Content Include="Views\Customer\CustomerCreate.cshtml" />
-    <Content Include="Views\Customer\Edit.cshtml" />
-    <Content Include="Views\Customer\Delete.cshtml" />
     <Content Include="Views\Account\EditProfile.cshtml" />
     <Content Include="Views\Account\ChangePassword.cshtml" />
     <Content Include="Views\Order\Checkout.cshtml" />
@@ -329,6 +323,7 @@
     <Folder Include="Areas\Index\Controllers\" />
     <Folder Include="Areas\Index\Data\" />
     <Folder Include="Areas\Index\Views\Shared\" />
+    <Folder Include="Views\Customer\" />
     <Folder Include="Views\Index\" />
     <Folder Include="Views\NewFolder1\" />
   </ItemGroup>
