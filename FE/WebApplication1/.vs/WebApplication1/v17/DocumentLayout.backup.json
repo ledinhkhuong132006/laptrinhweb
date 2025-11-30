@@ -1,126 +1,126 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\",
+  "WorkspaceRootPath": "C:\\nop bai git\\FE\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\phukien4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\phukien4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|c:\\nop bai git\\\u0111\u1ED3 \u00E1n\\webapplication1\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\laptop1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\laptop1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\laptop3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\laptop3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangxacnhan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|c:\\nop bai git\\fe\\webapplication1\\views\\home\\trangxacnhan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangxacnhan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\tranghome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranghome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\thongtin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\thongtin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangsanpham5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangsanpham5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangsanpham4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\tranglaptop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranglaptop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangsanpham3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\tranghome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranghome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangsanpham2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangsanpham1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\tranggiohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranggiohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\tranggiao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranggiao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangdienthoai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangdienthoai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangdangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangdangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\phukien5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\phukien5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\phukien2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\phukien2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\phukien2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\phukien3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\phukien3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\phukien1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\phukien1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\phukien1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\laptop5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\phukien5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\phukien5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\phukien4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\phukien4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\laptop1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\laptop1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\laptop3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\laptop3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\thongtin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\thongtin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangsanpham4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangsanpham3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangsanpham2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangsanpham1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\tranggiohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranggiohang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\tranggiao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranggiao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangdienthoai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangdienthoai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangdangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangdangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\phukien3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\phukien3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\laptop5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\laptop5.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\laptop4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\laptop4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\laptop4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\laptop2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\laptop2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\laptop2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\tranglichsu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\tranglichsu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranglichsu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\trangphukien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\trangphukien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\trangphukien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\tranglienhe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\FE\\WebApplication1\\views\\home\\tranglienhe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranglienhe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\views\\home\\tranglaptop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3F424F6-5B15-4FDA-9988-056752EE9DD0}|WebApplication1.csproj|solutionrelative:views\\home\\tranglaptop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,21 +130,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "trangchu.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangchu.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangchu.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\trangchu.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangchu.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangchu.cshtml",
               "RelativeToolTip": "Views\\Home\\trangchu.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAADwvyoAAAC5AAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAADwvy8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-02T15:41:13.841Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -157,303 +156,22 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "trangxacnhan.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangxacnhan.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangxacnhan.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangxacnhan.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangxacnhan.cshtml",
-              "ViewState": "AgIAAMwAAAAAAAAAAADwv+IAAAAHAAAAAAAAAA==",
+              "Title": "phukien1.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien1.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\phukien1.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien1.cshtml",
+              "RelativeToolTip": "Views\\Home\\phukien1.cshtml",
+              "ViewState": "AgIAAO8BAAAAAAAAAAAAAEsCAACLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:46:38.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "trangthanhtoan.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangthanhtoan.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangthanhtoan.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangthanhtoan.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangthanhtoan.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAPoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:46:34.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_MasterLayout.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Shared\\_MasterLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_MasterLayout.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Shared\\_MasterLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_MasterLayout.cshtml",
-              "ViewState": "AgIAAAgBAAAAAAAAAAAAANsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:56:41.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T15:39:17.904Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "laptop3.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop3.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\laptop3.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop3.cshtml",
-              "RelativeToolTip": "Views\\Home\\laptop3.cshtml",
-              "ViewState": "AgIAAGECAAAAAAAAAAAAACcCAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:38:11.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "laptop1.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop1.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\laptop1.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop1.cshtml",
-              "RelativeToolTip": "Views\\Home\\laptop1.cshtml",
-              "ViewState": "AgIAAGoCAAAAAAAAAAAAAGACAACBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:37:10.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "phukien4.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien4.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\phukien4.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien4.cshtml",
-              "RelativeToolTip": "Views\\Home\\phukien4.cshtml",
-              "ViewState": "AgIAAHYCAAAAAAAAAAAAAEsCAAB0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:40:18.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "tranghome.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranghome.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\tranghome.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranghome.cshtml",
-              "RelativeToolTip": "Views\\Home\\tranghome.cshtml",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAwwC4BAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:42:44.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "thongtin.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\thongtin.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\thongtin.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\thongtin.cshtml",
-              "RelativeToolTip": "Views\\Home\\thongtin.cshtml",
-              "ViewState": "AgIAAAkBAAAAAAAAAAAAwGYBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:40:56.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "trangsanpham5.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham5.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham5.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham5.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangsanpham5.cshtml",
-              "ViewState": "AgIAAGECAAAAAAAAAAAkwAwDAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:46:11.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "trangsanpham4.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham4.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham4.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham4.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangsanpham4.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAABwDAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:46:05.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "trangsanpham3.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham3.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham3.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham3.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangsanpham3.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:45:50.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "trangsanpham2.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham2.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham2.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham2.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangsanpham2.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0DAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:45:13.403Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "trangsanpham1.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham1.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham1.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham1.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangsanpham1.cshtml",
-              "ViewState": "AgIAAKMCAAAAAAAAAAAAAIwBAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:44:58.986Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "trangsanpham.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangsanpham.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangsanpham.cshtml",
-              "ViewState": "AgIAAKAAAAAAAAAAAADwv1UBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:44:43.398Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "trangphukien.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangphukien.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangphukien.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangphukien.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangphukien.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:44:03.831Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "tranglienhe.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranglienhe.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\tranglienhe.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranglienhe.cshtml",
-              "RelativeToolTip": "Views\\Home\\tranglienhe.cshtml",
-              "ViewState": "AgIAAMwAAAAAAAAAAADwv+IAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:43:48.985Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "tranglichsu.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranglichsu.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\tranglichsu.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranglichsu.cshtml",
-              "RelativeToolTip": "Views\\Home\\tranglichsu.cshtml",
-              "ViewState": "AgIAAOsAAAAAAAAAAAAYwAIBAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:43:31.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "tranglaptop.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranglaptop.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\tranglaptop.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranglaptop.cshtml",
-              "RelativeToolTip": "Views\\Home\\tranglaptop.cshtml",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAUwNwAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:43:26.6Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "tranggiohang.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranggiohang.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\tranggiohang.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranggiohang.cshtml",
-              "RelativeToolTip": "Views\\Home\\tranggiohang.cshtml",
-              "ViewState": "AgIAAC8BAAAAAAAAAAAwwJcBAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:42:26.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "tranggiao.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranggiao.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\tranggiao.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\tranggiao.cshtml",
-              "RelativeToolTip": "Views\\Home\\tranggiao.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:42:09.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "trangdienthoai.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangdienthoai.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangdienthoai.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangdienthoai.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangdienthoai.cshtml",
-              "ViewState": "AgIAAMsAAAAAAAAAAADwv9sAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:41:51.403Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "trangdangnhap.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangdangnhap.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\trangdangnhap.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\trangdangnhap.cshtml",
-              "RelativeToolTip": "Views\\Home\\trangdangnhap.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:41:29.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "phukien5.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien5.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\phukien5.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien5.cshtml",
-              "RelativeToolTip": "Views\\Home\\phukien5.cshtml",
-              "ViewState": "AgIAAD0CAAAAAAAAAAAAAEsCAACJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:40:35.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "phukien3.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien3.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\phukien3.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien3.cshtml",
-              "RelativeToolTip": "Views\\Home\\phukien3.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcCAACHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:39:49.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
               "Title": "phukien2.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien2.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien2.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\phukien2.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien2.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien2.cshtml",
               "RelativeToolTip": "Views\\Home\\phukien2.cshtml",
               "ViewState": "AgIAAEYCAAAAAAAAAAAAAIYBAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -461,23 +179,300 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "phukien1.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien1.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\phukien1.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\phukien1.cshtml",
-              "RelativeToolTip": "Views\\Home\\phukien1.cshtml",
-              "ViewState": "AgIAAE8CAAAAAAAAAAAAAEsCAACLAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "tranghome.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranghome.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\tranghome.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranghome.cshtml",
+              "RelativeToolTip": "Views\\Home\\tranghome.cshtml",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAwwC4BAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-02T15:39:17.904Z"
+              "WhenOpened": "2025-11-02T15:42:44.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "tranglaptop.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranglaptop.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\tranglaptop.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranglaptop.cshtml",
+              "RelativeToolTip": "Views\\Home\\tranglaptop.cshtml",
+              "ViewState": "AgIAANIAAAAAAAAAAAAUwNwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:43:26.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "trangsanpham5.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham5.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham5.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham5.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangsanpham5.cshtml",
+              "ViewState": "AgIAAGECAAAAAAAAAAAkwAwDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:46:11.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "trangxacnhan.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangxacnhan.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangxacnhan.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangxacnhan.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangxacnhan.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAADwv5cAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:46:38.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "phukien5.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien5.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\phukien5.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien5.cshtml",
+              "RelativeToolTip": "Views\\Home\\phukien5.cshtml",
+              "ViewState": "AgIAAM4BAAAAAAAAAAAAAOABAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:40:35.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "phukien4.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien4.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\phukien4.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien4.cshtml",
+              "RelativeToolTip": "Views\\Home\\phukien4.cshtml",
+              "ViewState": "AgIAAHYCAAAAAAAAAAAAAEsCAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:40:18.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_MasterLayout.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Shared\\_MasterLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_MasterLayout.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Shared\\_MasterLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_MasterLayout.cshtml",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAAANsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:56:41.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "laptop1.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop1.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\laptop1.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop1.cshtml",
+              "RelativeToolTip": "Views\\Home\\laptop1.cshtml",
+              "ViewState": "AgIAAGoCAAAAAAAAAAAAAGACAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:37:10.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "laptop3.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop3.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\laptop3.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop3.cshtml",
+              "RelativeToolTip": "Views\\Home\\laptop3.cshtml",
+              "ViewState": "AgIAAGECAAAAAAAAAAAAACcCAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:38:11.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "trangthanhtoan.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangthanhtoan.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangthanhtoan.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangthanhtoan.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangthanhtoan.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAPoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:46:34.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "thongtin.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\thongtin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\thongtin.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\thongtin.cshtml",
+              "RelativeToolTip": "Views\\Home\\thongtin.cshtml",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAAwGYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:40:56.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "trangsanpham4.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham4.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham4.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham4.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangsanpham4.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAABwDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:46:05.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "trangsanpham3.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham3.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham3.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham3.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangsanpham3.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:45:50.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "trangsanpham2.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham2.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham2.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham2.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangsanpham2.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0DAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:45:13.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "trangsanpham1.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham1.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham1.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham1.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangsanpham1.cshtml",
+              "ViewState": "AgIAAKMCAAAAAAAAAAAAAIwBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:44:58.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "trangsanpham.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangsanpham.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangsanpham.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangsanpham.cshtml",
+              "ViewState": "AgIAAKAAAAAAAAAAAADwv1UBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:44:43.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "trangphukien.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangphukien.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangphukien.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangphukien.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangphukien.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:44:03.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "tranglienhe.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranglienhe.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\tranglienhe.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranglienhe.cshtml",
+              "RelativeToolTip": "Views\\Home\\tranglienhe.cshtml",
+              "ViewState": "AgIAAMwAAAAAAAAAAADwv+IAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:43:48.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "tranglichsu.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranglichsu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\tranglichsu.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranglichsu.cshtml",
+              "RelativeToolTip": "Views\\Home\\tranglichsu.cshtml",
+              "ViewState": "AgIAAOsAAAAAAAAAAAAYwAIBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:43:31.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "tranggiohang.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranggiohang.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\tranggiohang.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranggiohang.cshtml",
+              "RelativeToolTip": "Views\\Home\\tranggiohang.cshtml",
+              "ViewState": "AgIAAC8BAAAAAAAAAAAwwJcBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:42:26.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "tranggiao.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranggiao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\tranggiao.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\tranggiao.cshtml",
+              "RelativeToolTip": "Views\\Home\\tranggiao.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:42:09.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "trangdienthoai.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangdienthoai.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangdienthoai.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangdienthoai.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangdienthoai.cshtml",
+              "ViewState": "AgIAAMsAAAAAAAAAAADwv9sAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:41:51.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "trangdangnhap.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangdangnhap.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\trangdangnhap.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\trangdangnhap.cshtml",
+              "RelativeToolTip": "Views\\Home\\trangdangnhap.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:41:29.735Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
+              "Title": "phukien3.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien3.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\phukien3.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\phukien3.cshtml",
+              "RelativeToolTip": "Views\\Home\\phukien3.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcCAACHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-02T15:39:49.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "laptop5.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop5.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop5.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\laptop5.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop5.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop5.cshtml",
               "RelativeToolTip": "Views\\Home\\laptop5.cshtml",
               "ViewState": "AgIAAFsCAAAAAAAAAAAAAGcCAACEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -485,11 +480,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "laptop4.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop4.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop4.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\laptop4.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop4.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop4.cshtml",
               "RelativeToolTip": "Views\\Home\\laptop4.cshtml",
               "ViewState": "AgIAAF4CAAAAAAAAAAAAAGgCAACDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -497,11 +492,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "laptop2.cshtml",
-              "DocumentMoniker": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop2.cshtml",
+              "DocumentMoniker": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop2.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\laptop2.cshtml",
-              "ToolTip": "C:\\nop bai git\\\u0110\u1ED3 \u00E1n\\WebApplication1\\Views\\Home\\laptop2.cshtml",
+              "ToolTip": "C:\\nop bai git\\FE\\WebApplication1\\Views\\Home\\laptop2.cshtml",
               "RelativeToolTip": "Views\\Home\\laptop2.cshtml",
               "ViewState": "AgIAAGECAAAAAAAAAAAAAGcCAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
