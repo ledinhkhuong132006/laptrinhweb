@@ -1,0 +1,314 @@
+﻿@{
+    ViewBag.Title = "tranghome";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPhone - Trang Chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: gray;
+            color: dimgray;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80');
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .banner-content {
+            max-width: 500px;
+            color: white;
+        }
+
+        .banner-subtitle {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .banner-title {
+            font-size: 52px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 10px 0 20px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: cornflowerblue;
+            color: white;
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: blue;
+            }
+
+        .categories-section {
+            padding: 60px 0;
+        }
+
+            .categories-section .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+        .category-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+            .category-item img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                transition: transform 0.4s ease;
+            }
+
+            .category-item:hover img {
+                transform: scale(1.05);
+            }
+
+        .category-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(34, 37, 41, 0.9);
+            color: white;
+            padding: 8px 15px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .featured-products {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 3px;
+                background-color: deepskyblue;
+            }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid gray;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            .product-card img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 15px;
+            }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-rating {
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+            .product-rating span {
+                color: #666;
+                font-size: 14px;
+            }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="banner">
+            <div class="banner-content">
+                <p class="banner-subtitle">EXCLUSIVE SMARTPHONES</p>
+                <h1 class="banner-title">WELCOME TO TECHPHONE</h1>
+                <a href="product.html" class="btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="container">
+                <a href="/Home/trangdienthoai" class="categories-card-link">
+                    <div class="category-item">
+                        <img src="https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/tile/Apple-iPhone-15-Pro-lineup-hero-230912.jpg.news_app_ed.jpg" alt="Smartphones">
+                        <div class="category-label">SMARTPHONES</div>
+                    </div>
+                </a>
+                <a href="/Home/tranglaptop" class="categories-card-link">
+                    <div class="category-item">
+                        <img src="https://cdnv2.tgdd.vn/mwg-static/common/News/1098349/bai-laptop-20-4.jpg" alt="Laptops">
+                        <div class="category-label">LAPTOPS</div>
+                    </div>
+                </a>
+                <a href="/Home/trangphukien" class="categories-card-link">
+                    <div class="category-item">
+                        <img src="https://vuaphukien.com.vn/wp-content/uploads/2019/09/Vua-Phu-Kien-dien-thoai-Thai-Ha-Ha-Noi.jpg" alt="Accessories">
+                        <div class="category-label">ACCESSORIES</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Gợi ý cho bạn</h2>
+                <div class="product-grid">
+                    <a href="/Home/trangsanpham1" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="iPhone 15 Pro" />
+                            <h3 class="product-name">iPhone 15 Pro</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(125 đánh giá)</span>
+                            </div>
+                            <p class="product-price">28.990.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/trangsanpham2" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-samsung-galaxy-s25-ultra_2__4.png" alt="Phone Model Y">
+                            <h3 class="product-name">Galaxy S25 Ultra</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(125 đánh giá)</span>
+                            </div>
+                            <p class="product-price">32.000.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/trangsanpham3" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn.tgdd.vn/2025/10/timerseo/322129-600x600-2.jpg" alt="Phone Model Z">
+                            <h3 class="product-name">Oppo Find X8 Pro</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(98 đánh giá)</span>
+                            </div>
+                            <p class="product-price">24.990.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/trangsanpham4" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/341625/vivo-v60-5g-xam-thumb-600x600.jpg" alt="Vivo V60 5G">
+                            <h3 class="product-name">Vivo V60 5G</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt">
+                                </i>
+                                <span>(85 đánh giá)</span>
+                            </div>
+                            <p class="product-price">19.990.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/trangsanpham5" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/344644/xiaomi-15t-rose-gold-thumb-600x600.jpg" alt="Phone Model A">
+                            <h3 class="product-name">Xiaomi 15T 5G</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><
+                                i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(110 đánh giá)</span>
+                            </div>
+                            <p class="product-price">22.990.000₫</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

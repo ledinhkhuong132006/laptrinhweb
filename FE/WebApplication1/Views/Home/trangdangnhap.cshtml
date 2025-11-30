@@ -1,0 +1,280 @@
+﻿
+@{
+    ViewBag.Title = "trangdangnhap";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPhone - Đăng ký / Đăng nhập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: lightblue;
+            color: white;
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+
+            .btn-primary:hover {
+                background-color: deepskyblue;
+            }
+
+        .auth-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .auth-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .auth-tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e9e9e9;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+
+            .tab-btn.active {
+                color: lightblue;
+                border-bottom-color: lightblue;
+            }
+
+        .auth-form {
+            display: none;
+        }
+
+            .auth-form.active {
+                display: block;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+
+            .form-group input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 14px;
+                box-sizing: border-box;
+            }
+
+                .form-group input:focus {
+                    outline: none;
+                    border-color: lightblue;
+                }
+
+        .remember-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .remember-group input[type="checkbox"] {
+                margin-right: 10px;
+            }
+
+        .forgot-link {
+            color: lightblue;
+            text-align: right;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .switch-link {
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+        }
+
+            .switch-link a {
+                color: lightblue;
+                font-weight: 600;
+            }
+    </style>
+</head>
+<body>
+    <main class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <div class="tab-btn active" onclick="switchTab('login')">Đăng nhập</div>
+                    <div class="tab-btn" onclick="switchTab('register')">Đăng ký</div>
+                </div>
+
+                <form class="auth-form active" id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required placeholder="Nhập email của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mật khẩu</label>
+                        <input type="password" id="login-password" required placeholder="Nhập mật khẩu">
+                    </div>
+                    <div class="remember-group">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Ghi nhớ đăng nhập</label>
+                    </div>
+                    <a href="#" class="forgot-link">Quên mật khẩu?</a>
+                    <button type="button" class="btn-primary" onclick="handleLogin()">Đăng nhập</button>
+                </form>
+
+                <form class="auth-form" id="register-form">
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required placeholder="Nhập email của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mật khẩu</label>
+                        <input type="password" id="register-password" required placeholder="Nhập mật khẩu (ít nhất 6 ký tự)">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Xác nhận mật khẩu</label>
+                        <input type="password" id="confirm-password" required placeholder="Nhập lại mật khẩu">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-name">Họ và tên</label>
+                        <input type="text" id="register-name" required placeholder="Nhập họ và tên">
+                    </div>
+                    <button type="button" class="btn-primary" onclick="handleRegister()">Đăng ký</button>
+                </form>
+
+                <div class="switch-link">
+                    <span>Bạn đã có tài khoản? </span><a href="#" onclick="switchTab('login')">Đăng nhập</a>
+                    <span style="display: none;">Bạn chưa có tài khoản? </span><a href="#" onclick="switchTab('register')" style="display: none;">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function switchTab(tab) {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const forms = document.querySelectorAll('.auth-form');
+            const switchLinks = document.querySelectorAll('.switch-link span, .switch-link a');
+
+            tabs.forEach(t => t.classList.remove('active'));
+            forms.forEach(f => f.classList.remove('active'));
+
+            if (tab === 'login') {
+                document.querySelector('.tab-btn').classList.add('active'); // First tab
+                document.getElementById('login-form').classList.add('active');
+                document.querySelector('.switch-link span').textContent = 'Bạn đã có tài khoản? ';
+                document.querySelector('.switch-link a').textContent = 'Đăng nhập';
+                document.querySelector('.switch-link a').onclick = () => switchTab('login');
+                document.querySelectorAll('.switch-link span')[1].style.display = 'none';
+                document.querySelectorAll('.switch-link a')[1].style.display = 'none';
+            } else {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active'); // Second tab
+                document.getElementById('register-form').classList.add('active');
+                document.querySelector('.switch-link span').textContent = 'Bạn chưa có tài khoản? ';
+                document.querySelector('.switch-link a').textContent = 'Đăng ký';
+                document.querySelector('.switch-link a').onclick = () => switchTab('register');
+                document.querySelectorAll('.switch-link span')[1].style.display = 'inline';
+                document.querySelectorAll('.switch-link a')[1].style.display = 'inline';
+            }
+        }
+
+        function handleLogin() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            if (!email || !password) {
+                alert('Vui lòng nhập đầy đủ thông tin!');
+                return;
+            }
+            localStorage.setItem('user', JSON.stringify({ email, loggedIn: true }));
+            alert('Đăng nhập thành công!');
+            window.location.href = '/Home/tranghome';
+        }
+
+        function handleRegister() {
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const name = document.getElementById('register-name').value;
+            if (!email || !password || !confirmPassword || !name) {
+                alert('Vui lòng nhập đầy đủ thông tin!');
+                return;
+            }
+            if (password !== confirmPassword) {
+                alert('Mật khẩu xác nhận không khớp!');
+                return;
+            }
+            if (password.length < 6) {
+                alert('Mật khẩu phải ít nhất 6 ký tự!');
+                return;
+            }
+            localStorage.setItem('user', JSON.stringify({ email, name, loggedIn: true }));
+            alert('Đăng ký thành công! Vui lòng đăng nhập.');
+            switchTab('login');
+        }
+    </script>
+</body>
+</html>
+

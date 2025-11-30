@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Trang chủ - TechPhone";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPhone - Trang Chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: gray;
+            color: dimgray;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80');
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .banner-content {
+            max-width: 500px;
+            color: white;
+        }
+
+        .banner-subtitle {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .banner-title {
+            font-size: 52px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 10px 0 20px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: cornflowerblue;
+            color: white;
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: blue;
+            }
+
+        .login-prompt {
+            text-align: center;
+            padding: 50px 0;
+            background: white;
+            margin: 40px 0;
+        }
+
+            .login-prompt h2 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .login-prompt p {
+                margin-bottom: 20px;
+                color: #666;
+            }
+
+        .login-btn {
+            display: inline-block;
+            background-color: lightblue;
+            color: white;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .login-btn:hover {
+                background-color: deepskyblue;
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="banner">
+            <div class="banner-content">
+                <p class="banner-subtitle">EXCLUSIVE SMARTPHONES</p>
+                <h1 class="banner-title">WELCOME TO TECHPHONE</h1>
+                <a href="/Home/tranghome" class="btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="login-prompt">
+            <div class="container">
+                <h2>Đăng nhập để tiếp tục mua sắm</h2>                  
+                <p>Trải nghiệm mua sắm cá nhân hóa và theo dõi đơn hàng của bạn.</p>
+                <button class="login-btn" onclick="window.location.href='/Home/trangdangnhap'">Đăng nhập / Đăng ký</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

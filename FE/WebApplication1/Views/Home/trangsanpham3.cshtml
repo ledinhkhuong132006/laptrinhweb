@@ -1,0 +1,807 @@
+﻿@{
+    ViewBag.Title = "trangsanpham3";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm - Oppo Find X8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: white;
+            color: black;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: lightblue;
+            color: white;
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: deepskyblue;
+            }
+
+        .breadcrumbs {
+            padding: 20px 0;
+            background-color: white;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+            .breadcrumbs ul {
+                display: flex;
+                gap: 10px;
+                font-size: 14px;
+            }
+
+            .breadcrumbs a {
+                color: lightblue;
+            }
+
+            .breadcrumbs li:not(:last-child)::after {
+                content: '/';
+                margin-left: 10px;
+                color: #999;
+            }
+
+        .product-detail-section {
+            padding: 40px 0;
+            background-color: white;
+        }
+
+        .product-detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .product-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-image img {
+            width: 100%;
+            border: 1px solid #e9e9e9;
+            border-radius: 5px;
+        }
+
+        .product-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+            .product-thumbnails img {
+                border: 2px solid #e9e9e9;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: border-color 0.3s;
+                display: none;
+            }
+
+                .product-thumbnails img.active-color {
+                    display: block;
+                }
+
+                .product-thumbnails img:hover, .product-thumbnails img.active {
+                    border-color: lightblue;
+                }
+
+        .product-info h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .product-rating {
+            color: #f9bf3b;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        .product-short-desc {
+            margin-bottom: 25px;
+            color: #666;
+        }
+
+        .product-options .option-group {
+            margin-bottom: 20px;
+        }
+
+        .option-group h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .option-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+            .option-buttons .option-btn {
+                padding: 8px 15px;
+                border: 1px solid;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all 0.3s;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+            }
+
+                .option-buttons .option-btn:hover {
+                    background-color: white;
+                    border-color: gray;
+                }
+
+                .option-buttons .option-btn.active {
+                    background-color: dodgerblue;
+                    color: #fff;
+                    border-color: dodgerblue;
+                }
+
+        .option-btn .color-swatch {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-right: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid white;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+            .quantity-selector button {
+                background: white;
+                border: none;
+                width: 35px;
+                height: 35px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            .quantity-selector input {
+                width: 50px;
+                height: 35px;
+                text-align: center;
+                border: none;
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+                font-size: 16px;
+                -moz-appearance: textfield;
+            }
+
+                .quantity-selector input::-webkit-outer-spin-button,
+                .quantity-selector input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+        .product-actions {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+            .product-actions .btn-primary {
+                flex-grow: 1;
+                padding: 15px;
+                font-size: 16px;
+            }
+
+        .product-tabs-section {
+            padding: 60px 0;
+        }
+
+        .tab-links {
+            display: flex;
+            border-bottom: 1px solid white;
+            margin-bottom: 30px;
+        }
+
+        .tab-link {
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            color: dimgrey;
+            position: relative;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+            .tab-link.active {
+                color: lightblue;
+                border-bottom-color: lightblue;
+            }
+
+        .tab-content {
+            display: none;
+        }
+
+            .tab-content.active {
+                display: block;
+            }
+
+            .tab-content h3 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .tab-content p, .tab-content li {
+                color: black;
+                margin-bottom: 10px;
+            }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            .specs-table td {
+                padding: 12px;
+                border-bottom: 1px solid white;
+            }
+
+                .specs-table td:first-child {
+                    font-weight: 600;
+                    width: 30%;
+                    background-color: white;
+                }
+
+        .related-products {
+            padding-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid white;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            }
+
+            .product-card img {
+                height: auto;
+                margin-bottom: 15px;
+            }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .product-card .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: black;
+        }
+
+        a.product-card-link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="/Home/tranghome">Trang chủ</a></li>
+                    <li><a href="/Home/trangdienthoai">Điện thoại</a></li>
+                    <li>Oppo Find X8</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="product-detail-section">
+            <div class="container">
+                <div class="product-detail-container">
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img id="main-product-image"
+                                 src="https://cdn.tgdd.vn/Products/Images/42/322444/oppo-find-x8-1.png"
+                                 alt="Oppo Find X8" />
+                        </div>
+
+                        <div class="product-thumbnails" id="product-thumbnails">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/322444/oppo-find-x8-1.png"
+                                 alt="Thumb 1" data-color="Glacier" class="active-color active" />
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/322444/oppo-find-x8-2.png"
+                                 alt="Thumb 2" data-color="Glacier" class="active-color" />
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/322444/oppo-find-x8-3.png"
+                                 alt="Thumb 3" data-color="Glacier" class="active-color" />
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/322444/oppo-find-x8-4.png"
+                                 alt="Thumb 4" data-color="Glacier" class="active-color" />
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/322444/oppo-find-x8-5.png"
+                                 alt="Thumb 5" data-color="Glacier" class="active-color" />
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <h1>Oppo Find X8 512GB - Glacier</h1>
+
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(150 đánh giá)</span>
+                        </div>
+
+                        <p class="product-price" id="base-price">22.990.000₫</p>
+
+                        <p class="product-short-desc">
+                            Oppo Find X8 — Hiệu năng mạnh mẽ, camera flagship, pin lớn, sạc nhanh 100W, màn hình AMOLED 120Hz.
+                        </p>
+
+                        <div class="product-options">
+                            <div class="option-group">
+                                <h3>Màu sắc:</h3>
+                                <div class="option-buttons" id="color-options">
+                                    <button class="option-btn active"
+                                            data-images='[
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/334168/oppo-find-x8-pink-1-638730561978663558-750x500.jpg",
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/334168/oppo-find-x8-pink-2-638730561985642457-750x500.jpg",
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/334168/oppo-find-x8-pink-3-638730561995160088-750x500.jpg",
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/334168/oppo-find-x8-pink-4-638730562002402944-750x500.jpg",
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/334168/oppo-find-x8-pink-5-638730562008924366-750x500.jpg"
+                                            ]'>
+                                        <span class="color-swatch"></span>Hồng
+
+
+                                    </button>
+
+                                    <button class="option-btn" data-value="Trắng"
+                                            data-images='[
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/322129/oppo-find-x8-pro-trang-5-638684907497235490-750x500.jpg",
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/322129/oppo-find-x8-pro-trang-6-638684907505006167-750x500.jpg",
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/322129/oppo-find-x8-pro-trang-7-638684907512525953-750x500.jpg"
+                                            ]'>
+                                        <span class="color-swatch"></span>Trắng
+
+                                    </button>
+
+                                    <button class="option-btn" data-value="Đen"
+                                            data-images='[
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/322129/oppo-find-x8-pro-den-5-638684907056769839-750x500.jpg",
+                                                "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/322129/oppo-find-x8-pro-den-6-638684907062910307-750x500.jpg"
+                                            ]'>
+                                        <span class="color-swatch"></span>Đen
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="option-group">
+                                <h3>Dung lượng:</h3>
+                                <div class="option-buttons" id="storage-options">
+                                    <button class="option-btn" data-value="256GB">256GB</button>
+                                    <button class="option-btn active" data-value="512GB">512GB</button>
+                                    <button class="option-btn" data-value="1TB">1TB</button>
+                                </div>
+                            </div>
+
+                            <div class="option-group">
+                                <h3>Số lượng:</h3>
+                                <div class="quantity-selector">
+                                    <button id="decrease-qty">-</button>
+                                    <input type="number" id="quantity-input" value="1" min="1" />
+                                    <button id="increase-qty">+</button>
+                                </div>
+                            </div>
+
+                            <div class="option-group">
+                                <h3>Tạm tính:</h3>
+                                <p class="product-price" id="subtotal-price" style="font-size: 28px; margin-bottom: 0;">
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="btn-primary" onclick="addToCart()">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ hàng
+                            </button>
+
+                            <button class="btn-primary" onclick="buyNow()" style="background-color: #e53935;">
+                                Mua ngay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-tabs-section">
+            <div class="container">
+                <div class="tab-links">
+                    <div class="tab-link active" data-tab="description">Mô tả sản phẩm</div>
+                    <div class="tab-link" data-tab="specs">Thông số kỹ thuật</div>
+                    <div class="tab-link" data-tab="reviews">Đánh giá</div>
+                </div>
+
+                <div class="tab-content active" id="description">
+                    <h3>Màn hình & Hiệu năng</h3>
+                    <p>Màn hình AMOLED 6.8", tần số quét 120Hz. Chip Snapdragon 8 Gen 3, RAM LPDDR5x, tối ưu cho chơi game và đa nhiệm.</p>
+                </div>
+
+                <div class="tab-content" id="specs">
+                    <h3>Thông số kỹ thuật chi tiết</h3>
+                    <table class="specs-table">
+                        <tbody>
+                            <tr>
+                                <td>Màn hình</td>
+                                <td>AMOLED, 6.8", 120Hz, QHD+</td>
+                            </tr>
+                            <tr>
+                                <td>Hệ điều hành</td>
+                                <td>Android 14 (ColorOS)</td>
+                            </tr>
+                            <tr>
+                                <td>Camera sau</td>
+                                <td>Chính 50 MP + góc rộng + tele 64 MP</td>
+                            </tr>
+                            <tr>
+                                <td>Pin, Sạc</td>
+                                <td>5500 mAh, sạc nhanh 100W</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tab-content" id="reviews">
+                    <h3>Đánh giá</h3>
+                    <p>Người dùng khen hiệu năng tốt và sạc cực nhanh; một số nói máy hơi nóng khi chơi game nặng.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="container">
+                <h2 class="section-title">Sản phẩm tương tự</h2>
+                <div class="product-grid">
+                    <a href="/Home/trangsanpham1" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="iPhone 15 Pro" />
+                            <h3 class="product-name">iPhone 15 Pro</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(125 đánh giá)</span>
+                            </div>
+                            <p class="product-price">28.990.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/trangsanpham2" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-samsung-galaxy-s25-ultra_2__4.png" alt="Phone Model Y">
+                            <h3 class="product-name">Galaxy S25 Ultra</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(125 đánh giá)</span>
+                            </div>
+                            <p class="product-price">32.000.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/trangsanpham4" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/341625/vivo-v60-5g-xam-thumb-600x600.jpg" alt="Vivo V60 5G">
+                            <h3 class="product-name">Vivo V60 5G</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(85 đánh giá)</span>
+                            </div>
+                            <p class="product-price">19.990.000₫</p>
+                        </div>
+                    </a>
+
+                    <a href="/Home/trangsanpham5" class="product-card-link">
+                        <div class="product-card">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/344644/xiaomi-15t-rose-gold-thumb-600x600.jpg" alt="Phone Model A">
+                            <h3 class="product-name">Xiaomi 15T 5G</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(110 đánh giá)</span>
+                            </div>
+                            <p class="product-price">22.990.000₫</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const mainImage = document.getElementById('main-product-image');
+            const thumbnailsContainer = document.getElementById('product-thumbnails');
+
+            function updateMainImage(thumbnailSrc) {
+                mainImage.src = thumbnailSrc;
+                document.querySelectorAll('.product-thumbnails img').forEach(t => t.classList.remove('active'));
+                const activeThumb = document.querySelector(`.product-thumbnails img[src="${thumbnailSrc}"]`);
+                if (activeThumb) {
+                    activeThumb.classList.add('active');
+                }
+            }
+
+            function renderThumbnails(imageUrls, selectedColor) {
+                thumbnailsContainer.innerHTML = '';
+                imageUrls.forEach((url, index) => {
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.alt = `Thumbnail ${index + 1} - ${selectedColor}`;
+                    img.setAttribute('data-color', selectedColor);
+
+                    if (index === 0) {
+                        mainImage.src = url;
+                        img.classList.add('active');
+                    }
+
+                    img.classList.add('active-color');
+                    img.addEventListener('click', function () {
+                        updateMainImage(this.src);
+                    });
+                    thumbnailsContainer.appendChild(img);
+                });
+            }
+
+            function handleOptionSelection(containerId) {
+                const optionsContainer = document.getElementById(containerId);
+                if (optionsContainer) {
+                    const optionButtons = optionsContainer.querySelectorAll('.option-btn');
+                    optionButtons.forEach(button => {
+                        button.addEventListener('click', function () {
+                            optionButtons.forEach(btn => btn.classList.remove('active'));
+                            this.classList.add('active');
+
+                            if (containerId === 'color-options') {
+                                const selectedColor = this.dataset.value;
+                                const imageUrls = JSON.parse(this.dataset.images);
+                                renderThumbnails(imageUrls, selectedColor);
+
+                                document.querySelector('.product-info h1').textContent = `Oppo Find X8 512GB - ${selectedColor}`;
+                            }
+                        });
+                    });
+                }
+            }
+            handleOptionSelection('color-options');
+            handleOptionSelection('storage-options');
+
+            const priceElement = document.getElementById('base-price');
+            const qtyInput = document.getElementById('quantity-input');
+            const decreaseBtn = document.getElementById('decrease-qty');
+            const increaseBtn = document.getElementById('increase-qty');
+            const subtotalElement = document.getElementById('subtotal-price');
+
+            function parsePrice(priceString) {
+                if (!priceString) return 0;
+                const numberString = priceString.replace(/₫/g, '').replace(/\./g, '');
+                return parseInt(numberString, 10);
+            }
+
+            function formatPrice(number) {
+                return number.toLocaleString('vi-VN') + '₫';
+            }
+
+            function updateSubtotal() {
+                const basePriceString = priceElement.textContent;
+                const basePrice = parsePrice(basePriceString);
+                const quantity = parseInt(qtyInput.value);
+                const subtotal = basePrice * quantity;
+                subtotalElement.textContent = formatPrice(subtotal);
+            }
+
+            decreaseBtn.addEventListener('click', () => {
+                let currentValue = parseInt(qtyInput.value);
+                if (currentValue > 1) {
+                    qtyInput.value = currentValue - 1;
+                    updateSubtotal();
+                }
+            });
+
+            increaseBtn.addEventListener('click', () => {
+                let currentValue = parseInt(qtyInput.value);
+                qtyInput.value = currentValue + 1;
+                updateSubtotal();
+            });
+
+            qtyInput.addEventListener('input', () => {
+                if (parseInt(qtyInput.value) < 1 || isNaN(parseInt(qtyInput.value))) {
+                    qtyInput.value = 1;
+                }
+                updateSubtotal();
+            });
+
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    const tabId = this.dataset.tab;
+                    tabLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    tabContents.forEach(content => {
+                        if (content.id === tabId) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            updateSubtotal();
+
+            const initialColorButton = document.querySelector('#color-options .option-btn.active');
+            if (initialColorButton) {
+                const initialImages = JSON.parse(initialColorButton.dataset.images);
+                renderThumbnails(initialImages, initialColorButton.dataset.value);
+            }
+        });
+
+        function addToCart() {
+            const productName = document.querySelector('.product-info h1').textContent;
+            const basePriceString = document.querySelector('#base-price').textContent;
+            const basePrice = (function (priceString) {
+                if (!priceString) return 0;
+                const numberString = priceString.replace(/₫/g, '').replace(/\./g, '');
+                return parseInt(numberString, 10);
+            })(basePriceString);
+            const quantity = parseInt(document.getElementById('quantity-input').value);
+            const selectedColorButton = document.querySelector('#color-options .option-btn.active');
+            const selectedStorageButton = document.querySelector('#storage-options .option-btn.active');
+            const selectedImage = document.getElementById('main-product-image').src;
+
+            const colorValue = selectedColorButton ? selectedColorButton.dataset.value : 'Glacier';
+            const storageValue = selectedStorageButton ? selectedStorageButton.dataset.value : '512GB';
+
+            const product = {
+                name: productName,
+                price: basePrice,
+                image: selectedImage,
+                color: colorValue,
+                storage: storageValue,
+                quantity: quantity,
+                addedAt: new Date().toISOString()
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Đã thêm vào giỏ hàng!");
+            window.location.href = "/Home/tranggiohang";
+        }
+
+        function buyNow() {
+            const productName = document.querySelector('.product-info h1').textContent;
+            const basePriceString = document.querySelector('.product-price').textContent;
+            const basePrice = (function (priceString) {
+                if (!priceString) return 0;
+                const numberString = priceString.replace(/₫/g, '').replace(/\./g, '');
+                return parseInt(numberString, 10);
+            })(basePriceString);
+            const quantity = parseInt(document.getElementById('quantity-input').value);
+            const selectedColorButton = document.querySelector('#color-options .option-btn.active');
+            const selectedStorageButton = document.querySelector('#storage-options .option-btn.active');
+            const selectedImage = document.getElementById('main-product-image').src;
+
+            const colorValue = selectedColorButton ? selectedColorButton.dataset.value : 'Phantom';
+            const storageValue = selectedStorageButton ? selectedStorageButton.dataset.value : '512GB';
+
+            const product = {
+                name: productName,
+                price: basePrice,
+                image: selectedImage,
+                color: colorValue,
+                storage: storageValue,
+                quantity: quantity
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            window.location.href = "/Home/tranggiao";
+        }
+    </script>
+</body>
+</html>
+
+
