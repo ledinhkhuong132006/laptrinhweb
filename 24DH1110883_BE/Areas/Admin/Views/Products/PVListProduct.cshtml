@@ -1,0 +1,56 @@
+﻿@model  _24DH1110883_MyStore.Models.ViewModel.ProductSearchVM
+@using PagedList.Mvc;
+
+<style>
+    img {
+        height: 150px;
+        max-width: 150px;
+        object-fit: cover;
+    }
+</style>
+
+@if (Model.Products != null && Model.Products.Any())
+{
+    <h2 class="bg-success">danh sach sản phẩm</h2>
+
+    <table class="table bg-info container-fluid">
+        <tr>
+            <th class="bg-success col-md-2">Hình ảnh</th>
+            <th class="bg-success col-md-2">Tên sản phẩm</th>
+            <th class="bg-success col-md-1">Đơn giá</th>
+            <th class="bg-success col-md-2">Danh mục</th>
+            <th class="bg-success col-md-4"></th>
+        </tr>
+
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Content(product.ProductImage ?? "~/Content/img/no-image.png")" alt="@product.ProductName" />
+                </td>
+                <td>@Html.DisplayFor(modelItem => product.ProductName)</td>
+                <td>@Html.DisplayFor(modelItem => product.ProductPrice)</td>
+                <td>@Html.DisplayFor(modelItem => product.Category.CategoryName)</td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", "Products", new { area = "Admin", id = product.ProductID }, new { @class = "btn btn-primary btn-sm" }) |
+                    @Html.ActionLink("Chi tiết", "Details", "Products", new { area = "Admin", id = product.ProductID }, new { @class = "btn btn-primary btn-sm" }) |
+                    @Html.ActionLink("Xóa", "Delete", "Products", new { area = "Admin", id = product.ProductID }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+            </tr>
+        }
+    </table>
+
+    <div class="pagination-container">
+        @Html.PagedListPager(Model.Products, page => Url.Action("Index", "Products", new { area = "Admin", page, searchTerm = Model.SearchTerm, minPrice = Model.MinPrice, maxPrice = Model.MaxPrice, sortOrder = Model.SortOrder }))
+    </div>
+}
+else
+{
+    <p>không tìm được sản phẩm phù hợp</p>
+}
+
+<div class="form-group">
+    <div class="col-md-offset-8 col-md-4">
+        @Html.ActionLink("Thêm mới", "Create", "Products", new { area = "Admin" }, new { @class = "btn btn-primary" })
+    </div>
+</div>

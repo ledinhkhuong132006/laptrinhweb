@@ -1,0 +1,50 @@
+﻿@model _24DH1110883_MyStore.Models.ViewModel.ProductSearchVM
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Sản phẩm</h2>
+
+<style>
+    .search-container, .order-container {
+        padding-top: 20px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .order-container {
+        margin-top: 8px;
+    }
+
+   
+    table td {
+        max-width: 250px; 
+        white-space: normal; /* Bắt buộc xuống dòng */
+        word-wrap: break-word; /* tu xuong dong neu qua dai*/
+        overflow-wrap: break-word;
+    }
+</style>
+
+@using (Html.BeginForm("Index", "Products", new { area = "Admin" }, FormMethod.Get))
+{
+    <div class="form-group search-container">
+        @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control", placeholder = "Nhập tên sản phẩm cần tìm" })
+        @Html.TextBoxFor(m => m.MinPrice, new { @class = "form-control", placeholder = "Giá tối thiểu", type = "number" })
+        @Html.TextBoxFor(m => m.MaxPrice, new { @class = "form-control", placeholder = "Giá tối đa", type = "number" })
+        <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
+    </div>
+
+    <div class="form-group order-container">
+        <span>Sắp xếp theo:</span>
+        @Html.ActionLink("Tên tăng dần", "Index", new { sortOrder = "name_asc", searchTerm = (Model != null ? Model.SearchTerm : "") }) |
+        @Html.ActionLink("Tên giảm dần", "Index", new { sortOrder = "name_desc", searchTerm = (Model != null ? Model.SearchTerm : "") }) |
+        @Html.ActionLink("Giá tăng dần", "Index", new { sortOrder = "price_asc", searchTerm = (Model != null ? Model.SearchTerm : "") }) |
+        @Html.ActionLink("Giá giảm dần", "Index", new { sortOrder = "price_desc", searchTerm = (Model != null ? Model.SearchTerm : "") })
+    </div>
+}
+
+@Html.Partial("PVListProduct", Model)

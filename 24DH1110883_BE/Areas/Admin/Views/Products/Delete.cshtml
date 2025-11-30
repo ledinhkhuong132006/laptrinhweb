@@ -1,0 +1,23 @@
+﻿@model _24DH1110883_MyStore.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="bg-success">Xóa sản phẩm</h2>
+
+
+@Html.Partial("PVProdlnfor", Model)
+@* show validation / error messages *@
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@using (Html.BeginForm("Delete", "Products", new { area = "Admin", id = Model.ProductID }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <div class="col-md-offset-3 col-md-9">
+            <input type="submit" value="Xóa" class="btn btn-danger btn-sm" />
+            @Html.ActionLink("Quay lại", "Index", "Products", new { area = "Admin" }, new { @class = "btn btn-secondary btn-sm ml-2" })
+        </div>
+    </div>
+}

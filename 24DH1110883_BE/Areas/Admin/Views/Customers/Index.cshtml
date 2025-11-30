@@ -1,0 +1,80 @@
+﻿@model IEnumerable<_24DH1110883_MyStore.Areas.Admin.Model.ViewModel.CustomerListVM>
+
+    @{
+        ViewBag.Title = "Quản lý khách hàng";
+        Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    }
+
+    <h2 class="mt-4 mb-4">Danh Sách Khách Hàng</h2>
+
+    @* Form tìm kiếm đơn giản *@
+    <div class="card mb-4">
+        <div class="card-body">
+            @using (Html.BeginForm("Index", "Customers", FormMethod.Get, new { @class = "form-inline" }))
+            {
+                <div class="input-group">
+                    <input type="text" name="searchName" class="form-control" placeholder="Nhập tên khách hàng..." />
+                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                </div>
+            }
+        </div>
+    </div>
+
+    @* Bảng danh sách *@
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Dữ liệu khách hàng</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Tên khách hàng</th>
+                            <th>Số điện thoại</th>
+                            <th>Địa chỉ</th>
+                            <th class="text-center">Số đơn</th>
+                            <th class="text-right">Tổng chi tiêu</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="font-weight:bold">@item.TenKhachHang</td>
+                                    <td>@item.SoDienThoai</td>
+                                    <td>@item.DiaChi</td>
+                                    <td class="text-center">
+                                       
+                                        <span style="font-size:14px;
+                                              font-weight:bold; 
+                                              color: black;">
+                                            @item.TongDonHang
+                                        </span>
+                                    </td>
+                                    <td class="text-right text-success font-weight-bold">
+                                        @string.Format("{0:N0} đ", item.TongTienDaChi)
+                                    </td>
+                                    <td>
+                                        @* xem chi tiet don hang *@
+                                        <a href="@Url.Action("Details", "Customers", new { id = item.UserID })" class="btn btn-sm btn-info">
+                                            Chi tiết
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center text-muted">Chưa có dữ liệu khách hàng</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

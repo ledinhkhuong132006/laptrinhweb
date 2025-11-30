@@ -1,0 +1,130 @@
+﻿/* --- CSS CHO DANH SÁCH SẢN PHẨM (TOP PRODUCT) --- */
+
+/* Khung bao quanh toàn bộ danh sách */
+.listProduct {
+    padding: 20px 0;
+    background-color: #fff; /* Nền trắng */
+}
+
+    /* Tiêu đề "Sản phẩm bán chạy" */
+    .listProduct h4 {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+        text-transform: uppercase; /* Viết hoa tiêu đề cho đẹp */
+        border-bottom: 2px solid #007bff; /* Kẻ gạch dưới tiêu đề */
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+/* Container chứa các thẻ li (danh sách) */
+.list-container {
+    display: flex; /* Xếp các sản phẩm nằm ngang */
+    flex-wrap: wrap; /* Nếu nhiều quá thì tự xuống dòng */
+    list-style: none; /* Bỏ dấu chấm tròn đầu dòng của thẻ li */
+    padding: 0;
+    margin: 0 -10px; /* Căn lề âm để bù trừ khoảng cách */
+}
+
+/* Từng khối sản phẩm con */
+.lproduct-item {
+    width: 23%; /* Mỗi sản phẩm chiếm khoảng 1/4 chiều rộng (4 sp 1 hàng) */
+    margin: 0 1% 20px 1%; /* Khoảng cách giữa các sản phẩm */
+    border: 1px solid #eee; /* Viền mờ xung quanh */
+    padding: 15px;
+    text-align: center; /* Căn giữa ảnh và chữ */
+    border-radius: 5px; /* Bo tròn góc nhẹ */
+    transition: 0.3s; /* Hiệu ứng mượt khi di chuột */
+}
+
+    /* Hiệu ứng khi di chuột vào sản phẩm */
+    .lproduct-item:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Đổ bóng */
+        border-color: #007bff; /* Đổi màu viền */
+    }
+
+    /* Ảnh sản phẩm */
+    .lproduct-item img {
+        max-width: 100%; /* Ảnh không bị tràn ra ngoài */
+        height: 150px; /* Cố định chiều cao (có thể chỉnh tùy ý) */
+        object-fit: contain; /* Giữ tỉ lệ ảnh không bị méo */
+        margin-bottom: 10px;
+    }
+
+    /* Tên sản phẩm */
+    .lproduct-item h5 {
+        font-size: 16px;
+        margin: 10px 0;
+        height: 40px; /* Cố định chiều cao tên để khung bằng nhau */
+        overflow: hidden; /* Ẩn tên nếu quá dài */
+    }
+
+/* Giá tiền */
+.prodSale {
+    color: #d9534f; /* Màu đỏ cho giá tiền */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Phần phân trang */
+.pagination-container {
+    text-align: center; /* Căn giữa thanh phân trang */
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* --- CSS CHO BANNER --- */
+.banner-bg {
+    padding: 100px 0;
+    /* Gọi ảnh từ thư mục images (lùi ra 2 cấp thư mục) */
+    background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.banner-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Màu đen mờ 60% */
+    padding: 30px;
+    display: inline-block;
+    border-radius: 10px;
+    max-width: 800px; /* Giới hạn chiều rộng cho đẹp */
+}
+
+/* Nút bấm banner */
+.btnBanner {
+    display: inline-block;
+    margin-top: 15px;
+    color: #fff;
+    background: #007bff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .btnBanner:hover {
+        background: #0056b3;
+        color: #fff;
+        text-decoration: none;
+    }
+
+/* --- CSS CHO FORM TÌM KIẾM --- */
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-input-custom {
+    width: 300px; /* Chiều rộng ô tìm kiếm */
+}

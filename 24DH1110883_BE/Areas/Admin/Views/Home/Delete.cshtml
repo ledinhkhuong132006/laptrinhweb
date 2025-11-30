@@ -1,0 +1,48 @@
+﻿@model _24DH1110883_MyStore.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Bạn có chắc chắn muốn xóa không?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Tên sản phẩm</dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>Giá sản phẩm</dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+
+        <dt>Hình ảnh</dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductImage)
+        </dd>
+
+        <dt>Mô tả</dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductDescription)
+        </dd>
+
+        <dt>Danh mục sản phẩm</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-group">
+    <div class="col-md-2">
+        <input type="submit" value="Xóa" class="btn btn-danger btn-" /> |
+
+        @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-default btn-sm" })
+    </div>
+</div>
+    }
+</div>

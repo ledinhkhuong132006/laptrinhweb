@@ -1,0 +1,36 @@
+﻿@model _24DH1110883_MyStore.Models.Customer
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Tạo hồ sơ</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="mb-3">
+        @Html.LabelFor(m => m.CustomerName)
+        @Html.TextBoxFor(m => m.CustomerName, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(m => m.CustomerEmail)
+        @Html.TextBoxFor(m => m.CustomerEmail, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(m => m.CustomerPhone)
+        @Html.TextBoxFor(m => m.CustomerPhone, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(m => m.CustomerAddress)
+        @Html.TextBoxFor(m => m.CustomerAddress, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu</button>
+}
